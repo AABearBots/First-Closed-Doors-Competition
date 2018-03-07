@@ -128,7 +128,7 @@ The competition awards 0.5 BTC and 500,000 ALGO (worth USD 5,000 as of this date
 | 2nd | 0.15 | 150,000 |
 | 3rd | 0.05 | 50,000 |
 
-> NOTE: In the example above, only Bot A would have been awarded the BTC Prize, as it is the only one with a positive ROI.
+> NOTE: In the [example above](#example), only Bot A would have been awarded the BTC Prize, as it is the only one with a positive ROI.
 
 ## Term of Service
 
