@@ -28,17 +28,19 @@ The very first step is creating your own bots. Follow the [Getting Started Guide
 
 The second step is entering your organization’s and bot’s details in the [competition configuration file](https://github.com/AAArena/First-Closed-Doors-Competition/blob/master/this.competition.config.json). Fork the file, enter your details and submit a pull request. Someone at our end will take care of merging your details.
 
-### Number of Bots Allowed
+### About Bots
 
-Each Dev Team is allowed to compete with as many trading bots as they see fit. They can also create as many Indicator Bots as required to implement their strategies. If you find that making calculations within your trading bot’s code instead of creating actual indicator bots is preferrable, feel free to do so.
+Each Dev Team is allowed to compete with one trading bot only. You can create as many Indicator Bots as required to implement your strategy. If you find that making calculations within your trading bot’s code instead of creating actual indicator bots is preferrable, feel free to do so.
 
 **Once a bot is released in the competition it cannot be modified.**
+
+> NOTE: The AA Platform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur --either at the bot or platform level-- resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha testing applications.
 
 ### Markets
 
 The competition takes place in the **USDT-BTC market in Poloniex**.
 
-For the time being, the platform serves both historic and live trades data as well as order book data. Trades are performed at Dev Team’s accounts at the exchange, thus having an account with Poloniex is a requirement for participating. 
+For the time being, the platform serves both historic and live trades data. Trades are performed at Dev Team’s accounts at the exchange, thus having an account with Poloniex is a requirement for participating. 
 
 > NOTE: If you don't have an account with Poloniex yet, make sure you move swiftly and open one ASAP, as there may be a considerable waiting period.
 
@@ -48,11 +50,13 @@ For the time being, we will only be using Poloniex and the USDT-BTC market to do
 
 Each Dev Team trades with their own funds within their own accounts at the exchange. Dev Teams are fully responsible for the trading they do.
 
-Each bot is allowed to trade up to 0.001 BTC (roughly equivalent to USD 10). This is in order to minimize risk at this first ever alpha stage competition. **Bots trading more than the allowed limit are automatically disqualified.** The platform serves running balances that your bot can check.
+Each bot is allowed to trade up to 0.001 BTC Initial Capital (roughly equivalent to USD 10). This is in order to minimize risk at this first ever alpha stage competition.
 
 #### Partial Profits Trading
 
-Bots are allowed to trade with partial profits. This is the only way in which bots can legally trade with more than the limit specified above. Thus, the actual limit is 0.001 BTC + Partial Profits.
+Bots are allowed to trade with partial profits. This is the only way in which bots can legally trade with more than the Initial Capital specified above. Thus, the limit is 0.001 BTC + Partial Profits. The platform serves running balances that your bot can check in order to make sure the limit is not exceded.
+
+**Bots trading more than the allowed limit are automatically disqualified.** 
 
 #### Fees
 
@@ -117,8 +121,6 @@ The competition awards 0.5 BTC and 500,000 ALGO (worth USD 5,000 as of this date
 * BTC Prizes are awarded to bots with positive ROI (profits) only.
 
 * ALGO prices are awarded even when ROI is negative (loss).
-
-* Prizes for vacant positions are not awarded and are saved for future rounds.
 
 **The prize money is awarded as follows:**
 
