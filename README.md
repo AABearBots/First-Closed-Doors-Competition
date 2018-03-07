@@ -30,13 +30,13 @@ The second step is entering your organization’s and bot’s details in the [co
 
 ### Number of Bots Allowed
 
-Each Dev Team is allowed to compete with as many trading bots as they see fit. They can also create as many Indicator Bots as required to implement their strategies. If you find that making calculation within your trading bot’s code instead of creating actual indicator bots is preferrable, feel free to do so.
+Each Dev Team is allowed to compete with as many trading bots as they see fit. They can also create as many Indicator Bots as required to implement their strategies. If you find that making calculations within your trading bot’s code instead of creating actual indicator bots is preferrable, feel free to do so.
 
-Once a bot is released in the competition it cannot be modified as it becomes an autonomous agent.
+**Once a bot is released in the competition it cannot be modified.**
 
 ### Markets
 
-The competitions takes place in the **USDT-BTC market in Poloniex**.
+The competition takes place in the **USDT-BTC market in Poloniex**.
 
 For the time being, the platform serves both historic and live trades data as well as order book data. Trades are performed at Dev Team’s accounts at the exchange, thus having an account with Poloniex is a requirement for participating. 
 
@@ -46,9 +46,9 @@ For the time being, we will only be using Poloniex and the USDT-BTC market to do
 
 ### Capital
 
-Each Dev Team trades with their own funds from within their own accounts at the exchange. Each Dev Team is fully responsible for the trading they do from within their accounts.
+Each Dev Team trades with their own funds within their own accounts at the exchange. Dev Teams are fully responsible for the trading they do.
 
-Each bot is allowed to trade up to 0.001 BTC (roughly equivalente to USD 10). This is in order to minimize risk at this first ever alpha stage competition. **Bots trading more than the allowed limit are automatically disqualified.** The platform serves running balances that your bot can check.
+Each bot is allowed to trade up to 0.001 BTC (roughly equivalent to USD 10). This is in order to minimize risk at this first ever alpha stage competition. **Bots trading more than the allowed limit are automatically disqualified.** The platform serves running balances that your bot can check.
 
 #### Partial Profits Trading
 
@@ -105,14 +105,14 @@ Bot B ROI = (0.001 - 0.001) / 0.001 * 100% = 0%
 **Final Ranking**
 
 | **Position** | **Bot** | **ROI** |
-|-----------|-----------|-----------|
-| 1st | A | 50% |
-| 2nd | C | 0% |
-| 3rd | B | -25% |
+|:----------|:---------:|----------:|
+| 1st | A | 50 % |
+| 2nd | C | 0 % |
+| 3rd | B | -25 % |
 
 ### Prizes
 
-The competition awards 0.5 bitcoin and 500,000 ALGO (worth USD 5,000 as of this date) as prize money for the top 3 performers during each competition period, with the following caveats:
+The competition awards 0.5 BTC and 500,000 ALGO (worth USD 5,000 as of this date) as prize money for the top 3 performers during each competition period, with the following caveats:
 
 * BTC Prizes are awarded to bots with positive ROI (profits) only.
 
@@ -123,14 +123,16 @@ The competition awards 0.5 bitcoin and 500,000 ALGO (worth USD 5,000 as of this 
 **The prize money is awarded as follows:**
 
 | **Position** | **BTC Prize** | **ALGO Prize** |
-|-----------|-----------|-----------|
-| 1st | 0.3 | 300,000 |
+|:----------|----------:|----------:|
+| 1st | 0.30 | 300,000 |
 | 2nd | 0.15 | 150,000 |
 | 3rd | 0.05 | 50,000 |
 
+> NOTE: In the example above, only Bot A would have been awarded the BTC Prize, as it is the only one with a positive ROI.
+
 ## Term of Service
 
-The information provided in this document is intended for informational purposes only and is subject to change without notice. The AA Project may also make improvements and/or changes in the products, pricing and/or the programs described in this information at any time without notice.
+The information provided in this document is intended for informational purposes only and is subject to change without notice. The AA Project may make improvements and/or changes in the products, pricing and/or the programs described in this information at any time without notice.
 
 ## Disclaimer
 
