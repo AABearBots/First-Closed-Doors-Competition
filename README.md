@@ -24,9 +24,17 @@ Subsequent competitions shall be announced and confirmed later on.
 
 We are launching the first competition on an invite-only basis. If you haven’t been invited and want in, send us an email to feedback@advancedalgos.org.
 
-The very first step is creating your own bots. Follow the [Getting Started Guide](https://github.com/AdvancedAlgos/Documentation/wiki/Overview) to do so.
+#### Step 1: Poloniex Account
 
-The second step is entering your organization’s and bot’s details in the [competition configuration file](https://github.com/AAArena/First-Closed-Doors-Competition/blob/master/this.competition.config.json). Fork the file, enter your details and submit a pull request. Someone at our end will take care of merging your details.
+Make sure you have an account with [Poloniex](https://poloniex.com/). If you don't, move swiftly and open one ASAP, as there may be a waiting period. You can proceed an attempt the verification process, however, you will be able to trade even if you don't.
+
+#### Step 2: Your Own Bots
+
+The next step is creating your own GitHub Organization and your own bots. Follow the [Getting Started Guide](https://github.com/AdvancedAlgos/Documentation/wiki/Overview) to do so.
+
+#### Step 3: Competition Configuration
+
+Next, enter your organization’s and bot’s details in the [competition configuration file](https://github.com/AAArena/First-Closed-Doors-Competition/blob/master/this.competition.config.json). Fork the file, enter your details and submit a pull request. Someone at our end will take care of merging your details.
 
 ### About Bots
 
@@ -41,8 +49,6 @@ Each Dev Team is allowed to compete with one trading bot only. You can create as
 The competition takes place in the **USDT-BTC market in Poloniex**.
 
 For the time being, the platform serves both historic and live trades data. Trades are performed at Dev Team’s accounts at the exchange, thus having an account with Poloniex is a requirement for participating. 
-
-> NOTE: If you don't have an account with Poloniex yet, make sure you move swiftly and open one ASAP, as there may be a considerable waiting period.
 
 For the time being, we will only be using Poloniex and the USDT-BTC market to do our trading. We will expand the horizon in upcoming competitions.
 
