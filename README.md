@@ -4,7 +4,9 @@
 
 As explained in the documentation offered further down this document, the AA Platform is part of a system that dramatically simplifies the creation and operation of crypto trading bots while hosting trading bots competitions. The platform is still under development, and its use along with registration for bots competitions are free of charge for the time being, while running on alpha testing mode.
 
-However, this is an exceptional circumstance, as the AA Platform is set to implement a business model by which end users subscribe to bots to have bots trade on their behalf, paying subscription fees to cover the costs of running the bots in the cloud and to pay Dev Teams fees. Fees will be paid in ALGO tokens, the AA Platform’s native token.
+The functionality offered at this point in time is rather basic nowhere near complete. We are very much aware of that. The reason for hosting early stage competitions is to help drive alpha testing and to integrate early feedback from developers and traders. We want to make sure the platform evolves with developers' and traders' interests in mind.
+
+In the near future, the AA Platform is set to implement a business model by which end users subscribe to bots to have bots trade on their behalf, paying subscription fees to cover the costs of running the bots in the cloud and to pay Dev Teams fees. Fees will be paid in ALGO tokens, the AA Platform’s native token.
 
 Therefore, participating in early competitions not only offers you the chance to win competition prizes, but also makes you a member of the AA Community and sets you in the track to further monetize your efforts once the platform is launched to the general public.
 
