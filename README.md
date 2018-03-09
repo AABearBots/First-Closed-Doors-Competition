@@ -18,7 +18,7 @@ You will need to get familiar with the AA Platform, set up your development envi
 
 ### Dates
 
-The first ever competition starts on **Monday March 26th 2018** at 00:00:00.000 GMT and ends on **Friday March 30th** at 23:59:59.999 GMT. 
+The first ever competition starts on **Monday April 2nd 2018** at 00:00:00.000 GMT and ends on **Sunday April 10th** at 23:59:59.999 GMT. 
 
 Subsequent competitions shall be announced and confirmed later on.
 
@@ -60,6 +60,8 @@ Each Dev Team trades with their own funds within their own accounts at the excha
 
 Each bot is allowed to trade up to 0.001 BTC Initial Capital (roughly equivalent to USD 10). This is in order to minimize risk at this first ever alpha stage competition.
 
+> NOTE: In order to avoid unnecessary risk, we recommend withdrawing excess funds from the exchange  or block them by placing an order at a price you know will not be filled.
+
 #### Partial Profits Trading
 
 Bots are allowed to trade with partial profits. This is the only way in which bots can legally trade with more than the Initial Capital specified above. Thus, the limit is 0.001 BTC + Partial Profits. The platform serves running balances that your bot can check in order to make sure the limit is not exceded.
@@ -98,7 +100,7 @@ The ranking is determined by a very simple performance metric: [Return on Invest
 
 #### Winners
 
-The result of the competition is determined by the position of each bot in the ranking by the end of the competition. Notice it is bots competing, not Dev Teams. Thus, a Dev Team may end up with more than one bot in the podium.
+The result of the competition is determined by the position of each bot in the ranking by the end of the competition.
 
 #### Example
 
@@ -126,9 +128,9 @@ Bot B ROI = (0.001 - 0.001) / 0.001 * 100% = 0%
 
 The competition awards 0.5 BTC and 500,000 ALGO (worth USD 5,000 as of this date) as prize money for the top 3 performers during each competition period, with the following caveats:
 
-* BTC Prizes are awarded to bots with positive ROI (profits) only.
+* BTC Prizes are awarded to bots with ROI >= 10% (10% profits and higher) only.
 
-* ALGO prices are awarded even when ROI is negative (loss).
+* ALGO prices are awarded always, even when ROI is negative (loss).
 
 **The prize money is awarded as follows:**
 
@@ -138,7 +140,7 @@ The competition awards 0.5 BTC and 500,000 ALGO (worth USD 5,000 as of this date
 | 2nd | 0.15 | 150,000 |
 | 3rd | 0.05 | 50,000 |
 
-> NOTE: In the [example above](#example), only Bot A would have been awarded the BTC Prize, as it is the only one with a positive ROI.
+> NOTE: In the [example above](#example), only Bot A would have been awarded the BTC Prize, as it is the only one with a ROI bigger than 10%.
 
 ## Term of Service
 
