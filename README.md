@@ -40,11 +40,11 @@ We are launching the first competition on an invite-only basis. If you haven’t
 
 #### Step 1: Poloniex Account
 
-Make sure you have an account with [Poloniex](https://poloniex.com/). If you don't, move swiftly and open one ASAP, as there may be a waiting period. You can proceed an attempt the verification process, however, you will be able to trade even if you don't.
+Make sure you have an account with [Poloniex](https://poloniex.com/). If you don't, move swiftly and open one ASAP, as there may be a waiting period. You can proceed an attempt the verification process, however, you should be able to trade even if you don't verify your account.
 
 #### Step 2: Your Own Bots
 
-The next step is creating your own GitHub Organization and your own bots. Follow the [Getting Started Guide](https://github.com/AdvancedAlgos/Documentation/wiki/Overview) to do so.
+The next step is creating your own GitHub Organization and your own bots. We will go through the whole process further down this document.
 
 #### Step 3: Competition Configuration
 
