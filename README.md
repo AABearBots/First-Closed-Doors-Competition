@@ -152,9 +152,13 @@ IN NO EVENT WILL THE AA PROJECT BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT,
 
 ## Overview
 
+The AA Platform provides the environment to develop bots, and once bots are ready to go live, runs them in the cloud.
+
+AA Bots are open source projects in Github, programed in JavaScript. The platform calls bots and puts them to run in specific time intervals. Bots consume services from the platform and from other bots, and at the same time, produce an output that is stored in the cloud (to be consumed by other bots).
+
 There are three GitHub Organizations you need to be familiar with:
 
-* [Advanced Algos](https://github.com/AdvancedAlgos): Features repositories with the AA Platform code including the bits that run in the cloud (AACloudPlatform) and in the web browser, along with a few other platform-related tools and documentation.
+* [Advanced Algos](https://github.com/AdvancedAlgos): Features repositories with the AA Platform code including the bits that run in the cloud (AACloudPlatform) and in the web browser, along with a few other platform-related configurations and documentation.
 
 * [AAMasters](https://github.com/AAMasters): Its a showcase GitHub organization similar to the one each Dev Team needs to create for themselves. It features several examples of bots, each in their corresponding repository.
 
@@ -162,7 +166,7 @@ There are three GitHub Organizations you need to be familiar with:
 
 ## Setting Up a Dev Team Organization
 
-The very first step is setting up a GitHub organization named after your own Dev Team. Make sure the name of the organization starts with “AA”, just like in the above example AAMasters. Also make sure that the phrase “Advanced Algos” is part of the organization’s description.
+The very first step is [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Dev Team. Make sure the name of the organization starts with “AA”, just like in the above example _AAMasters_. Also make sure that the phrase “_Advanced Algos_” is part of the organization’s description.
 
 # Setting up your Development Environment
 
@@ -196,7 +200,7 @@ DefaultEndpointsProtocol=https;AccountName=aatestnet;AccountKey=rQRuD8KeD0upqcN9
 
 Click **Next** and **Connect** in the following screen.
 
-> **NOTE**: Please bear in mind that this connection method is provisional and will soon be changed for a secure one.
+> **NOTE**: Please bear in mind that this connection string allows you to browse data in the testnet environment. When you produce your own bot it will store data in its own storage for which you will get your own connection string.
 
 Storage Explorer will load on the following screen:
 
@@ -247,73 +251,9 @@ Choose where in your local machine GitHub should copy the files.
 
 Once you clone the repository, GitHub desktop keeps track of the changes that may occur in the files in your local machine and helps synchronize the changes with the online repository via commits and pushes. 
 
-## Step 4: Clone Bot Examples
-
-There are several bots to play with and many more will be available soon from Dev Teams under their own organizations. In the meantime, the ones in [AAMaster](https://github.com/AAMasters) should suffice. Clone them in your local machine.
-
-## Step 5: Test Run
-
-### Request Connection String
-
-Send us an email to feedback@advancedalgos.org to request connection strings for existing bots. You will receive an instructional email explaining how to use them.
-
-### Configure Which Bot to Run
-
-> NOTE: For the sake of this guide, we will use Microsoft Visual Studio as the IDE of choice. However, the platform is IDE-agnostic, thus you should be able to use your preferred IDE, as usual. If that is the case, we would be thrilled if you could share screen shots of your own set up so that we can add them here. Send any contributions to feedback@advancedalgos.com or submit a pull request with a new version of this page incorporating them.
-
-We will first configure which bot to run. Open _AACloudPlatform.sln_. In the Solution Explorer window, scroll down and open _this.vm.config.json_. Enter one of the example bot’s name and path in the config file as shown below:
-
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Visual-Studio-01.png"/>
-
-### Configure Process
-
-Now we need to tell the platform which process to run. Bots may have multiple process. Each of them is defined in a file named _Interval.js_, located inside a folder in the root of the bot’s repository, as shown below:
-
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Local-Files-01.png"/>
-
-In the example above, the bot has two processes: _Multi-Period-Daily_ and _Multi-Period-Market_. Choose either and copy the exact folder name. Back in your preferred IDE, click on the Project node and paste the process name as the value for the Script arguments field:
-
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Visual-Studio-02.png"/>
-
-### Execute
-
-Once running, the process should call the command prompt and start showing some activity:
-
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Command-Prompt-01.png"/>
-
-### Debugging
-
-By now you should be able to run any bot in your local environment and use typical debugging tools and procedures should anything go wrong.
-
-Open the _IntervalExecutor.js_ module and place a breakpoint in the following line:
-
-```
-fileProcessingInterval.start(loopControl);
-```
-
-Now, run the IDE. When execution halts, press F11 to step into the module _Interval.js_ that will be loaded from the configured bot process folder. Once there you can set more breakpoints or debug the module step by step.
-
-## Step 6: What to Expect After Execution
-
-Remember bots' main activity is producing datasets. That is, once you run the AACloudPlatform and the platform calls the bot and process you just configured, you will not “see” much more than the command prompt popping up, as described earlier. Do not expect any graphics, browser windows or candlestick charts to pop up. The visualization of bots activity over a candlestick chart happens at a different moment. We will get there later. In the meantime, what you can actually see is the dataset generated by the bot in the form of _.json_ files stored in the cloud and the logs stored locally.
-
-### Check Output
-
-As stated above, you should be able to browse the output of the bot using the Azure Storage Explorer (_aatestnet > File Shares_). Check the bot’s code at _Interval.js_ to find out where the bot is storing its output. In the case of AAOlivia, search for the following string for the code building the path string:
-
-```
-let filePath
-```
-
-### Logs
-
-Upon execution, the platform creates a folder named _Logs_ right outside the repository. Thus, you will find the Logs folder in the same directory as the AACloudPlatform. Each bot stores logs in its own sub-folders.
-
 # Trading Bots
 
-As usual, a little planning is in order before starting. What kind of trading strategy do you wish to implement? In what markets? What indicators do you need? Is there any existing AA Trading Bot that is similar to what you envision?
-
-The idea is to start from a solid base: cloning an existing bot and working on top of it is the easiest way to get started.
+You are almost done with your set up. Let's briefely discuss Trading Bots before actually cloning one to use as a template.
 
 ## Overview
 
@@ -325,11 +265,11 @@ At this early stage, the AA Platform along with existing trading bots templates 
 
 This leaves the Dev Team free to focus in the creative side of things: coming up with and implementing a trading strategy.
 
-In its current version, the AA Platform provides an object (platform) containing several other objects:
+In its current version, the AA Platform provides an object (_platform_) containing several other objects:
 
-* datasource: preloads ready-to-consume data comprised of candlesticks, volumes and stair patterns;
-* assistant: opens, closes and moves positions;
-* processDatetime: keeps official execution time, to be recorded in logs and used to retrieve stored data.
+* _datasource_: preloads ready-to-consume data comprised of candlesticks, volumes and stair patterns;
+* _assistant_: opens, closes and moves positions;
+* _processDatetime_: keeps official execution time, to be recorded in logs and used to retrieve stored data.
 
 The overall strategy when working with trading bots can be summarized in the following bullet points:
 
@@ -338,39 +278,13 @@ The overall strategy when working with trading bots can be summarized in the fol
 * Then the bot embarks in the calculations required by its trading strategy. At this point in time, there are very few indicators offering processed information. As a consequence, the bot needs to do all calculations internally. Almost all Technical Analysis indicators are calculated from trades and volume data. Their formulas are in the pubic domain and even code is readily available if you search around. You are free to use open source code within your bot's code.
 * Once calculations are performed, the bot decides what to do, and uses the platform to place orders on the exchange.
 
-## Particulars of Cloning a Trading Bot
-
-We covered [[elsewhere|Starting out Your Own Bot]] how to clone a bot and set it up to build your own bot on top of it. Please follow the same guidelines when cloning a trading bot. 
-
-In addition, you need to know the following:
-
-### Running Mode
-
-When you run a trading bot in your local environment you can configure the AACloudPlatform to run it either continuously or only once. This is to avoid the consequences of stopping a trading bot forcefully, which may cause the bot to loose sync with the exchange (open positions may not be taken into account in subsequent runs).
-
-By now you should be familiar with the configuration at _this.vm.config.json_:
-
-```
-{
-  "bot": {
-    "path": "../AAName-Trading-Bot"
-  },
-  "stopGracefully": "false"
-}
-
-```
-
-What we haven't discussed so far is the _stopGracefully_ parameter. When the value is _false_ the platform will run the bot continuously. When the value is _true_ the platform runs the bot once and stops it afterwards.
-
-If you ran the bot with _"stopGracefully": "false"_ and need to stop the bot, then simply go back to the config, change the parameter to _true_, save the file and wait. Upon the next run, the bot will be stopped.
-
 ## Exchanges API
 
 The AA Platform places orders on exchanges through the use of APIs. You will need to create an API and configure your bot to use it.
 
 ### Creating the API Key
 
-Let's take Poloniex as an example. This is how you create an API Key:
+This is how you create an API Key in Poloniex:
 
 Go to the tools menu and select _API KEYS_...
 
@@ -408,23 +322,17 @@ e.g.: AAMariam.Poloniex.json
 
 # Starting out Your Own Bot
 
-## Step 1: A Bit of Planning
+## Step 1: Using an Existing Bot as a Starting Point
 
-First thing to do is understanding what you wish to do and deciding which of the existing bots resembles the most to what your own bot should end up looking like. 
+### Clone and Rename Bot
 
-Are you doing an indicator bot? A trading bot? What kind of process will your bot involve? What kind of data output should your bot have? Which of the existing bots is the most similar to your requirements?
-
-## Step 2: Using an Existing Bot as a Starting Point
-
-### Copy and Rename Bot
-
-Once you have identified the bot that is the most similar to yours, clone the corresponding repository and --once in your local machine-- copy and paste the repository’s root folder, renaming it with the name of your new bot. 
+We will use Mariam, a Trading Bot within the AAMasters organization as a starting point for creating your own bot. Clone [Mariam's repository](https://github.com/AAMasters/AAMariam-Trading-Bot) and --once in your local machine-- copy and paste the repository’s root folder, renaming it with the name of your new bot. 
 
 Make sure you follow the naming convention using the following string:
 
 “**AA**”+”**BotName**”+”**-Indicator-Bot**” _or_ “**-Trading-Bot**”
 
-e.g.: _AAOlivia-Indicator-Bot_
+e.g.: _AAMariam-Trading-Bot_
 
 > NOTE: Make sure the bot name is unique. That is, no other bot by any other Dev Team can have the same name.
 
@@ -432,7 +340,7 @@ e.g.: _AAOlivia-Indicator-Bot_
 
 Now rename the solution using the following syntax: “**AA**”+“**BotName**”+“**-TypeOfBot-**”+“**Bot**”+“**.sln**”
 
-e.g.: _AAOlivia-Indicator-Bot.sln_
+e.g.: _AAMariam-Trading-Bot.sln_
 
 ### Remove .git Folder
 
@@ -459,18 +367,28 @@ You will use this string in the next step...
 
 Next, open the recently renamed solution in your IDE and make the following changes:
 
-* In the Solution Explorer window:
-  - You may want to rename one of the existing processes (the one you are planning to use).
-  - Delete the remaining original unused processes, if any.
-
-* Open _this.bot.config.json_. This is the bit of the configuration file that concerns the AACloudPlatform:
+* Open _this.bot.config.json_. Let's modify the config file segment by segment:
 
 ```
-"displayName": "ExampleBot",
-  "codeName": "AAExampleBot",
+{
+  "displayName": "Mariam",
+  "codeName": "AAMariam",
   "type": "Trading",
-  "version": "1.0.0",
-  "devTeam": "AAExampleOrg",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+```
+
+You need to update that segment of the config with the following things in mind:
+
+ - *displayName* (your bot's name without the AA prefix)
+ - *codeName* (name with the AA prefix; e.g. AAMariam)
+ - *version* (start with major:0, minor:1, patch:0 -- increase minor until you release yur bot; once you do, change to major:1, minor: 0)
+
+```
+  "devTeam": "AAMasters",
   "dataSetVersion": "dataSet.V1",
   "processes": [
     {
@@ -494,125 +412,216 @@ Next, open the recently renamed solution in your IDE and make the following chan
       "executionWaitTime": 60000,
       "retryWaitTime": 10000
     }
+  ],
 ```
 
-You need to update that segment of the config with the following things in mind:
+ - *devTeam* (your organization's name inlcuing the AA prefix)
+ - *dataSetVersion* (different versions of bots may use different versions of datasets)
+ - *description* (briefly describe your bot's strategy)
 
- - *displayName* (your bot's name without the AA prefix)
- - *codeName* (name with the AA prefix; e.g. AAMariam)
- - *type* (change if appropriate)
- - *version* (start with 1.0.0)
- - *devTeam* (your organization's name)
- - *dataSetVersion* (different versions of bots may use different versions of datasets"
- - The process name in case you decided to change it
- - Delete the config for any unused processes
+```
+  "products": [
+    {
+      "codeName": "Trading History",
+      "displayName": "Mariam Trading History",
+      "description": "General information about Mariam trading history.",
+      "storageAccount": "aamariam",
+      "sets": [
+        {
+          "codeName": "Oficial History",
+          "type": "Single File",
+          "validPeriods": [ "24-hs", "12-hs", "08-hs", "06-hs", "04-hs", "03-hs", "02-hs", "01-hs", "45-min", "40-min", "30-min", "20-min", "15-min", "10-min", "05-min", "04-min", "03-min", "02-min", "01-min" ],
+          "filePath": "@DevTeam/@Bot.1.0/dataSet.V1/Output/Trading-Process/AACloudPlatform.1.0",
+          "fileName": "Execution.History.json"
+        }
+      ],
+      "exchangeList": [
+        {
+          "name": "Poloniex"
+        }
+      ],
+      "plotter": {
+        "devTeam": "AAMasters",
+        "repo": "Plotters-Trading",
+        "moduleName": "History"
+      }
+    }
+  ],
+  ```
+  
+   - *displayName* (replace "_Example_" with your bot's name)
+   
+   
+  ```
+    "storage": {
+    "sas": "?sv=2017-07-29&ss=f&srt=sco&sp=rl&se=2018-12-31T01:49:13Z&st=2018-03-01T17:49:13Z&spr=https&sig=BGdV3DlytkD6vGr%2FxfXcinqF3xSLFxfIz18lfzFzI6g%3D",
+    "fileUri": "https://aadumbo.file.core.windows.net"
+  }
+}
+```
 
-Now scroll down to the bottom of the config and replace the string concerning to the storage account with the one you got from us on the previous title. Save the file when you are done.
+   - *sas* (replace the value with the string we gave you over the email after your request)
+   - *fileUri (replace the value with the string we gave you over the email after your request)
 
-### Configure the AACloudPlatform
+Save the file when you are done.
 
-We will first configure which bot to run. Open _AACloudPlatform.sln_. In the Solution Explorer window, scroll down and open _this.vm.config.json_. Enter your bot’s name and path in the config file as shown below:
+## Step 2: Configure the AACloudPlatform
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Visual-Studio-01.png"/>
+### Configure Which Bot to Run.
 
-Now we need to tell the platform which process to run. Click on the AACloudPlatform node and enter the process name as the value for the Script arguments field.
+Open _AACloudPlatform.sln_. In the Solution Explorer window, scroll down and open _platform.config.json_.
 
-## Step 3: Start Coding
+```
+{
+  "codeName": "AACloudPlatform",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "bot": {
+    "path": "../Bots/AAMasters/AAMariam-Trading-Bot"
+  },
+  "stopGracefully": "false"
+}
+```
 
-Now you are good to go. We’ve found the following workflow is quite practical:
+Change the path to the proper one in you local machine. Bear in mind the path is relative to where the _AACloudPlatform.sln_ is located.
+
+### Running Mode
+
+When you run a trading bot in your local environment you can configure the AACloudPlatform to run it either continuously or only once. This is to avoid the consequences of stopping a trading bot forcefully, which may cause the bot to loose sync with the exchange (open positions may not be taken into account in subsequent runs).
+
+This is where the _stopGracefully_ parameter comes into play. When the value is _false_ the platform will run the bot continuously. When the value is _true_ the platform runs the bot once and stops it afterwards.
+
+If you ran the bot with _"stopGracefully": "false"_ and need to stop the bot, then simply go back to the config, change the parameter to _true_, save the file and wait. Upon the next run, the bot will be stopped.
+
+### Configure Which Process to Run
+
+Now we need to tell the platform which process to run. Click on the AACloudPlatform node and make sure the value for the Script arguments field is "_Trading-Process_":
+
+<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Visual-Studio-02-TB.png"/>
+
+## Step 3: Test Run
+
+### Request Connection Strings
+
+Because Mariam --the bot you cloned-- uses datasets from other bots (Carol and Tom) you will need to send us an email to feedback@advancedalgos.org to request connection strings for those bots. You will receive an instructional email explaining how to use them.
+
+### Execute
+
+Once running, the process should call the command prompt and start showing some activity:
+
+<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Command-Prompt-01.png"/>
+
+## Step 4: What to Expect After Execution
+
+Once you run the AACloudPlatform and the platform calls the bot and process you just configured, you will not “see” much more than the command prompt popping up, as described earlier. Do not expect any graphics, browser windows or candlestick charts to pop up. The visualization of bots activity over a candlestick chart happens at a different moment. We will get there later. In the meantime, what you can actually see is the dataset generated by the bot in the form of _.json_ files stored in the cloud, the logs stored locally and the orders that may have been placed in your account at the exchange.
+
+### Check Output
+
+As stated above, you should be able to browse the output of the bot using the Azure Storage Explorer with the connection string we provided for your bot earlier (_File Shares > data_).
+
+### Logs
+
+Upon execution, the platform creates a folder named _Logs_ right outside the platform's repository. Thus, you will find the Logs folder in the same directory as the AACloudPlatform folder. Each bot stores logs in its own sub-folders.
+
+### Debugging
+
+By now you should be able to run the bot in your local environment and use typical debugging tools and procedures should anything go wrong.
+
+In case you were not able to successfully run the bot, the logs files are the first place to go. If you wish to debug the platform and your bot, open the _IntervalExecutor.js_ module and place a breakpoint in the following line:
+
+```
+fileProcessingInterval.start(loopControl);
+```
+
+Now, run the IDE. When execution halts, press F11 to step into the module _User.Bot.js_ that will be loaded from the configured bot process folder. Once there you can set more breakpoints or debug the module step by step.
+
+## Step 5: Start Coding
+
+Once you have managed to run the bot successfully, you are good to go. We’ve found the following workflow is quite practical:
 
 * Code directly in the bot’s solution until the code is fully implemented.
-* Close the bot’s module and go to the cloud platform solution to debug (as explained here). While debugging, the bot’s files will pop up in separate tabs, so that you can edit the code in the process.
+* Close the bot’s module and go to the cloud platform solution to debug (as explained above). While debugging, the bot’s files will pop up in separate tabs, so that you can edit the code in the process.
 
-> NOTE: Please, bear in mind that the data produced by other bots available in the testnet storage may be inconsistent, incomplete or even faulty. If you are using other bot's dataset as input for your own bots, it might be a good idea to isolate portions of the data and even move it to your local environment to work in isolation temporarily.
+# Launching Your Bot
 
-## Step 4: Configure Dev Team and Bots to Run in the Cloud
+Now that your bot is ready and you are happy with its behaviour, it is time to register your Dev Team and bots in the AA Platform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
 
-Now that your bots are ready and you are happy with the datasets they produce, it is time to register your Dev Team and bots in the AA Platform so that they can run in the cloud. Running in the cloud is not that different from running the bot locally.
-
-### Configuration File
+### Configure Dev Team and Bots in the Web Platform
 
 Clone the [AAPlatform](https://github.com/AdvancedAlgos/AAPlatform) repository and open _ecosystem.json_. You will need to locate the following piece of code:
 
 ```
     {
-      "codeName": "AAMasters",
-      "displayName": "AA Masters",
+      "codeName": "AASpartans",
+      "displayName": "AA Spartans",
       "bots": [
         {
-          "repo": "AAOlivia-Indicator-Bot",
-          "configFile": "this.bot.config.json"
-        },
-        {
-          "repo": "AATom-Indicator-Bot",
-          "configFile": "this.bot.config.json"
-        },
-        {
-          "repo": "AAMariam-Trading-Bot",
+          "repo": "AADumbO-Trading-Bot",
           "configFile": "this.bot.config.json"
         }
       ],
-      "plotters": [
-        {
-          "description": "Plots traditional red and green candles.",
-          "repo": "Plotters-Candles-Volumes",
-          "moduleName": "Candles",
-          "target": "Timeline"
-        },
-        {
-          "description": "Plots volumes separated in buy and sell.",
-          "repo": "Plotters-Candles-Volumes",
-          "moduleName": "Volumes",
-          "target": "Timeline"
-        },
-        {
-          "description": "Plots Candle Stairs patterns.",
-          "repo": "Plotters-Stairs-Patterns",
-          "moduleName": "CandleStairs",
-          "target": "Timeline"
-        },
-        {
-          "description": "Plots Volume Stairs patterns.",
-          "repo": "Plotters-Stairs-Patterns",
-          "moduleName": "VolumeStairs",
-          "target": "Timeline"
-        },
-        {
-          "description": "Plots a trading history.",
-          "repo": "Plotters-Trading",
-          "moduleName": "History",
-          "target": "Timeline"
-        },
-        {
-          "description": "Plots trading decitions in an easy to understand way.",
-          "repo": "Plotters-Trading",
-          "moduleName": "Details",
-          "target": "Timeline"
-        }
-      ]
+      "plotters": []
     }
 ```
 
-Copy the piece of code and replicate it immediately below the closing key. Modify the pasted code to incorporate the details of your own GitHub organization and your own bots.
+Copy the piece of code and replicate it immediately below the closing key, adding a colon in between the two segments:
 
-> You will notice the configuration describes _plotters_. We haven't discussed those yet, so simply delete the related segments. 
+```
+    {
+      "codeName": "AASpartans",
+      "displayName": "AA Spartans",
+      "bots": [
+        {
+          "repo": "AADumbO-Trading-Bot",
+          "configFile": "this.bot.config.json"
+        }
+      ],
+      "plotters": []
+    },
+    {
+      "codeName": "AASpartans",
+      "displayName": "AA Spartans",
+      "bots": [
+        {
+          "repo": "AADumbO-Trading-Bot",
+          "configFile": "this.bot.config.json"
+        }
+      ],
+      "plotters": []
+    }
+```
+
+Modify the pasted code to incorporate the details of your own GitHub organization and your own bots:
+
+
+```
+    {
+      "codeName": "AASpartans",
+      "displayName": "AA Spartans",
+      "bots": [
+        {
+          "repo": "AADumbO-Trading-Bot",
+          "configFile": "this.bot.config.json"
+        }
+      ],
+      "plotters": []
+    },
+    {
+      "codeName": "AAYourOrganization",
+      "displayName": "AA Your Organization",
+      "bots": [
+        {
+          "repo": "AAYourBot-Trading-Bot",
+          "configFile": "this.bot.config.json"
+        }
+      ],
+      "plotters": []
+    }
+```
 
 Once you are finished, commit the changes and submit a pull request. Someone in the AdvancedAlgos Organization will analyze your request and pull it into the main branch's code if everything looks right.
 
-# Visualizing Result
-
-Once your bot is up and running, generating a specific dataset, you will want to be able to visualize the data in a more friendly manner, probably on top of a typical candlestick chart. To do that, you will need to program a plotter.
-
-Plotters --unlike bots-- run on the Web Platform. Upon execution, the Web Platform loads a web page which, in turn, calls scripts corresponding to bots plotters, among others. The scripts are loaded directly from the corresponding GitHub repository. Thus, every time you wish to see the effect of changes made in plotter’s code you need to commit the changes and push them to the repository. You will use your browser’s debugging tools to debug your scripts directly in-browser.
-
-## Step 1: A Little Planning
-
-Decide on what is the best way to visualize the data your bot is outputting. Is it a curve? Is it a candlestick pattern? Is it a horizontal line?
-
-Are there any existing bots with similar visualization requirements that you can copy as a starter?
-
-## Step 2: Clone Plotter
-
-Clone the existing plotter of your choice and use it as a starting point for your own development.
-
-
+Once that is done, you will be able to see your bot's activity at http://aawebplatformalpha.azurewebsites.net/ 
