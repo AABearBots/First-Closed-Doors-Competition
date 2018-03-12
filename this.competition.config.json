@@ -5,67 +5,76 @@
   "startDatetime": "2018-03-26T00:00:00.000 GMT+00:00",
   "endingDatetime": "2018-03-30T23:59:59.999 GMT+00:00",
   "formula": "ROI",
-  "rules": [
+  "plotter": 
     {
-      "number": 1,
-      "title": "Initial Capital",
-      "description": "Bots must enter the competition with an initial capital of 0.0001 BTC and that is what they can use for trading. This capital must be provided by the devTeam the bot belongs too and the trading will happen at the Poloniex account of this devTeam."
+      "host": "AAArena",
+      "repo": "Plotters-ROI",
+      "moduleName": "CombinedProfits"
     },
-    {
-      "number": 2,
-      "title": "Profits",
-      "description": "Profits will be calculated in BTC."
-    },
-    {
-      "number": 3,
-      "title": "Partial Profits Trading",
-      "description": "It is allowed to trade partial profits which added to the Initial Capital can amount to more than 0.0001 BTC."
-    },
-    {
-      "number": 4,
-      "title": "Single Release",
-      "description": "The bot can only use a single software release to execute itself, that means no upgrades are allowed for any reason during the competition."
-    },
-    {
-      "number": 5,
-      "title": "No Costs",
-      "description": "The AA Company will not charge competitors for participating in this competition. No payments will be required either to the comopetition host organizing it or to the bots providing indicator data."
-    }
-  ],
-  "prizes": [
-    {
-      "position": 1,
-      "ALGO Prize": 10000000,
-      "Other Prizes": [
-        {
-          "condition": "ROI > 0",
-          "amount": 1,
-          "asset": "BTC"
-        }
-      ]
-    },
-    {
-      "position": 2,
-      "ALGO Prize": 5000000
-    },
-    {
-      "position": 3,
-      "ALGO Prize": 2500000
-    },
-    {
-      "position": 4,
-      "ALGO Prize": 1000000
-    },
-    {
-      "position": 5,
-      "ALGO Prize": 500000
-    }
-  ],
-  "participants": [
-    {
-      "devTeam": "AAMasters",
-      "bot": "AAMariam",
-      "release": "1.0.0"
-    }
-  ]
+    "rules": 
+    [
+      {
+        "number": 1,
+        "title": "Initial Capital",
+        "description": "Bots must enter the competition with an initial capital of 0.0001 BTC and that is what they can use for trading. This capital must be provided by the devTeam the bot belongs too and the trading will happen at the Poloniex account of this devTeam."
+      },
+      {
+        "number": 2,
+        "title": "Profits",
+        "description": "Profits will be calculated in BTC."
+      },
+      {
+        "number": 3,
+        "title": "Partial Profits Trading",
+        "description": "It is allowed to trade partial profits which added to the Initial Capital can amount to more than 0.0001 BTC."
+      },
+      {
+        "number": 4,
+        "title": "Single Release",
+        "description": "The bot can only use a single software release to execute itself, that means no upgrades are allowed for any reason during the competition."
+      },
+      {
+        "number": 5,
+        "title": "No Costs",
+        "description": "The AA Company will not charge competitors for participating in this competition. No payments will be required either to the comopetition host organizing it or to the bots providing indicator data."
+      }
+    ],
+    "prizes": 
+    [
+      {
+        "position": 1,
+        "ALGO Prize": 10000000,
+        "Other Prizes": [
+          {
+            "condition": "ROI > 0",
+            "amount": 1,
+            "asset": "BTC"
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "ALGO Prize": 5000000
+      },
+      {
+        "position": 3,
+        "ALGO Prize": 2500000
+      },
+      {
+        "position": 4,
+        "ALGO Prize": 1000000
+      },
+      {
+        "position": 5,
+        "ALGO Prize": 500000
+      }
+    ],
+    "participants": 
+    [
+      {
+        "devTeam": "AAMasters",
+        "bot": "AAMariam",
+        "release": "1.0.0"
+      }
+    ]
 }
