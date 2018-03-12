@@ -1,3 +1,14 @@
+# Contents
+
+[Competition Guidelines](#Competition-Guidelines)
+[The AA Platform](#The-AA-Platform)
+[Setting up Your Development Environment](#Setting-up-Your-Development-Environment)
+[Trading Bots](#Trading-Bots)
+[Starting out Your Own Bot](#Starting-out-Your-Own-Bot)
+[Launching Your Bot](#Launching-Your-Bot)
+
+<hr>
+
 # Competition Guidelines
 
 ## Introduction
@@ -148,6 +159,8 @@ THE AA PLATFORM AND ITS ASSOCIATED PRODUCTS AND SERVICES ARE PROVIDED "AS IS" WI
 
 IN NO EVENT WILL THE AA PROJECT BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT, SPECIAL OR OTHER CONSEQUENTIAL DAMAGES FOR ANY USE OF THE AA PLATFORM, OR ANY OTHER ASSOCIATED SERVICE OR WEB SITE, INCLUDING, WITHOUT LIMITATION, ANY LOST PROFITS, BUSINESS INTERRUPTION, LOSS OF FUNDS, PROGRAMS OR OTHER DATA OR OTHERWISE, EVEN IF WE ARE EXPRESSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
+<hr>
+
 # The AA Platform
 
 ## Overview
@@ -167,6 +180,8 @@ There are three GitHub Organizations you need to be familiar with:
 ## Setting Up a Dev Team Organization
 
 The very first step is [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Dev Team. Make sure the name of the organization starts with “AA”, just like in the above example _AAMasters_. Also make sure that the phrase “_Advanced Algos_” is part of the organization’s description.
+
+<hr>
 
 # Setting up your Development Environment
 
@@ -251,6 +266,8 @@ Choose where in your local machine GitHub should copy the files.
 
 Once you clone the repository, GitHub desktop keeps track of the changes that may occur in the files in your local machine and helps synchronize the changes with the online repository via commits and pushes. 
 
+<hr>
+
 # Trading Bots
 
 You are almost done with your set up. Let's briefely discuss Trading Bots before actually cloning one to use as a template.
@@ -319,6 +336,8 @@ Create a folder named _API-Keys_ at the same level of the platform's repository 
 e.g.: AAMariam.Poloniex.json
 
 > NOTE: Make sure the folder and file doesn't accidentally end up in GitHub! Your API KEYs should be kept secret! 
+
+<hr>
 
 # Starting out Your Own Bot
 
@@ -545,6 +564,8 @@ Once you have managed to run the bot successfully, you are good to go. We’ve f
 * Code directly in the bot’s solution until the code is fully implemented.
 * Close the bot’s module and go to the cloud platform solution to debug (as explained above). While debugging, the bot’s files will pop up in separate tabs, so that you can edit the code in the process.
 
+<hr>
+
 # Launching Your Bot
 
 Now that your bot is ready and you are happy with its behaviour, it is time to register your Dev Team and bots in the AA Platform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
@@ -567,7 +588,7 @@ Clone the [AAPlatform](https://github.com/AdvancedAlgos/AAPlatform) repository a
     }
 ```
 
-Copy the piece of code and replicate it immediately below the closing key, adding a colon in between the two segments:
+Copy the piece of code and replicate it immediately below the closing key, **adding a colon in between the two segments**:
 
 ```
     {
@@ -624,4 +645,5 @@ Modify the pasted code to incorporate the details of your own GitHub organizatio
 
 Once you are finished, commit the changes and submit a pull request. Someone in the AdvancedAlgos Organization will analyze your request and pull it into the main branch's code if everything looks right.
 
-Once that is done, you will be able to see your bot's activity at http://aawebplatformalpha.azurewebsites.net/ 
+Once that is done, you will be able to see your bot's activity at http://aawebplatformalpha.azurewebsites.net/
+
