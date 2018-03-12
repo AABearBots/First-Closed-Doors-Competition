@@ -76,9 +76,9 @@ Each bot is allowed to trade up to 0.001 BTC Initial Capital (roughly equivalent
 
 #### Partial Profits Trading
 
-Bots are allowed to trade with partial profits. This is the only way in which bots can legally trade with more than the Initial Capital specified above. Thus, the limit is 0.001 BTC + Partial Profits. The platform serves running balances that your bot can check in order to make sure the limit is not exceded.
+Bots are allowed to trade with partial profits. This is the only way in which bots can legally trade with more than the Initial Capital specified above. Thus, the limit is 0.001 BTC + Partial Profits. The platform serves available balances that your bot can check in order to make sure the limit is not exceded.
 
-**Bots trading more than the allowed limit are automatically disqualified.** 
+**Bots attempting to trade more than the allowed limit generate an exeption that needs to be handled.** 
 
 #### Fees
 
@@ -92,7 +92,7 @@ For your information, Poloniex charges the following fees for every order filled
 
 Poloniex fees are explained [here](https://poloniex.com/fees/).
 
-That said, the competition does NOT take fees into consideration while calculating the ranking and competition results.
+The competition does take fees into consideration while calculating the ranking and competition results. For that reason, fees are factored in the available balance served by the platform.
 
 ### Ranking
 
@@ -170,8 +170,6 @@ IN NO EVENT WILL THE AA PROJECT BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT,
 
 ## Overview
 
-The AA Platform provides the environment to develop bots, and once bots are ready to go live, runs them in the cloud.
-
 AA Bots are open source projects in Github, programed in JavaScript. The platform calls bots and puts them to run in specific time intervals. Bots consume services from the platform and from other bots, and at the same time, produce an output that is stored in the cloud (to be consumed by other bots).
 
 There are three GitHub Organizations you need to be familiar with:
@@ -180,7 +178,7 @@ There are three GitHub Organizations you need to be familiar with:
 
 * [AAMasters](https://github.com/AAMasters): Its a showcase GitHub organization similar to the one each Dev Team needs to create for themselves. It features several examples of bots, each in their corresponding repository.
 
-* [AAArena](https://github.com/AAArena): Its another showcase GitHub organization featuring the AA Application hosting the trading bot competition you area about to enter.
+* [AAArena](https://github.com/AAArena): Its another showcase GitHub organization featuring the AA Application hosting the trading bot competition you are about to enter.
 
 ## Setting Up a Dev Team Organization
 
@@ -194,7 +192,7 @@ The very first step is [setting up a GitHub organization](https://github.com/acc
 
 Before we start, make sure you have Node.js installed. If you don’t, please [download and install Node.js](https://nodejs.org/en/download/).
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Node-js-01.png"/>
+<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Node-js-01.png">
 
 ## Step 2: Azure Storage Explorer
 
@@ -206,7 +204,7 @@ Download and install the [Azure Storage Explorer](https://azure.microsoft.com/en
 
 The following screen should pop up when you launch Azure Storage Explorer:
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-02.png"/>
+<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-02.png">
 
 Select _Use a connection string or a shared access signature URI_ and click **Next**.
 
@@ -225,23 +223,6 @@ Click **Next** and **Connect** in the following screen.
 Storage Explorer will load on the following screen:
 
 <img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-01.png"/>
-
-### Data Structure
-
-Spend some time exploring and getting familiar with the data structure under the _File Shares_ folder.
-
-The data is stored under the following folder tree structure:
-
-- ExchangeName
-  - BotName
-    - dataSet.V1
-      - Output
-        - This is the folder where bots store their data outputs.
-      - Processes
-        - This folder holds one child folder per each process by each bot.
-        - Each child folder holds a control checkpoint file named _Status.Report.”MARKETPAIR”.json_ (e.g.: _Status.Report.USDT_BTC.json_). This checkpoint helps the process restart from a certain point in the event of an unexpected interruption. Bots are free to store data in any way developers see fit. We have found in some cases it is best to organize data in the following format: YEAR > MONTH > DAY > HOUR > MINUTE.
-
-> **NOTE**: Please be mindful of the way you use storage space. While using the AA Platform is currently free of charge for you, there are expenses related to storage volumes that the project needs to pay for.
 
 ## Step 3: Clone the Cloud Platform
 
@@ -289,9 +270,8 @@ This leaves the Dev Team free to focus in the creative side of things: coming up
 
 In its current version, the AA Platform provides an object (_platform_) containing several other objects:
 
-* _datasource_: preloads ready-to-consume data comprised of candlesticks, volumes and stair patterns;
+* _datasource_: preloads ready-to-consume data comprised of candlesticks and stair patterns;
 * _assistant_: opens, closes and moves positions;
-* _processDatetime_: keeps official execution time, to be recorded in logs and used to retrieve stored data.
 
 The overall strategy when working with trading bots can be summarized in the following bullet points:
 
@@ -302,7 +282,7 @@ The overall strategy when working with trading bots can be summarized in the fol
 
 ## Exchanges API
 
-The AA Platform places orders on exchanges through the use of APIs. You will need to create an API and configure your bot to use it.
+The AA Platform places orders on exchanges through the use of APIs. You will need to create an API Key and configure your bot to use it.
 
 ### Creating the API Key
 
@@ -328,7 +308,7 @@ Once you create your key, the system will present it as follows...
 
 ### Creating an API Key File
 
-Next, you will use the information in the API Key to a create a flat file with the following structure using your own Key and Secret information:
+Next, you will use the information in the API Key to a create a _.json_ file with the following structure using your own Key and Secret information:
 
 ```
 { "Key" : "6HS4YUEB-865UY9W4-KGHEHHJ-GH72ETG1", "Secret" : "1a3529851a05439asdasdw63426378ggd65701ac4a5d53c4859aa3511a8aa65acbd7e713bba755d0b1591ebe3a7618a71393ef4d3d11310628e1db"}
@@ -358,7 +338,7 @@ Make sure you follow the naming convention using the following string:
 
 e.g.: _AAMariam-Trading-Bot_
 
-> NOTE: Make sure the bot name is unique. That is, no other bot by any other Dev Team can have the same name.
+> NOTE: Make sure the bot name is unique. That is, no other bot by any other Dev Team can have the same name. You can find the current list of bots in the _[AAPlatform ecosystem.json file](https://github.com/AdvancedAlgos/AAPlatform/blob/master/ecosystem.json)_.
 
 ### Rename Solution
 
@@ -409,7 +389,7 @@ You need to update that segment of the config with the following things in mind:
 
  - *displayName* (your bot's name without the AA prefix)
  - *codeName* (name with the AA prefix; e.g. AAMariam)
- - *version* (start with major:0, minor:1, patch:0 -- increase minor until you release yur bot; once you do, change to major:1, minor: 0)
+ - *version* (start with major:0, minor:1, patch:0 -- increase minor until you release your bot; once you do, change to major:1, minor: 0)
 
 ```
   "devTeam": "AAMasters",
