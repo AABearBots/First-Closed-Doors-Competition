@@ -10,10 +10,6 @@ In the near future, the AA Platform is set to implement a business model by whic
 
 Therefore, participating in early competitions not only offers you the chance to win competition prizes, but also makes you a member of the AA Community and sets you in the track to further monetize your efforts once the platform is launched to the general public.
 
-## About the AA Platform
-
-You will need to get familiar with the AA Platform, set up your development environment and create your own bots. Pease read the [available documentation](https://github.com/AdvancedAlgos/Documentation/wiki).
-
 ## Competition Rules
 
 ### Dates
@@ -151,4 +147,20 @@ The information provided in this document is intended for informational purposes
 THE AA PLATFORM AND ITS ASSOCIATED PRODUCTS AND SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, SUITABILITY FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
 
 IN NO EVENT WILL THE AA PROJECT BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT, SPECIAL OR OTHER CONSEQUENTIAL DAMAGES FOR ANY USE OF THE AA PLATFORM, OR ANY OTHER ASSOCIATED SERVICE OR WEB SITE, INCLUDING, WITHOUT LIMITATION, ANY LOST PROFITS, BUSINESS INTERRUPTION, LOSS OF FUNDS, PROGRAMS OR OTHER DATA OR OTHERWISE, EVEN IF WE ARE EXPRESSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+# The AA Platform
+
+## Overview
+
+There are three GitHub Organizations you need to be familiar with:
+
+* [Advanced Algos](https://github.com/AdvancedAlgos): Features repositories with the AA Platform code including the bits that run in the cloud (AACloudPlatform) and in the web browser, along with a few other platform-related tools and documentation.
+
+* [AAMasters](https://github.com/AAMasters): Its a showcase GitHub organization similar to the one each Dev Team needs to create for themselves. It features several examples of bots, each in their corresponding repository.
+
+* [AAArena](https://github.com/AAArena): Its another showcase GitHub organization featuring the AA Application hosting the trading bot competition you area about to enter.
+
+## Setting Up a Dev Team Organization
+
+The very first step is setting up a GitHub organization named after your own Dev Team. Make sure the name of the organization starts with “AA”, just like in the above example AAMasters. Also make sure that the phrase “Advanced Algos” is part of the organization’s description.
 
