@@ -138,7 +138,7 @@ Bot B ROI = (0.001 - 0.001) / 0.001 * 100% = 0%
 
 ### Prizes
 
-The competition awards 0.5 BTC and 500,000 ALGO (worth USD 5,000 as of this date) as prize money for the top 3 performers during each competition period, with the following caveats:
+The competition awards 0.5 BTC and up to 1,250,000 ALGO (worth USD 12,500 as of this date) as prize money for the top performers during each competition period, with the following caveats:
 
 * BTC Prizes are awarded to bots with ROI >= 10% (10% profits and higher) only.
 
@@ -148,9 +148,12 @@ The competition awards 0.5 BTC and 500,000 ALGO (worth USD 5,000 as of this date
 
 | **Position** | **BTC Prize** | **ALGO Prize** |
 |:----------|----------:|----------:|
-| 1st | 0.30 | 300,000 |
-| 2nd | 0.15 | 150,000 |
-| 3rd | 0.05 | 50,000 |
+| 1st | 0.30 | 500,000 |
+| 2nd | 0.15 | 250,000 |
+| 3rd | 0.05 | 125,000 |
+| 4th |      |  75,000 |
+| 5th |      |  50,000 |
+| 6th to 15th |      |  25,000 |
 
 > NOTE: In the [example above](#example), only Bot A would have been awarded the BTC Prize, as it is the only one with a ROI bigger than 10%.
 
