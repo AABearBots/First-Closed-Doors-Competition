@@ -1,11 +1,16 @@
 # Contents
 
-[Competition Guidelines](#Competition-Guidelines)
-[The AA Platform](#The-AA-Platform)
-[Setting up Your Development Environment](#Setting-up-Your-Development-Environment)
-[Trading Bots](#Trading-Bots)
-[Starting out Your Own Bot](#Starting-out-Your-Own-Bot)
-[Launching Your Bot](#Launching-Your-Bot)
+[Competition Guidelines](#competition-guidelines)
+
+[The AA Platform](#the-aa-platform)
+
+[Setting up Your Development Environment](#setting-up-your-development-environment)
+
+[Trading Bots](#trading-bots)
+
+[Starting out Your Own Bot](#starting-out-your-own-bot)
+
+[Launching Your Bot](#launching-your-bot)
 
 <hr>
 
