@@ -47,7 +47,11 @@ We are launching the first competition on an invite-only basis. If you haven’t
 
 Make sure you have an account with [Poloniex](https://poloniex.com/). If you don't, move swiftly and open one ASAP, as there may be a waiting period. You can attempt the verification process, however, you should be able to trade even if you don't verify your account.
 
-#### Step 2: Your Own Bots
+#### Step 2: Join Dev's WhatsApp Group
+
+Send us an email to feedback@advancedalgos.org with your name and phone number. We will add you to a closed WhatsApp Group through which we will offer support.
+
+#### Step 3: Your Own Bots
 
 The next step is creating your own GitHub Organization and your own bots. We will go through the whole process further down this document.
 
@@ -255,6 +259,7 @@ Storage Explorer will load on the following screen:
 ## Step 3: Clone the Cloud Platform
 
 Clone the [AACloudPlatform](https://github.com/AdvancedAlgos/AACloudPlatform) repository in your local machine.
+
 #### Using Git CLI
 ```
 $ git clone https://github.com/AdvancedAlgos/AACloudPlatform
@@ -419,22 +424,49 @@ $ git push -u origin master
 
 ### E: Request a Storage Account
 
-Bots store data in the cloud. For the time being, the process for opening a storage account for your bot is manual. Please send us a request including your bot's name to feedback@advancedalgos.org. When the request is processed, you will get a text file with a string similar to the following:
+Bots store data in the cloud. For the time being, the process for opening a storage account for your bot is manual. Please send us a request to open a storage account over WhatsApp; include your bot's name, please. When the request is processed, you will get the following:
+
+#### Your Bot's Connection String
 
 ```
-  "storage": {
-    "sas": "?sv=2017-07-29&ss=f&srt=sco&sp=r&se=2018-12-30T23:44:52Z&st=2018-02-25T15:44:52Z&spr=https&sig=0pzOTcaRdfYgH7C4KmA1Rbs15kyjvVC1XFCsLQYjXKU%3D",
-    "fileUri": "https://botname.file.core.windows.net"
-  }
+DefaultEndpointsProtocol=https;AccountName=aayourbot;AccountKey=o1+ImM1zafasYOgf6Npmza+oGDjf7R2dRFEfXv7zF9krgIlgXtUCrNQE+UjAq3DR9u7JdFi684Wl/DWJlLvnwyWT9Q==;EndpointSuffix=core.windows.net
 ```
 
-You will use this string in the next step...
+Create a folder named _Connection-Strings_ at the same level of the platform's repository (out of the folder AACloudPlatform). Inside it, create a subfolder named _Production_.
 
-### F: Configure Solution (Optional: VS IDE only)
+Open Notepad or any other basic text editor and create a file with the following content, making sure you place the supplied connection string in the appropriate place:
 
-Next, open the recently renamed solution in your IDE and make the following changes:
+```
+{
+"useDevelopmentStorage": false,
+"connectionString": "PLACE_YOUR_CONNECTION_STRING_HERE",
+"accountName": "",
+"accountKey": "",
+"sas": ""
+}
+```
 
-* Open _this.bot.config.json_. Let's modify the config file segment by segment:
+Save the file inside _Connection-Strings > Production_ naming it as follows:
+
+"**AA**" + **BotName** + "**.azure.storage**" + **.connstring**"
+
+e.g.: AAMariam.azure.storage.connstring
+
+#### Other Bot's Connection Strings
+
+The bot you cloned --Mariam-- uses datasets that other bots produce, thus, your bot will need connection strings for those other bots. You will get these connection strings in files that you will need to place inside _Connection-Strings > Production_ folders.
+
+#### SAS Token
+
+```
+?sv=2017-07-29&ss=f&srt=sco&sp=rl&se=2018-12-31T04:47:12Z&st=2018-03-01T20:47:12Z&spr=https&sig=VFMzqZUyr%2aTEyu53dHV60Zib0hb1PTqzcqEKAl97aLvA%3D
+```
+
+You will use the SAS token in the next step.
+
+### F: Configure Your Bot
+
+Open _this.bot.config.json_, a file within your bot's repository. Let's modify the config file segment by segment:
 
 ```
 {
@@ -522,13 +554,13 @@ You need to update that segment of the config with the following things in mind:
   ```
     "storage": {
     "sas": "?sv=2017-07-29&ss=f&srt=sco&sp=rl&se=2018-12-31T01:49:13Z&st=2018-03-01T17:49:13Z&spr=https&sig=BGdV3DlytkD6vGr%2FxfXcinqF3xSLFxfIz18lfzFzI6g%3D",
-    "fileUri": "https://aadumbo.file.core.windows.net"
+    "fileUri": "https://aayourbot.file.core.windows.net"
   }
 }
 ```
 
-   - *sas* (replace the value with the string we gave you over the email after your request)
-   - *fileUri (replace the value with the string we gave you over the email after your request)
+   - *sas* (replace the value with the SAS token we gave you in the [previous step](#sas-token)
+   - *fileUri* (replace "_yourbot_" with the actual name of your bot)
 
 Save the file when you are done.
 
@@ -536,7 +568,7 @@ Save the file when you are done.
 
 ### Configure Which Bot to Run
 
-Open _AACloudPlatform.sln_. In the Solution Explorer window, scroll down and open _platform.config.json_.
+In the AACloudPlatform folder, find and open _platform.config.json_.
 
 ```
 {
@@ -553,7 +585,7 @@ Open _AACloudPlatform.sln_. In the Solution Explorer window, scroll down and ope
 }
 ```
 
-Change the path to the proper one in you local machine. Bear in mind the path is relative to where the _AACloudPlatform.sln_ is located.
+Change the path to the proper one pointing to your bot in your local machine. Bear in mind the path is relative to where the _AACloudPlatform.sln_ is located.
 
 ### Running Mode
 
@@ -570,10 +602,6 @@ Now we need to tell the platform which process to run. Click on the AACloudPlatf
 <img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Visual-Studio-02-TB.png"/>
 
 ## Step 3: Test Run
-
-### Request Connection Strings
-
-Because Mariam --the bot you cloned-- uses datasets from other bots (Carol and Tom) you will need to send us an email to feedback@advancedalgos.org to request connection strings for those bots. You will receive an instructional email explaining how to use them.
 
 ### Execute
 
@@ -598,20 +626,21 @@ Upon execution, the platform creates a folder named _Logs_ right outside the pla
 By now you should be able to run the bot in your local environment and use typical debugging tools and procedures should anything go wrong.
 
 In case you were not able to successfully run the bot, the logs files are the first place to go.
+
 #### A quick Logs overview
 ```
 .
 ├── AACloudPlatform              
-├── Logs             # Note: same dir level as AACloudPlatform
-	└── _Your_Team_    # Directory named after your team
-	   └── Trading    # Named after process (e.g. Trading, Indicator, etc)
+├── Logs             			# Note: same dir level as AACloudPlatform
+	└── _Your_Team_ 		# Directory named after your team
+	   └── Trading 			# Named after process (e.g. Trading, Indicator, etc)
 		   └── _YourBot_ver_    # Named after your Bot
-			   └── ...logs    # See below for details			   
+			   └── ...logs 	# See below for details			   
 ```
 **Log name format:** _Date(Yr-Mo-Day-Hr-Min)--RandId--SourceFile.log_
 \* _SourceFile_ is the name of the AACloudPlatform file to check for associated error or output.
 
-**Selected Log guide:\***
+**Selected Log Guide:\***
 1.  _~.This.Bot.log:_ Errors and outputs specific to your bot in its repository. All other logs point to CloudPlatform files.
 2.  _~.Exchange Api.log:_ Output from exchange API
 3.  _~.Assistant.log:_ Trading actions between bot and exchange
@@ -634,6 +663,7 @@ Now, run the IDE. When execution halts, press F11 to step into the module _User.
 ## Step 5: Start Coding
 
 Once you have managed to run the bot successfully, you are good to go. We’ve found the following workflow is quite practical:
+
 * The main business logic/solution to edit is in  (_Your-Bot-Repo > Trading-Process > User.Bot.js_). Other types of bots (e.g. indicator or extraction) have different process folder types.
 * Your bot will not fully successfully run until there is a balance in your Poloniex account and your bot can make an actual trade. The bot status report will also not be written to your storage account until then.
 * Code directly in the bot’s solution until the code is fully implemented.
