@@ -730,7 +730,7 @@ $ cd AAPlatform
 $ git add .
 $ git commit -m 'Add MyTeam to AAPlatform'
 $ git push origin master
-# In your browser, go to https://github.com/_Your_Fork_/AAPlatform/compare. Make sure Base fork is AdvancedAlgos/AAPlatform and head fork is yours.
+# In your browser, go to https://github.com/_Your_Fork_/AAPlatform/compare. Make sure Base fork is AdvancedAlgos/AAPlatform and head fork is yours. You may have to click on 'compare across forks.'
 Click 'Create Pull Request' button.
 ```
 Once you are finished, commit the changes and submit a pull request. Someone in the AdvancedAlgos Organization will analyze your request and pull it into the main branch's code if everything looks right.
