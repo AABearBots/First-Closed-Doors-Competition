@@ -1,3 +1,7 @@
+# Introduction
+
+*Welcome to the Advanced Algos Closed-Doors First Bot Competition!* Join us for a dive into the world of crypto-currency trading to collaborate and compete with a select group in the AAArena hosted on the AA Platform. This marks the beginning of a new community for developers and traders and a chance to cultivate the ultimate open-source crypto-currency trading bot community and ecosystem.
+
 # Contents
 
 [Competition Guidelines](#competition-guidelines)
@@ -16,21 +20,21 @@
 
 # Competition Guidelines
 
-## Introduction
+## The Competition
 
-As explained in the documentation offered further down this document, the AA Platform is part of a system that dramatically simplifies the creation and operation of crypto trading bots while hosting trading bots competitions. The platform is still under development, and its use along with registration for bots competitions are free of charge for the time being, while running on alpha testing mode.
+The AA Arena is an organization built around the competition of crypto-currency bots. The foundation of the Arena is powered by the AA Platform — a system developed by Advanced Algos that dramatically simplifies the creation and operation of crypto-currency bots. The AA Arena is an example showcase to an envisioned future of many bot competitions hosted by like organizations with their own rules, criteria and prizes. Conceptually, the competitions cultivate the open-source community between developers and traders which in turn drives the advancement of bots available to all.
 
-The functionality offered at this point in time is rather basic and nowhere near complete. We are very much aware of that and accept that early trading will be rather dumb. The reason for hosting early stage competitions is to help drive alpha testing and to integrate early feedback from developers and traders. We want to make sure the platform evolves with developers' and traders' interests in mind.
+At this point, the AA platform is still in the alpha-stage of development. A large portion of functionality is still under development and the early generation of bots will be rather dumb. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
 
-In the near future, the AA Platform is set to implement a business model by which end users subscribe to bots to have bots trade on their behalf, paying subscription fees to cover the costs of running the bots in the cloud and to pay Dev Teams fees. Fees will be paid in ALGO tokens, the AA Platform’s native token.
+In the near future, the AA Platform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees cover the costs of the bot infrastructure and to pay development team fees. Fees will be paid in ALGO tokens, the AA Platform’s native token.
 
-Therefore, participating in early competitions not only offers you the chance to win competition prizes, but also makes you a member of the AA Community and sets you in the track to further monetize your efforts once the platform is launched to the general public.
+Participating in early competitions not only offers the chance to win competition prizes, but makes you a part of the AA Community and provides increased potential of monetizing your efforts when the platform is release to the general public.
 
 ## Competition Rules
 
 ### Dates
 
-The first ever competition starts on **Monday April 2nd 2018** at 00:00:00.000 GMT and ends on **Sunday April 10th** at 23:59:59.999 GMT. 
+The first ever competition starts on **Monday April 2nd 2018** at 00:00:00.000 GMT and ends on **Sunday April 10th** at 23:59:59.999 GMT.
 
 Subsequent competitions shall be announced and confirmed later on.
 
@@ -38,6 +42,7 @@ Subsequent competitions shall be announced and confirmed later on.
 
 We are launching the first competition on an invite-only basis. If you haven’t been invited and want in, send us an email to feedback@advancedalgos.org.
 
+### Requirements
 #### Step 1: Poloniex Account
 
 Make sure you have an account with [Poloniex](https://poloniex.com/). If you don't, move swiftly and open one ASAP, as there may be a waiting period. You can proceed an attempt the verification process, however, you should be able to trade even if you don't verify your account.
@@ -52,7 +57,7 @@ Next, enter your organization’s and bot’s details in the [competition config
 
 ### About Bots
 
-Each Dev Team is allowed to compete with one trading bot only. You can create as many Indicator Bots as required to implement your strategy. If you find that making calculations within your trading bot’s code instead of creating actual indicator bots is preferrable, feel free to do so.
+Each Dev Team is allowed to compete with one trading bot only. You can create as many Indicator Bots as required to implement your strategy. If you find that making calculations within your trading bot’s code instead of creating actual indicator bots is preferable, feel free to do so.
 
 **Once a bot is released in the competition it cannot be modified.**
 
@@ -62,7 +67,7 @@ Each Dev Team is allowed to compete with one trading bot only. You can create as
 
 The competition takes place in the **USDT-BTC market in Poloniex**.
 
-For the time being, the platform serves both historic and live trades data. Trades are performed at Dev Team’s accounts at the exchange, thus having an account with Poloniex is a requirement for participating. 
+For the time being, the platform serves both historic and live trades data. Trades are performed at Dev Team’s accounts at the exchange, thus having an account with Poloniex is a requirement for participating.
 
 For the time being, we will only be using Poloniex and the USDT-BTC market to do our trading. We will expand the horizon in upcoming competitions.
 
@@ -76,9 +81,9 @@ Each bot is allowed to trade up to 0.001 BTC Initial Capital (roughly equivalent
 
 #### Partial Profits Trading
 
-Bots are allowed to trade with partial profits. This is the only way in which bots can legally trade with more than the Initial Capital specified above. Thus, the limit is 0.001 BTC + Partial Profits. The platform serves available balances that your bot can check in order to make sure the limit is not exceded.
+Bots are allowed to trade with partial profits. This is the only way in which bots can legally trade with more than the Initial Capital specified above. Thus, the limit is 0.001 BTC + Partial Profits. The platform serves available balances that your bot can check in order to make sure the limit is not exceeded.
 
-**Bots attempting to trade more than the allowed limit generate an exeption that needs to be handled.** 
+> **Bots attempting to trade more than the allowed limit generate an exception that needs to be handled.**
 
 #### Fees
 
@@ -114,8 +119,8 @@ The ranking is determined by a very simple performance metric: [Return on Invest
 
 The result of the competition is determined by the position of each bot in the ranking by the end of the competition.
 
-#### Example
-
+_Example_
+```
 **Bot A ends up with 0.0015 BTC**
 
 Bot A ROI = (0.0015 - 0.001) / 0.001 * 100% = 50%
@@ -135,6 +140,7 @@ Bot B ROI = (0.001 - 0.001) / 0.001 * 100% = 0%
 | 1st | A | 50 % |
 | 2nd | C | 0 % |
 | 3rd | B | -25 % |
+```
 
 ### Prizes
 
@@ -188,6 +194,32 @@ The very first step is [setting up a GitHub organization](https://github.com/acc
 <hr>
 
 # Setting up your Development Environment
+To setup and develop your own bot, you'll need to pull in several code repositories as well as make a few directories to store configurations. This is a sample view of the final directory structure with important files/folder annotated. Instructions for creating all of this will follow and your directory and file names will differ.
+```
+.                               # Top level directory located at your choice
+├── AACloudPlatform             # Will be cloned from git repository
+│   ├── ...                     # A variety of files and folders
+│   ├── AACloudPlatform.sln     # Used only with VS IDE to launch project
+│   └── platform.config.json    # Configure your bot to test and develop in cloud
+├── API-Keys                    # Create this dir at same level as AACloudPlatform
+│   └── AABot.Poloniex.json     # Your Poloniex API Key
+├── Connection-Strings          # Create this dir at same level as AACloudPlatform
+│   └── Production              
+│       ├─ .connstring          # A variety of storage connection files
+│       └─ ...  
+├── Logs                        # AACloudPlatform will output logs here
+│            
+├── AAPlatform                  # Will be cloned from git repository
+│   └── ecosystem.json          # Adding your team and bots to the cloud
+│
+└── AAYourTeam                  # Directory named after your Dev/Bot Team
+    └── AAYourBot-TradingBot    # You custom bot repository     
+        ├─ Trading-Process      # A variety of storage connection files
+        │    └── User.Bot.js    #Customize your bot logic here
+        ├─ AA~Trading-Bot.sln   # Used only with VS IDE to launch project
+        └─ this.bot.config.json # Your bot configuration
+
+```
 
 ## Step 1: Node.js
 
@@ -228,8 +260,12 @@ Storage Explorer will load on the following screen:
 ## Step 3: Clone the Cloud Platform
 
 Clone the [AACloudPlatform](https://github.com/AdvancedAlgos/AACloudPlatform) repository in your local machine.
+#### Using Git CLI
+```
+$ git clone https://github.com/AdvancedAlgos/AACloudPlatform
+```
 
-### Using GitHub Desktop
+#### or Using GitHub Desktop
 
 If you are an advanced GitHub user you are probably using Git via the command-line. If you are not, we recommend [downloading and installing the GitHub Desktop](https://desktop.github.com/) application.
 
@@ -241,7 +277,7 @@ Go to _File > Clone Repository_
 
 <img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/GitHub-Desktop-01.png"/>
 
-Click on the URL tab and paste the repository URL in corresponding field: 
+Click on the URL tab and paste the repository URL in corresponding field:
 
 ```
 https://github.com/AdvancedAlgos/AACloudPlatform
@@ -251,7 +287,7 @@ Choose where in your local machine GitHub should copy the files.
 
 <img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/GitHub-Desktop-02.png"/>
 
-Once you clone the repository, GitHub desktop keeps track of the changes that may occur in the files in your local machine and helps synchronize the changes with the online repository via commits and pushes. 
+Once you clone the repository, GitHub desktop keeps track of the changes that may occur in the files in your local machine and helps synchronize the changes with the online repository via commits and pushes.
 
 <hr>
 
@@ -261,7 +297,7 @@ You are almost done with your set up. Let's briefely discuss Trading Bots before
 
 ## Overview
 
-At this early stage, the AA Platform along with existing trading bots templates solve several of the main issues around algorithmic trading:
+At this early stage, the AA Platform and the trading bot templates solve several of the main issues around algorithmic trading:
 
 * Infrastructure to run bots in the cloud;
 * Crucial historical and live trades and volumes data;
@@ -276,7 +312,7 @@ In its current version, the AA Platform provides an object (_platform_) containi
 
 The overall strategy when working with trading bots can be summarized in the following bullet points:
 
-* Bots are executed every one minute. 
+* Bots are executed every one minute.
 * Each time the bot runs, it first needs to understand the context of the current execution. Does it have any open positions? Have orders placed at an earlier time been filled?
 * Then the bot embarks in the calculations required by its trading strategy. At this point in time, there are very few indicators offering processed information. As a consequence, the bot needs to do all calculations internally. Almost all Technical Analysis indicators are calculated from trades and volume data. Their formulas are in the pubic domain and even code is readily available if you search around. You are free to use open source code within your bot's code.
 * Once calculations are performed, the bot decides what to do, and uses the platform to place orders on the exchange.
@@ -321,7 +357,7 @@ Create a folder named _API-Keys_ at the same level of the platform's repository 
 
 e.g.: AAMariam.Poloniex.json
 
-> NOTE: Make sure the folder and file doesn't accidentally end up in GitHub! Your API KEYs should be kept secret! 
+> NOTE: Make sure the folder and file doesn't accidentally end up in GitHub! Your API KEYs should be kept secret!
 
 <hr>
 
@@ -329,9 +365,14 @@ e.g.: AAMariam.Poloniex.json
 
 ## Step 1: Using an Existing Bot as a Starting Point
 
-### Clone and Rename Bot
+### A: Clone and Rename Bot
 
-We will use Mariam, a Trading Bot within the AAMasters organization as a starting point for creating your own bot. Clone [Mariam's repository](https://github.com/AAMasters/AAMariam-Trading-Bot) and --once in your local machine-- copy and paste the repository’s root folder, renaming it with the name of your new bot. 
+We will use Mariam, a Trading Bot within the AAMasters organization as a starting point for creating your own bot. Clone [Mariam's repository](https://github.com/AAMasters/AAMariam-Trading-Bot) and --once in your local machine-- copy and paste the repository’s root folder, renaming it with the name of your new bot.
+
+```
+$ git clone https://github.com/AAMasters/AAMariam-Trading-Bot _AAYourBotName-Trading-Bot_
+$ cd _AAYourBotName-Trading-Bot_
+```
 
 Make sure you follow the naming convention using the following string:
 
@@ -341,21 +382,46 @@ e.g.: _AAMariam-Trading-Bot_
 
 > NOTE: Make sure the bot name is unique. That is, no other bot by any other Dev Team can have the same name. You can find the current list of bots in the _[AAPlatform ecosystem.json file](https://github.com/AdvancedAlgos/AAPlatform/blob/master/ecosystem.json)_.
 
-### Rename Solution
+### B: Rename Solution (Optional: VS IDE only)
 
 Now rename the solution using the following syntax: “**AA**”+“**BotName**”+“**-TypeOfBot-**”+“**Bot**”+“**.sln**”
 
 e.g.: _AAMariam-Trading-Bot.sln_
 
-### Remove .git Folder
+```
+$ mv  AAMariam-Trading-Bot.sln _AAYourBotName-Trading-Bot.sln_
+```
+
+### C: Remove .git Folder
 
 Next, delete the hidden _.git_ folder to eliminate the relation to the original GitHub repository.
 
-### Add GitHub Repository
+```
+$ rm -rf .git
+```
+
+### D: Add GitHub Repository
 
 Now is a good time to go to GitHub and add a new local repository within your own organization. Name the repository after your bot (use the exact same name as the root folder). Make sure you include a concise description of what the bot does. Upload the files in your local repository to the GitHub repository so that GitHub takes control of the association between your local files and the ones at GitHub.
 
-### Request a Storage Account
+#### Using Git CLI:
+After creating new empty repository in Github without creating README or other files
+```
+$ git init
+# initialize local repository
+$ git add .
+# Track all local files
+$ git commit -m "Clone bot"
+# Make first commit
+$ git remote add origin _YourRemoteRepositoryURL
+# e.g. https://github.com/YourTeam/AAYourBot-Trading-Bot.git
+$ git remote -v
+# Verifies the new remote URL
+$ git push -u origin master
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+```
+
+### E: Request a Storage Account
 
 Bots store data in the cloud. For the time being, the process for opening a storage account for your bot is manual. Please send us a request including your bot's name to feedback@advancedalgos.org. When the request is processed, you will get a text file with a string similar to the following:
 
@@ -368,7 +434,7 @@ Bots store data in the cloud. For the time being, the process for opening a stor
 
 You will use this string in the next step...
 
-### Configure Solution
+### F: Configure Solution (Optional: VS IDE only)
 
 Next, open the recently renamed solution in your IDE and make the following changes:
 
@@ -420,7 +486,7 @@ You need to update that segment of the config with the following things in mind:
   ],
 ```
 
- - *devTeam* (your organization's name inlcuing the AA prefix)
+ - *devTeam* (your organization's name including the AA prefix)
  - *dataSetVersion* (different versions of bots may use different versions of datasets)
  - *description* (briefly describe your bot's strategy)
 
@@ -453,10 +519,10 @@ You need to update that segment of the config with the following things in mind:
     }
   ],
   ```
-  
+
    - *displayName* (replace "_Example_" with your bot's name)
-   
-   
+
+
   ```
     "storage": {
     "sas": "?sv=2017-07-29&ss=f&srt=sco&sp=rl&se=2018-12-31T01:49:13Z&st=2018-03-01T17:49:13Z&spr=https&sig=BGdV3DlytkD6vGr%2FxfXcinqF3xSLFxfIz18lfzFzI6g%3D",
@@ -472,7 +538,7 @@ Save the file when you are done.
 
 ## Step 2: Configure the AACloudPlatform
 
-### Configure Which Bot to Run.
+### Configure Which Bot to Run
 
 Open _AACloudPlatform.sln_. In the Solution Explorer window, scroll down and open _platform.config.json_.
 
@@ -535,10 +601,36 @@ Upon execution, the platform creates a folder named _Logs_ right outside the pla
 
 By now you should be able to run the bot in your local environment and use typical debugging tools and procedures should anything go wrong.
 
-In case you were not able to successfully run the bot, the logs files are the first place to go. If you wish to debug the platform and your bot, open the _IntervalExecutor.js_ module and place a breakpoint in the following line:
+In case you were not able to successfully run the bot, the logs files are the first place to go.
+#### A quick Logs overview
+```
+.
+├── AACloudPlatform              
+├── Logs             # Note: same dir level as AACloudPlatform
+	└── _Your_Team_    # Directory named after your team
+	   └── Trading    # Named after process (e.g. Trading, Indicator, etc)
+		   └── _YourBot_ver_    # Named after your Bot
+			   └── ...logs    # See below for details			   
+```
+**Log name format:** _Date(Yr-Mo-Day-Hr-Min)--RandId--SourceFile.log_
+\* _SourceFile_ is the name of the AACloudPlatform file to check for associated error or output.
+
+**Selected Log guide:\***
+1.  _~.This.Bot.log:_ Errors and outputs specific to your bot in its repository. All other logs point to CloudPlatform files.
+2.  _~.Exchange Api.log:_ Output from exchange API
+3.  _~.Assistant.log:_ Trading actions between bot and exchange
+4.  _~.Datasource.log:_ Data accessed from storage by your bots
+5.  _~File Storage.\_Bot\_.log:_ Data access from storage by listed bot
+6. _~.Trading Bot Main Loop.log:_ Best log to narrow down general cloud platform issues
+
+\*_By closest relationship to your bot. Read source code for more detailed comments and to view other files associated with the cloud platform_
+
+
+If you wish to debug the platform and your bot, open the _IntervalExecutor.js_ module and place a breakpoint in the following line:
 
 ```
 fileProcessingInterval.start(loopControl);
+# line 142
 ```
 
 Now, run the IDE. When execution halts, press F11 to step into the module _User.Bot.js_ that will be loaded from the configured bot process folder. Once there you can set more breakpoints or debug the module step by step.
@@ -546,7 +638,8 @@ Now, run the IDE. When execution halts, press F11 to step into the module _User.
 ## Step 5: Start Coding
 
 Once you have managed to run the bot successfully, you are good to go. We’ve found the following workflow is quite practical:
-
+* The main business logic/solution to edit is in  (_Your-Bot-Repo > Trading-Process > User.Bot.js_). Other types of bots (e.g. indicator or extraction) have different process folder types.
+* Your bot will not fully successfully run until there is a balance in your Poloniex account and your bot can make an actual trade. The bot status report will also not be written to your storage account until then.
 * Code directly in the bot’s solution until the code is fully implemented.
 * Close the bot’s module and go to the cloud platform solution to debug (as explained above). While debugging, the bot’s files will pop up in separate tabs, so that you can edit the code in the process.
 
@@ -554,11 +647,11 @@ Once you have managed to run the bot successfully, you are good to go. We’ve f
 
 # Launching Your Bot
 
-Now that your bot is ready and you are happy with its behaviour, it is time to register your Dev Team and bots in the AA Platform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
+Now that your bot is ready and you are happy with its behavior, it is time to register your Dev Team and bots in the AA Platform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
 
 ### Configure Dev Team and Bots in the Web Platform
 
-Clone the [AAPlatform](https://github.com/AdvancedAlgos/AAPlatform) repository and open _ecosystem.json_. You will need to locate the following piece of code:
+Fork and clone the [AAPlatform](https://github.com/AdvancedAlgos/AAPlatform) repository and open _ecosystem.json_. You will need to locate the following piece of code:
 
 ```
     {
@@ -574,7 +667,7 @@ Clone the [AAPlatform](https://github.com/AdvancedAlgos/AAPlatform) repository a
     }
 ```
 
-Copy the piece of code and replicate it immediately below the closing key, **adding a colon in between the two segments**:
+Copy the piece of code and replicate it immediately below the closing key, **adding a comma in between the two segments**:
 
 ```
     {
@@ -587,7 +680,7 @@ Copy the piece of code and replicate it immediately below the closing key, **add
         }
       ],
       "plotters": []
-    },
+    }, # <-- Add this comma and change your info below
     {
       "codeName": "AASpartans",
       "displayName": "AA Spartans",
@@ -629,7 +722,17 @@ Modify the pasted code to incorporate the details of your own GitHub organizatio
     }
 ```
 
+#### Git CLI commands for above:
+```
+$ git clone https://github.com/_Your_Fork_/AAPlatform
+$ cd AAPlatform
+# Make changes as explained above (e.g. vi ecosystem.json)
+$ git add .
+$ git commit -m 'Add MyTeam to AAPlatform'
+$ git push -u origin master
+# In your browser, go to https://github.com/_Your_Fork_/AAPlatform/compare. Make sure Base fork is AdvancedAlgos/AAPlatform and head fork is yours.
+Click 'Create Pull Request' button.
+```
 Once you are finished, commit the changes and submit a pull request. Someone in the AdvancedAlgos Organization will analyze your request and pull it into the main branch's code if everything looks right.
 
 Once that is done, you will be able to see your bot's activity at http://aawebplatformalpha.azurewebsites.net/
-
