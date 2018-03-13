@@ -129,7 +129,7 @@ Bot B ROI = (0.00075 - 0.001) / 0.001 * 100% = -25%
 
 Bot B ROI = (0.001 - 0.001) / 0.001 * 100% = 0%
 
-**Final Ranking**
+_Final Ranking_:
 
 | **Position** | **Bot** | **ROI** |
 |:----------|:---------:|----------:|
@@ -200,7 +200,7 @@ To setup and develop your own bot, you'll need to pull in several code repositor
 │   └── AABot.Poloniex.json     # Your Poloniex API Key
 ├── Connection-Strings          # Create this dir at same level as AACloudPlatform
 │   └── Production              
-│       ├─ .connstring          # A variety of storage connection files
+│       ├─ .connstring          # A variety of storage connection files to be supplied by Advanced Algos
 │       └─ ...  
 ├── Logs                        # AACloudPlatform will output logs here
 │            
@@ -208,9 +208,9 @@ To setup and develop your own bot, you'll need to pull in several code repositor
 │   └── ecosystem.json          # Adding your team and bots to the cloud
 │
 └── AAYourTeam                  # Directory named after your Dev/Bot Team
-    └── AAYourBot-TradingBot    # You custom bot repository     
+    └── AAYourBot-Trading-Bot   # You custom bot repository     
         ├─ Trading-Process      # A variety of storage connection files
-        │    └── User.Bot.js    #Customize your bot logic here
+        │    └── User.Bot.js    # Customize your bot logic here
         ├─ AA~Trading-Bot.sln   # Used only with VS IDE to launch project
         └─ this.bot.config.json # Your bot configuration
 
