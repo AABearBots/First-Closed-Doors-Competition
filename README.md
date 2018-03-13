@@ -729,7 +729,7 @@ $ cd AAPlatform
 # Make changes as explained above (e.g. vi ecosystem.json)
 $ git add .
 $ git commit -m 'Add MyTeam to AAPlatform'
-$ git push -u origin master
+$ git push origin master
 # In your browser, go to https://github.com/_Your_Fork_/AAPlatform/compare. Make sure Base fork is AdvancedAlgos/AAPlatform and head fork is yours.
 Click 'Create Pull Request' button.
 ```
