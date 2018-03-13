@@ -1,6 +1,6 @@
 # Introduction
 
-*Welcome to the Advanced Algos Closed-Doors First Bot Competition!* Join us for a dive into the world of crypto-currency trading to collaborate and compete with a select group in the AAArena hosted on the AA Platform. This marks the beginning of a new community for developers and traders and a chance to cultivate the ultimate open-source crypto-currency trading bot community and ecosystem.
+*Welcome to the Advanced Algos Closed-Doors First Bot Competition!* Join us for a dive into the world of crypto-currency trading to collaborate and compete with a select group in the AA Arena hosted on the AA Platform. This marks the beginning of a new community for developers and traders and a chance to cultivate the ultimate open-source crypto-currency trading bot community and ecosystem.
 
 # Contents
 
@@ -22,13 +22,13 @@
 
 ## The Competition
 
-The AA Arena is an organization built around the competition of crypto-currency bots. The foundation of the Arena is powered by the AA Platform — a system developed by Advanced Algos that dramatically simplifies the creation and operation of crypto-currency bots. The AA Arena is an example showcase to an envisioned future of many bot competitions hosted by like organizations with their own rules, criteria and prizes. Conceptually, the competitions cultivate the open-source community between developers and traders which in turn drives the advancement of bots available to all.
+The AA Arena is an organization built around the competition of crypto-currency bots. The foundation of the Arena is powered by the AA Platform — a system developed by Advanced Algos that dramatically simplifies the creation and operation of crypto-currency bots.
 
-At this point, the AA platform is still in the alpha-stage of development. A large portion of functionality is still under development and the early generation of bots will be rather dumb. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
+At this point, the AA platform is still in the alpha-stage. A large portion of functionality is still under development and the early generation of bots will be rather dumb. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
 
-In the near future, the AA Platform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees cover the costs of the bot infrastructure and to pay development team fees. Fees will be paid in ALGO tokens, the AA Platform’s native token.
+In the near future, the AA Platform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees cover the costs of the bot infrastructure and pay development team fees. Fees will be paid in ALGO tokens, the AA Platform’s native token.
 
-Participating in early competitions not only offers the chance to win competition prizes, but makes you a part of the AA Community and provides increased potential of monetizing your efforts when the platform is release to the general public.
+Participating in early competitions not only offers the chance to win competition prizes, but makes you a part of the AA Community and provides increased potential of monetizing your efforts when the platform is released to the general public.
 
 ## Competition Rules
 
@@ -45,15 +45,11 @@ We are launching the first competition on an invite-only basis. If you haven’t
 ### Requirements
 #### Step 1: Poloniex Account
 
-Make sure you have an account with [Poloniex](https://poloniex.com/). If you don't, move swiftly and open one ASAP, as there may be a waiting period. You can proceed an attempt the verification process, however, you should be able to trade even if you don't verify your account.
+Make sure you have an account with [Poloniex](https://poloniex.com/). If you don't, move swiftly and open one ASAP, as there may be a waiting period. You can attempt the verification process, however, you should be able to trade even if you don't verify your account.
 
 #### Step 2: Your Own Bots
 
 The next step is creating your own GitHub Organization and your own bots. We will go through the whole process further down this document.
-
-#### Step 3: Competition Configuration
-
-Next, enter your organization’s and bot’s details in the [competition configuration file](https://github.com/AAArena/First-Closed-Doors-Competition/blob/master/this.competition.config.json). Fork the file, enter your details and submit a pull request. Someone at our end will take care of merging your details.
 
 ### About Bots
 
@@ -83,7 +79,7 @@ Each bot is allowed to trade up to 0.001 BTC Initial Capital (roughly equivalent
 
 Bots are allowed to trade with partial profits. This is the only way in which bots can legally trade with more than the Initial Capital specified above. Thus, the limit is 0.001 BTC + Partial Profits. The platform serves available balances that your bot can check in order to make sure the limit is not exceeded.
 
-> **Bots attempting to trade more than the allowed limit generate an exception that needs to be handled.**
+> Bots attempting to trade more than the allowed limit generate an exception that needs to be handled.
 
 #### Fees
 
@@ -111,7 +107,7 @@ The ranking is determined by a very simple performance metric: [Return on Invest
 
 * **Cost of Investment** = Initial BTC Balance = 0.001 BTC. For the purpose of this competition, this is a constant, meaning that if you use less than 0.001 BTC to do your trading, we will still use 0.001 BTC as the value for this constant.
 
-> NOTE: It doesn’t matter how much BTC you actually have in the exchange. The platform keeps track of your trades and running balances during the competition.
+> NOTE: It doesn’t matter how much BTC you actually have in the exchange. The platform keeps track of your trades and available balances during the competition.
 
 * **Gain from Investment** (or Losses, expressed as negative Gains) = Final BTC Balance
 
@@ -119,17 +115,17 @@ The ranking is determined by a very simple performance metric: [Return on Invest
 
 The result of the competition is determined by the position of each bot in the ranking by the end of the competition.
 
-_Example_
-```
-**Bot A ends up with 0.0015 BTC**
+##### _Example_
+
+**Bot A** ends up with 0.0015 BTC
 
 Bot A ROI = (0.0015 - 0.001) / 0.001 * 100% = 50%
 
-**Bot B ends up with 0.0005 BTC**
+**Bot B** ends up with 0.0005 BTC
 
 Bot B ROI = (0.00075 - 0.001) / 0.001 * 100% = -25%
 
-**Bot C ends up with 0.001 BTC**
+**Bot C** ends up with 0.001 BTC
 
 Bot B ROI = (0.001 - 0.001) / 0.001 * 100% = 0%
 
@@ -140,7 +136,6 @@ Bot B ROI = (0.001 - 0.001) / 0.001 * 100% = 0%
 | 1st | A | 50 % |
 | 2nd | C | 0 % |
 | 3rd | B | -25 % |
-```
 
 ### Prizes
 
@@ -163,13 +158,13 @@ The competition awards 0.5 BTC and up to 800,000 ALGO (worth USD 8,000 as of thi
 
 ## Term of Service
 
-The information provided in this document is intended for informational purposes only and is subject to change without notice. The AA Project may make improvements and/or changes in the products, pricing and/or the programs described in this information at any time without notice.
+The information provided in this document is intended for informational purposes only and is subject to change without notice. The Advanced Algos may make improvements and/or changes in the products, pricing and/or the programs described in this information at any time without notice.
 
 ## Disclaimer
 
-THE AA PLATFORM AND ITS ASSOCIATED PRODUCTS AND SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, SUITABILITY FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+THE AA PLATFORM, THE AA ARENA COMPETITION, THE AA MASTERS BOTS AND ITS ASSOCIATED PRODUCTS AND SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, SUITABILITY FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
 
-IN NO EVENT WILL THE AA PROJECT BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT, SPECIAL OR OTHER CONSEQUENTIAL DAMAGES FOR ANY USE OF THE AA PLATFORM, OR ANY OTHER ASSOCIATED SERVICE OR WEB SITE, INCLUDING, WITHOUT LIMITATION, ANY LOST PROFITS, BUSINESS INTERRUPTION, LOSS OF FUNDS, PROGRAMS OR OTHER DATA OR OTHERWISE, EVEN IF WE ARE EXPRESSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+IN NO EVENT WILL THE ADVANCED AGOS BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT, SPECIAL OR OTHER CONSEQUENTIAL DAMAGES FOR ANY USE OF THE AA PLATFORM, THE AA ARENA COMPETITION, THE AA MASTERS BOTS, OR ANY OTHER ASSOCIATED SERVICE OR WEB SITE, INCLUDING, WITHOUT LIMITATION, ANY LOST PROFITS, BUSINESS INTERRUPTION, LOSS OF FUNDS, PROGRAMS OR OTHER DATA OR OTHERWISE, EVEN IF WE ARE EXPRESSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 <hr>
 
