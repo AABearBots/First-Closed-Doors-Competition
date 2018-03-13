@@ -295,7 +295,7 @@ You are almost done with your set up. Let's briefely discuss Trading Bots before
 At this early stage, the AA Platform and the trading bot templates solve several of the main issues around algorithmic trading:
 
 * Infrastructure to run bots in the cloud;
-* Crucial historical and live trades and volumes data;
+* Crucial historical and live trades data;
 * Connection with exchanges, placement and handling of orders.
 
 This leaves the Dev Team free to focus in the creative side of things: coming up with and implementing a trading strategy.
@@ -304,6 +304,7 @@ In its current version, the AA Platform provides an object (_platform_) containi
 
 * _datasource_: preloads ready-to-consume data comprised of candlesticks and stair patterns;
 * _assistant_: opens, closes and moves positions;
+* _getPositions_: returns an array with the positions the bot has in the order book.
 
 The overall strategy when working with trading bots can be summarized in the following bullet points:
 
@@ -324,7 +325,7 @@ Go to the tools menu and select _API KEYS_...
 
 <img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-01.png"/>
 
-If you have never used APIs before chances are they are disabled at the exchange. So before actually creating one you will need to enable them...
+If you have never used the API before, chances are it is disabled at the exchange. So before actually creating an API Key you will need to enable them...
 
 <img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-02.png"/>
 
