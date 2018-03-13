@@ -627,7 +627,7 @@ By now you should be able to run the bot in your local environment and use typic
 
 In case you were not able to successfully run the bot, the logs files are the first place to go.
 
-#### A quick Logs overview
+#### A Quick Logs Overview
 ```
 .
 ├── AACloudPlatform              
@@ -706,7 +706,7 @@ Copy the piece of code and replicate it immediately below the closing key, **add
         }
       ],
       "plotters": []
-    }, # <-- Add this comma and change your info below
+    }, # <-- ADD THIS COMMA AND CHANGE YOUR INFO BELOW
     {
       "codeName": "AASpartans",
       "displayName": "AA Spartans",
@@ -762,3 +762,34 @@ Click 'Create Pull Request' button.
 Once you are finished, commit the changes and submit a pull request. Someone in the AdvancedAlgos Organization will analyze your request and pull it into the main branch's code if everything looks right.
 
 Once that is done, you will be able to see your bot's activity at http://aawebplatformalpha.azurewebsites.net/
+
+### Competition Configuration
+
+Once your bot is finished and tested, you need to register your bot in the competition's configuration file. Fork and open [_this.competition.config.json_](https://github.com/AAArena/First-Closed-Doors-Competition/blob/master/this.competition.config.json). Locate the following segment:
+
+```
+      {
+        "devTeam": "AAMasters",
+        "bot": "AAMariam",
+        "release": "1.0.0"
+      }
+
+```
+
+Copy the piece of code and replicate it immediately below the closing key, **adding a comma in between the two segments**:
+
+
+```
+      {
+        "devTeam": "AAMasters",
+        "bot": "AAMariam",
+        "release": "1.0.0"
+      },  # <-- ADD THIS COMMA AND CHANGE YOUR INFO BELOW
+      {
+        "devTeam": "AAYourOrganization",
+        "bot": "AAYourBot",
+        "release": "1.0.0"
+      }
+```
+
+Modify the pasted code to incorporate the details of your own GitHub organization and your own bot. Create a pull request and wait for someone at our end to review it.
