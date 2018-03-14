@@ -224,7 +224,7 @@ To setup and develop your own bot, you'll need to pull in several code repositor
 
 Before we start, make sure you have Node.js installed. If you don’t, please [download and install Node.js](https://nodejs.org/en/download/).
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Node-js-01.png">
+![Node.js](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Node-js-01.png)
 
 ## Step 2: Azure Storage Explorer
 
@@ -236,7 +236,7 @@ Download and install the [Azure Storage Explorer](https://azure.microsoft.com/en
 
 The following screen should pop up when you launch Azure Storage Explorer:
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-02.png">
+![Azure Storage Explorer](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-02.png)
 
 Select _Use a connection string or a shared access signature URI_ and click **Next**.
 
@@ -246,7 +246,7 @@ Select _Use a connection string_ and paste the following connection string in th
 DefaultEndpointsProtocol=https;AccountName=aatestnet;AccountKey=rQRuD8KeD0upqcN9532zqZTknKwkYJDpGzkATGptk9lIEovkLchdOGOJVld26cUjpzTA4enxsxpCB33B0pOZRg==;EndpointSuffix=core.windows.net
 ```
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-03.png"/>
+![Azure Storage Explorer](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-03.png)
 
 Click **Next** and **Connect** in the following screen.
 
@@ -254,7 +254,7 @@ Click **Next** and **Connect** in the following screen.
 
 Storage Explorer will load on the following screen:
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-01.png"/>
+![Azure Storage Explorer](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-01.png)
 
 ## Step 3: Clone the Cloud Platform
 
@@ -275,7 +275,7 @@ Once you have launched GitHub Desktop and logged in with your GitHub credentials
 
 Go to _File > Clone Repository_
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/GitHub-Desktop-01.png"/>
+![GitHub Desktop](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/GitHub-Desktop-01.png)
 
 Click on the URL tab and paste the repository URL in corresponding field:
 
@@ -285,7 +285,7 @@ https://github.com/AdvancedAlgos/AACloudPlatform
 
 Choose where in your local machine GitHub should copy the files.
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/GitHub-Desktop-02.png"/>
+![GitHub Desktop](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/GitHub-Desktop-02.png)
 
 Once you clone the repository, GitHub desktop keeps track of the changes that may occur in the files in your local machine and helps synchronize the changes with the online repository via commits and pushes.
 
@@ -328,19 +328,19 @@ This is how you create an API Key in Poloniex:
 
 Go to the tools menu and select _API KEYS_...
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-01.png"/>
+![Poloniex](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-01.png)
 
 If you have never used the API before, chances are it is disabled at the exchange. So before actually creating an API Key you will need to enable them...
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-02.png"/>
+![Poloniex](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-02.png)
 
 You will need to follow the validation process involving checking your email and confirming your choice. Once that is taken care of, go back to the tools menu and click _API KEY_ again. You should now see a screen offering to create a new key...
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-03.png"/>
+![Poloniex](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-03.png)
 
 Once you create your key, the system will present it as follows...
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-04.png"/>
+![Poloniex](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Poloniex-API-04.png)
 
 **Make sure you DO NOT enable withdrawals nor IP access restrictions**.
 
@@ -599,7 +599,7 @@ If you ran the bot with _"stopGracefully": "false"_ and need to stop the bot, th
 
 Now we need to tell the platform which process to run. Click on the AACloudPlatform node and make sure the value for the Script arguments field is "_Trading-Process_":
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Visual-Studio-02-TB.png"/>
+![VS](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Visual-Studio-02-TB.png)
 
 ## Step 3: Test Run
 
@@ -607,7 +607,7 @@ Now we need to tell the platform which process to run. Click on the AACloudPlatf
 
 Once running, the process should call the command prompt and start showing some activity:
 
-<img src="https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Command-Prompt-01.png"/>
+![VS](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Command-Prompt-01.png)
 
 ## Step 4: What to Expect After Execution
 
