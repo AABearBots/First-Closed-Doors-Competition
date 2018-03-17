@@ -595,6 +595,14 @@ This is where the _stopGracefully_ parameter comes into play. When the value is 
 
 If you ran the bot with _"stopGracefully": "false"_ and need to stop the bot, then simply go back to the config, change the parameter to _true_, save the file and wait. Upon the next run, the bot will be stopped.
 
+In addition, the file Run.js allows you to tell the AACloud whether you wish to run againt Testnet of Production data:
+
+```
+/* The following global variable tells the system if it is running on test mode or production. */
+
+global.RUNNING_MODE = 'Testnet';  // 'Testnet', 'Mixed' or 'Production'
+```
+
 ### Configure Which Process to Run
 
 Now we need to tell the platform which process to run. Click on the AACloud node and make sure the value for the Script arguments field is "_Trading-Process_":
