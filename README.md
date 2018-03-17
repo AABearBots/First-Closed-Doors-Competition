@@ -180,7 +180,7 @@ AA Bots are open source projects in Github, programed in JavaScript. The platfor
 
 There are three GitHub Organizations you need to be familiar with:
 
-* [Advanced Algos](https://github.com/AdvancedAlgos): Features repositories with the AA Platform code including the bits that run in the cloud (AACloudPlatform) and in the web browser, along with a few other platform-related configurations and documentation.
+* [Advanced Algos](https://github.com/AdvancedAlgos): Features repositories with the AA Platform code including the bits that run in the cloud (AACloud) and in the web browser, along with a few other platform-related configurations and documentation.
 
 * [AAMasters](https://github.com/AAMasters): Its a showcase GitHub organization similar to the one each Dev Team needs to create for themselves. It features several examples of bots, each in their corresponding repository.
 
@@ -196,17 +196,17 @@ The very first step is [setting up a GitHub organization](https://github.com/acc
 To setup and develop your own bot, you'll need to pull in several code repositories as well as make a few directories to store configurations. This is a sample view of the final directory structure with important files/folder annotated. Instructions for creating all of this will follow and your directory and file names will differ.
 ```
 .                               # Top level directory located at your choice
-├── AACloudPlatform             # Will be cloned from git repository
+├── AACloud		        # Will be cloned from git repository
 │   ├── ...                     # A variety of files and folders
-│   ├── AACloudPlatform.sln     # Used only with VS IDE to launch project
+│   ├── AACloud.sln             # Used only with VS IDE to launch project
 │   └── platform.config.json    # Configure your bot to test and develop in cloud
-├── API-Keys                    # Create this dir at same level as AACloudPlatform
+├── API-Keys                    # Create this dir at same level as AACloud
 │   └── AABot.Poloniex.json     # Your Poloniex API Key
-├── Connection-Strings          # Create this dir at same level as AACloudPlatform
+├── Connection-Strings          # Create this dir at same level as AACloud
 │   └── Production              
 │       ├─ .connstring          # A variety of storage connection files to be supplied by Advanced Algos
 │       └─ ...  
-├── Logs                        # AACloudPlatform will output logs here
+├── Logs                        # AACloud will output logs here
 │            
 ├── AAPlatform                  # Will be cloned from git repository
 │   └── ecosystem.json          # Adding your team and bots to the cloud
@@ -258,11 +258,11 @@ Storage Explorer will load on the following screen:
 
 ## Step 3: Clone the Cloud Platform
 
-Clone the [AACloudPlatform](https://github.com/AdvancedAlgos/AACloudPlatform) repository in your local machine.
+Clone the [AACloud](https://github.com/AdvancedAlgos/AACloud) repository in your local machine.
 
 #### Using Git CLI
 ```
-$ git clone https://github.com/AdvancedAlgos/AACloudPlatform
+$ git clone https://github.com/AdvancedAlgos/AACloud
 ```
 
 #### or Using GitHub Desktop
@@ -280,7 +280,7 @@ Go to _File > Clone Repository_
 Click on the URL tab and paste the repository URL in corresponding field:
 
 ```
-https://github.com/AdvancedAlgos/AACloudPlatform
+https://github.com/AdvancedAlgos/AACloud
 ```
 
 Choose where in your local machine GitHub should copy the files.
@@ -352,7 +352,7 @@ Next, you will use the information in the API Key to a create a _.json_ file wit
 { "Key" : "6HS4YUEB-865UY9W4-KGHEHHJ-GH72ETG1", "Secret" : "1a3529851a05439asdasdw63426378ggd65701ac4a5d53c4859aa3511a8aa65acbd7e713bba755d0b1591ebe3a7618a71393ef4d3d11310628e1db"}
 ```
 
-Create a folder named _API-Keys_ at the same level of the platform's repository (out of the folder AACloudPlatform) and save the file using the following naming convention:
+Create a folder named _API-Keys_ at the same level of the platform's repository (out of the folder AACloud) and save the file using the following naming convention:
 
 "**AA**" + **BotName** + "**.**" + **ExchangeName** + "**.json**"
 
@@ -432,7 +432,7 @@ Bots store data in the cloud. For the time being, the process for opening a stor
 DefaultEndpointsProtocol=https;AccountName=aayourbot;AccountKey=o1+ImM1zafasYOgf6Npmza+oGDjf7R2dRFEfXv7zF9krgIlgXtUCrNQE+UjAq3DR9u7JdFi684Wl/DWJlLvnwyWT9Q==;EndpointSuffix=core.windows.net
 ```
 
-Create a folder named _Connection-Strings_ at the same level of the platform's repository (out of the folder AACloudPlatform). Inside it, create a subfolder named _Production_.
+Create a folder named _Connection-Strings_ at the same level of the platform's repository (out of the folder AACloud). Inside it, create a subfolder named _Production_.
 
 Open Notepad or any other basic text editor and create a file with the following content, making sure you place the supplied connection string in the appropriate place:
 
@@ -530,7 +530,7 @@ You need to update that segment of the config with the following things in mind:
           "codeName": "Oficial History",
           "type": "Single File",
           "validPeriods": [ "24-hs", "12-hs", "08-hs", "06-hs", "04-hs", "03-hs", "02-hs", "01-hs", "45-min", "40-min", "30-min", "20-min", "15-min", "10-min", "05-min", "04-min", "03-min", "02-min", "01-min" ],
-          "filePath": "@DevTeam/@Bot.1.0/dataSet.V1/Output/Trading-Process/AACloudPlatform.1.0",
+          "filePath": "@DevTeam/@Bot.1.0/dataSet.V1/Output/Trading-Process/AACloud.1.0",
           "fileName": "Execution.History.json"
         }
       ],
@@ -564,15 +564,15 @@ You need to update that segment of the config with the following things in mind:
 
 Save the file when you are done.
 
-## Step 2: Configure the AACloudPlatform
+## Step 2: Configure the AACloud
 
 ### Configure Which Bot to Run
 
-In the AACloudPlatform folder, find and open _platform.config.json_.
+In the AACloud folder, find and open _platform.config.json_.
 
 ```
 {
-  "codeName": "AACloudPlatform",
+  "codeName": "AACloud",
   "version": {
     "major": 1,
     "minor": 0,
@@ -585,11 +585,11 @@ In the AACloudPlatform folder, find and open _platform.config.json_.
 }
 ```
 
-Change the path to the proper one pointing to your bot in your local machine. Bear in mind the path is relative to where the _AACloudPlatform.sln_ is located.
+Change the path to the proper one pointing to your bot in your local machine. Bear in mind the path is relative to where the _AACloud.sln_ is located.
 
 ### Running Mode
 
-When you run a trading bot in your local environment you can configure the AACloudPlatform to run it either continuously or only once. This is to avoid the consequences of stopping a trading bot forcefully, which may cause the bot to loose sync with the exchange (open positions may not be taken into account in subsequent runs).
+When you run a trading bot in your local environment you can configure the AACloud to run it either continuously or only once. This is to avoid the consequences of stopping a trading bot forcefully, which may cause the bot to loose sync with the exchange (open positions may not be taken into account in subsequent runs).
 
 This is where the _stopGracefully_ parameter comes into play. When the value is _false_ the platform will run the bot continuously. When the value is _true_ the platform runs the bot once and stops it afterwards.
 
@@ -597,7 +597,7 @@ If you ran the bot with _"stopGracefully": "false"_ and need to stop the bot, th
 
 ### Configure Which Process to Run
 
-Now we need to tell the platform which process to run. Click on the AACloudPlatform node and make sure the value for the Script arguments field is "_Trading-Process_":
+Now we need to tell the platform which process to run. Click on the AACloud node and make sure the value for the Script arguments field is "_Trading-Process_":
 
 ![VS](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Visual-Studio-02-TB.png)
 
@@ -611,7 +611,7 @@ Once running, the process should call the command prompt and start showing some 
 
 ## Step 4: What to Expect After Execution
 
-Once you run the AACloudPlatform and the platform calls the bot and process you just configured, you will not “see” much more than the command prompt popping up, as described earlier. Do not expect any graphics, browser windows or candlestick charts to pop up. The visualization of bots activity over a candlestick chart happens at a different moment. We will get there later. In the meantime, what you can actually see is the dataset generated by the bot in the form of _.json_ files stored in the cloud, the logs stored locally and the orders that may have been placed in your account at the exchange.
+Once you run the AACloud and the platform calls the bot and process you just configured, you will not “see” much more than the command prompt popping up, as described earlier. Do not expect any graphics, browser windows or candlestick charts to pop up. The visualization of bots activity over a candlestick chart happens at a different moment. We will get there later. In the meantime, what you can actually see is the dataset generated by the bot in the form of _.json_ files stored in the cloud, the logs stored locally and the orders that may have been placed in your account at the exchange.
 
 ### Check Output
 
@@ -619,7 +619,7 @@ As stated above, you should be able to browse the output of the bot using the Az
 
 ### Logs
 
-Upon execution, the platform creates a folder named _Logs_ right outside the platform's repository. Thus, you will find the Logs folder in the same directory as the AACloudPlatform folder. Each bot stores logs in its own sub-folders.
+Upon execution, the platform creates a folder named _Logs_ right outside the platform's repository. Thus, you will find the Logs folder in the same directory as the AACloud folder. Each bot stores logs in its own sub-folders.
 
 ### Debugging
 
@@ -630,15 +630,15 @@ In case you were not able to successfully run the bot, the logs files are the fi
 #### A Quick Logs Overview
 ```
 .
-├── AACloudPlatform              
-├── Logs             			# Note: same dir level as AACloudPlatform
+├── AACloud              
+├── Logs             			# Note: same dir level as AACloud
 	└── _Your_Team_ 		# Directory named after your team
 	   └── Trading 			# Named after process (e.g. Trading, Indicator, etc)
 		   └── _YourBot_ver_    # Named after your Bot
 			   └── ...logs 	# See below for details			   
 ```
 **Log name format:** _Date(Yr-Mo-Day-Hr-Min)--RandId--SourceFile.log_
-\* _SourceFile_ is the name of the AACloudPlatform file to check for associated error or output.
+\* _SourceFile_ is the name of the AACloud file to check for associated error or output.
 
 **Selected Log Guide:\***
 1.  _~.This.Bot.log:_ Errors and outputs specific to your bot in its repository. All other logs point to CloudPlatform files.
