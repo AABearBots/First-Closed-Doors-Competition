@@ -566,28 +566,31 @@ Save the file when you are done.
 
 ## Step 2: Configure the AACloud
 
-### Configure Which Bot to Run
-
-In the AACloud folder, find and open _platform.config.json_.
+In the AACloud folder, open _this.config.json_, make the changes as explained below and save.
 
 ```
 {
   "codeName": "AACloud",
   "version": {
     "major": 1,
-    "minor": 0,
+    "minor": 1,
     "patch": 0
   },
   "bot": {
-    "path": "../Bots/AAMasters/AAMariam-Trading-Bot"
+    "path": "../Bots/AAMasters/AAMariam-Trading-Bot"	# Enter the path to your bot's .sln file up to the last folder only.
   },
-  "stopGracefully": "false"
+  "stopGracefully": "false",				# 'false' for continuous run, 'true' for one run only.
+  "exchangeSimulationMode": "false",			# 'false' to place real order at the exchange, 'true' to simulate orders.
+  "storageConnStringFolder": "Production",		# 'Testnet', 'Mixed' or 'Production' indicate which folders to look in for connection strings.
+  "maxLogLoops": 10					# The number of loops you wish to log.
 }
 ```
 
-Change the path to the proper one pointing to your bot in your local machine. Bear in mind the path is relative to where the _AACloud.sln_ is located.
+### Path
 
-### Running Mode
+Change the path to the proper one pointing to your bot in your local machine. Bear in mind the path is relative to where the _AACloud.sln_ is located. Do not include the actual _.sln_ file in the path; only the containing folder is expected.
+
+### Stop Gracefully
 
 When you run a trading bot in your local environment you can configure the AACloud to run it either continuously or only once. This is to avoid the consequences of stopping a trading bot forcefully, which may cause the bot to loose sync with the exchange (open positions may not be taken into account in subsequent runs).
 
@@ -595,13 +598,9 @@ This is where the _stopGracefully_ parameter comes into play. When the value is 
 
 If you ran the bot with _"stopGracefully": "false"_ and need to stop the bot, then simply go back to the config, change the parameter to _true_, save the file and wait. Upon the next run, the bot will be stopped.
 
-In addition, the file Run.js allows you to tell the AACloud whether you wish to run againt Testnet of Production data:
+### Connection String Folders
 
-```
-/* The following global variable tells the system if it is running on test mode or production. */
-
-global.RUNNING_MODE = 'Testnet';  // 'Testnet', 'Mixed' or 'Production'
-```
+In addition, the file Run.js allows you to tell the AACloud whether you wish to run your bot againt testnet or production data (or both).
 
 ### Configure Which Process to Run
 
