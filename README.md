@@ -199,7 +199,7 @@ To setup and develop your own bot, you'll need to pull in several code repositor
 ├── AACloud		        # Will be cloned from git repository
 │   ├── ...                     # A variety of files and folders
 │   ├── AACloud.sln             # Used only with VS IDE to launch project
-│   └── platform.config.json    # Configure your bot to test and develop in cloud
+│   └── this.config.json    	# Configure your bot to test and develop in cloud
 ├── API-Keys                    # Create this dir at same level as AACloud
 │   └── AABot.Poloniex.json     # Your Poloniex API Key
 ├── Connection-Strings          # Create this dir at same level as AACloud
@@ -310,6 +310,12 @@ In its current version, the AA Platform provides an object (_platform_) containi
 * _datasource_: preloads ready-to-consume data comprised of candlesticks and stair patterns;
 * _assistant_: opens, closes and moves positions;
 * _getPositions_: returns an array with the positions the bot has in the order book.
+
+There are two particular AACloud modules strictly related to trading bots that you should be aware of:
+
+* _Context_: In terms of context, trading bots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. The context is saved in files as outputs of trading bots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the assistant module.
+
+* _Assistant_: The assistant module processes information available from other modules and serves a digest version to the trading bot. It also serves the datasource with trades, candles, etc. The Assistant modelu also acts as an interface with the exchange, as it offers methods for placing, closing and moving orders.
 
 The overall strategy when working with trading bots can be summarized in the following bullet points:
 
