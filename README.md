@@ -305,12 +305,6 @@ At this early stage, the AA Platform and the trading bot templates solve several
 
 This leaves the Dev Team free to focus in the creative side of things: coming up with and implementing a trading strategy.
 
-In its current version, the AA Platform provides an object (_platform_) containing several other objects:
-
-* _datasource_: preloads ready-to-consume data comprised of candlesticks and stair patterns;
-* _assistant_: opens, closes and moves positions;
-* _getPositions_: returns an array with the positions the bot has in the order book.
-
 There are three AACloud modules particularly significant to trading bots:
 
 * _Dependencies_: Your Trading Bot's config file contains a declaration of dependencies. Dependencies exist because trading bots use other bot's datasets or actions, or require certain data to be on a certain state. The dependencies module loads declared dependencies and passes them on to the bot through the Assistant module.
@@ -318,6 +312,12 @@ There are three AACloud modules particularly significant to trading bots:
 * _Context_: In terms of context, trading bots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. Context is saved in files as outputs of trading bots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the Assistant module.
 
 * _Assistant_: The Assistant module processes information available from other modules and serves a digest version to the trading bot. It also serves the datasource with trades, candles, etc. The Assistant module also acts as an interface with the exchange, as it offers methods for placing, closing and moving orders.
+
+In its current version, AACloud provides an object (_platform_) containing several other objects:
+
+* _datasource_: preloads ready-to-consume data comprised of candlesticks and stair patterns;
+* _assistant_: opens, closes and moves positions;
+* _getPositions_: returns an array with the positions the bot has in the order book.
 
 The overall strategy when working with trading bots can be summarized in the following bullet points:
 
@@ -436,6 +436,8 @@ Bots store data in the cloud. For the time being, the process for opening a stor
 
 #### Your Bot's Connection String
 
+A text string similar to the following one:
+
 ```
 DefaultEndpointsProtocol=https;AccountName=aayourbot;AccountKey=o1+ImM1zafasYOgf6Npmza+oGDjf7R2dRFEfXv7zF9krgIlgXtUCrNQE+UjAq3DR9u7JdFi684Wl/DWJlLvnwyWT9Q==;EndpointSuffix=core.windows.net
 ```
@@ -501,6 +503,13 @@ You need to update that segment of the config with the following things in mind:
     {
       "name": "Trading-Process",
       "description": "Simple trading strategy to be used as a template.",
+```
+
+ - *devTeam* (your organization's name including the AA prefix)
+ - *dataSetVersion* (different versions of bots may use different versions of datasets)
+ - *description* (briefly describe your bot's strategy)
+ 
+```
       "startMode": {
         "allMonths": {
           "run": "false",
@@ -516,15 +525,27 @@ You need to update that segment of the config with the following things in mind:
           "run": "true"
         }
       },
-      "executionWaitTime": 60000,
-      "retryWaitTime": 10000
+      "normalWaitTime": 60000,
+      "retryWaitTime": 10000,
+      "sleepWaitTime": 3600000,
+      "comaWaitTime": 86400000,
+      "dependencies": [
+        {
+          "devTeam": "AAMasters",
+          "bot": "AAMariam",
+          "botVersion": {
+            "major": 1,
+            "minor": 0
+          },
+          "process": "Trading-Process",
+          "dataSetVersion": "dataSet.V1"
+        }
+      ]
     }
   ],
 ```
 
- - *devTeam* (your organization's name including the AA prefix)
- - *dataSetVersion* (different versions of bots may use different versions of datasets)
- - *description* (briefly describe your bot's strategy)
+No need to touch the previous segment.
 
 ```
   "products": [
@@ -584,13 +605,32 @@ In the AACloud folder, open _this.config.json_, make the changes as explained be
     "minor": 1,
     "patch": 0
   },
-  "bot": {
-    "path": "../Bots/AAMasters/AAMariam-Trading-Bot"	# Enter the path to your bot's .sln file up to the last folder only.
-  },
-  "stopGracefully": "false",				# 'false' for continuous run, 'true' for one run only.
-  "exchangeSimulationMode": "false",			# 'false' to place real order at the exchange, 'true' to simulate orders.
-  "storageConnStringFolder": "Production",		# 'Testnet', 'Mixed' or 'Production' indicate which folders to look in for connection strings.
-  "maxLogLoops": 10					# The number of loops you wish to log.
+  "executionList": [
+    {
+      "enabled": "false",
+      "botPath": "../Bots/AAMasters/AAMariam-Trading-Bot",	# Enter the path to your bot's .sln file up to the last folder only.
+      "process": "Trading-Process"
+    },								# AACloud is prepared to run multiple bots
+    {								# each with it's own processes.
+      "enabled": "false",					#
+      "botPath": "../Bots/AAMasters/AAOlivia-Indicator-Bot",	# When you clone AACloud you may find different bots
+      "process": "Multi-Period-Market"				# showing up in the configuration file, just like the ones here.
+    },								# 
+    {								# You can choose to set "enabled" to "false"
+      "enabled": "false",					# or simply delete the entries you are not using,
+      "botPath": "../Bots/AAMasters/AACharly-Extraction-Bot",	# in which case you will need to delete the comma
+      "process": "Poloniex-Hole-Fixing"				# after teh first bot.
+    },								#
+    {								#
+      "enabled": "true",					#
+      "botPath": "../Bots/AAMasters/AABruce-Indicator-Bot",	#
+      "process": "One-Min-Daily-Candles-Volumes"		#
+    }								#
+  ],
+  "stopGracefully": "true",					# 'false' for continuous run, 'true' for one run only.
+  "exchangeSimulationMode": "false",				# 'false' to place real order at the exchange, 'true' to simulate orders.
+  "storageConnStringFolder": "Mixed",				# 'Testnet', 'Mixed' or 'Production' indicate which folders to look in for connection strings.
+  "maxLogLoops": 10						# The number of loops you wish to log.
 }
 ```
 
