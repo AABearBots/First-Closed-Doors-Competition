@@ -311,11 +311,13 @@ In its current version, the AA Platform provides an object (_platform_) containi
 * _assistant_: opens, closes and moves positions;
 * _getPositions_: returns an array with the positions the bot has in the order book.
 
-There are two particular AACloud modules strictly related to trading bots that you should be aware of:
+There are three AACloud modules particularly significant to trading bots:
 
-* _Context_: In terms of context, trading bots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. The context is saved in files as outputs of trading bots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the assistant module.
+* _Dependencies_: Your Trading Bot's config file contains a declaration of dependencies. Dependencies exist because trading bots use other bot's datasets or actions, or require certain data to be on a certain state. The dependencies module loads declared dependencies and passes them on to the bot through the Assistant module.
 
-* _Assistant_: The assistant module processes information available from other modules and serves a digest version to the trading bot. It also serves the datasource with trades, candles, etc. The Assistant modelu also acts as an interface with the exchange, as it offers methods for placing, closing and moving orders.
+* _Context_: In terms of context, trading bots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. Context is saved in files as outputs of trading bots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the Assistant module.
+
+* _Assistant_: The Assistant module processes information available from other modules and serves a digest version to the trading bot. It also serves the datasource with trades, candles, etc. The Assistant module also acts as an interface with the exchange, as it offers methods for placing, closing and moving orders.
 
 The overall strategy when working with trading bots can be summarized in the following bullet points:
 
