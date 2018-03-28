@@ -627,10 +627,10 @@ In the AACloud folder, open _this.config.json_, make the changes as explained be
       "process": "One-Min-Daily-Candles-Volumes"		# after the first bot.
     }								#
   ],
-  "stopGracefully": "true",					# 'false' for continuous run, 'true' for one run only.
-  "exchangeSimulationMode": "false",				# 'false' to place real order at the exchange, 'true' to simulate orders.
-  "storageConnStringFolder": "Mixed",				# 'Testnet', 'Mixed' or 'Production' indicate which folders to look in for connection strings.
-  "maxLogLoops": 10						# The number of loops you wish to log.
+  "stopGracefully": "true",		# 'false' for continuous run, 'true' for one run only.
+  "exchangeSimulationMode": "false",	# 'false' to place real order at the exchange, 'true' to simulate orders.
+  "storageConnStringFolder": "Mixed",	# 'Testnet', 'Mixed' or 'Production' indicate which folders to look in for connection strings.
+  "maxLogLoops": 10			# The number of loops you wish to log.
 }
 ```
 
