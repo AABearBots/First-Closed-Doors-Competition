@@ -608,23 +608,23 @@ In the AACloud folder, open _this.config.json_, make the changes as explained be
   "executionList": [
     {
       "enabled": "false",
-      "botPath": "../Bots/AAMasters/AAMariam-Trading-Bot",	# Enter the path to your bot's .sln file up to the last folder only.
-      "process": "Trading-Process"
-    },								# AACloud is prepared to run multiple bots
-    {								# each with it's own processes.
-      "enabled": "false",					#
-      "botPath": "../Bots/AAMasters/AAOlivia-Indicator-Bot",	# When you clone AACloud you may find different bots
-      "process": "Multi-Period-Market"				# showing up in the configuration file, just like the ones here.
-    },								# 
-    {								# You can choose to set "enabled" to "false"
-      "enabled": "false",					# or simply delete the entries you are not using,
-      "botPath": "../Bots/AAMasters/AACharly-Extraction-Bot",	# in which case you will need to delete the comma
-      "process": "Poloniex-Hole-Fixing"				# after teh first bot.
-    },								#
-    {								#
-      "enabled": "true",					#
-      "botPath": "../Bots/AAMasters/AABruce-Indicator-Bot",	#
-      "process": "One-Min-Daily-Candles-Volumes"		#
+      "botPath": "../Bots/AAMasters/AAMariam-Trading-Bot",	# Enter the path to your bot's .sln file
+      "process": "Trading-Process"				# up to the last folder only.
+    },
+    {								# AACloud is prepared to run multiple bots
+      "enabled": "false",					# each with it's own processes.
+      "botPath": "../Bots/AAMasters/AAOlivia-Indicator-Bot",	# 
+      "process": "Multi-Period-Market"				# When you clone AACloud
+    },								# you may find different bots
+    {								# showing up in the configuration file, 
+      "enabled": "false",					# just like the ones here.
+      "botPath": "../Bots/AAMasters/AACharly-Extraction-Bot",	#
+      "process": "Poloniex-Hole-Fixing"				# You can choose to set "enabled"
+    },								# to "false" or simply delete
+    {								# the entries you are not using,
+      "enabled": "true",					# in which case you will need to 
+      "botPath": "../Bots/AAMasters/AABruce-Indicator-Bot",	# delete the comma
+      "process": "One-Min-Daily-Candles-Volumes"		# after the first bot.
     }								#
   ],
   "stopGracefully": "true",					# 'false' for continuous run, 'true' for one run only.
