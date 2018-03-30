@@ -34,7 +34,7 @@ Participating in early competitions not only offers the chance to win competitio
 
 ### Dates
 
-The first ever competition starts on **Monday April 2nd 2018** at 00:00:00.000 GMT and ends on **Sunday April 10th** at 23:59:59.999 GMT.
+The first ever competition starts on **Monday April 30th 2018** at 00:00:00.000 GMT and ends on **Sunday May 6th** at 23:59:59.999 GMT.
 
 Subsequent competitions shall be announced and confirmed later on.
 
@@ -61,7 +61,7 @@ Each Dev Team is allowed to compete with one trading bot only. You can create as
 
 **Once a bot is released in the competition it cannot be modified.**
 
-> NOTE: The AA Platform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur --either at the bot or platform level-- resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha testing applications.
+> NOTE: The AA Platform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur --either at the bot or platform level-- resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha testing applications. Execution Logs will be provided for post-mortem analisys.
 
 ### Markets
 
@@ -176,7 +176,7 @@ IN NO EVENT WILL THE ADVANCED AGOS BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRE
 
 ## Overview
 
-AA Bots are open source projects in Github, programed in JavaScript. The platform calls bots and puts them to run in specific time intervals. Bots consume services from the platform and from other bots, and at the same time, produce an output that is stored in the cloud (to be consumed by other bots).
+AA Bots are open source projects in Github, programed in JavaScript. The platform calls bots and puts them to run in specific time intervals. Bots consume services from the platform and data from other bots, specially from indicator bots, and at the same time, produce an output that is stored in the cloud (to be consumed by other bots).
 
 There are three GitHub Organizations you need to be familiar with:
 
@@ -213,7 +213,7 @@ To setup and develop your own bot, you'll need to pull in several code repositor
 │
 └── AAYourTeam                  # Directory named after your Dev/Bot Team
     └── AAYourBot-Trading-Bot   # You custom bot repository     
-        ├─ Trading-Process      # A variety of storage connection files
+        ├─ Trading-Process
         │    └── User.Bot.js    # Customize your bot logic here
         ├─ AA~Trading-Bot.sln   # Used only with VS IDE to launch project
         └─ this.bot.config.json # Your bot configuration
@@ -307,7 +307,7 @@ This leaves the Dev Team free to focus in the creative side of things: coming up
 
 There are three AACloud modules particularly significant to trading bots:
 
-* _Dependencies_: Your Trading Bot's config file contains a declaration of dependencies. Dependencies exist because trading bots use other bot's datasets or actions, or require certain data to be on a certain state. The dependencies module loads declared dependencies and passes them on to the bot through the Assistant module.
+* _Dependencies_: Your Trading Bot's config file contains a declaration of dependencies. Dependencies exist because trading bots use other bot's datasets, or require certain data to be on a certain state. The dependencies module loads declared dependencies and passes them on to the bot through the Assistant module.
 
 * _Context_: In terms of context, trading bots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. Context is saved in files as outputs of trading bots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the Assistant module.
 
@@ -316,19 +316,20 @@ There are three AACloud modules particularly significant to trading bots:
 In its current version, AACloud provides an object (_platform_) containing several other objects:
 
 * _datasource_: preloads ready-to-consume data comprised of candlesticks and stair patterns;
-* _assistant_: opens, closes and moves positions;
-* _getPositions_: returns an array with the positions the bot has in the order book.
+* _assistant_: opens, closes and moves positions
 
 The overall strategy when working with trading bots can be summarized in the following bullet points:
 
 * Bots are executed every one minute.
-* Each time the bot runs, it first needs to understand the context of the current execution. Does it have any open positions? Have orders placed at an earlier time been filled?
+
+* Each time the bot runs, it first needs to understand the context of the current execution. Bots get the context info from the Assitant module.
+
 * Then the bot embarks in the calculations required by its trading strategy. At this point in time, there are very few indicators offering processed information. As a consequence, the bot needs to do all calculations internally. Almost all Technical Analysis indicators are calculated from trades and volume data. Their formulas are in the pubic domain and even code is readily available if you search around. You are free to use open source code within your bot's code.
 * Once calculations are performed, the bot decides what to do, and uses the platform to place orders on the exchange.
 
 ## Exchanges API
 
-The AA Platform places orders on exchanges through the use of APIs. You will need to create an API Key and configure your bot to use it.
+The AA Platform places orders on exchanges through the use of the exchanges' APIs. You will need to create an API Key and configure your bot to use it.
 
 ### Creating the API Key
 
@@ -390,6 +391,8 @@ Make sure you follow the naming convention using the following string:
 e.g.: _AAMariam-Trading-Bot_
 
 > NOTE: Make sure the bot name is unique. That is, no other bot by any other Dev Team can have the same name. You can find the current list of bots in the _[AAPlatform ecosystem.json file](https://github.com/AdvancedAlgos/AAPlatform/blob/master/ecosystem.json)_.
+
+> NOTE: Having fun is essential; naming your bot offers a good chance to do just that. Feel free to name your bot after a good friend or go crazy with whatever character makes you laugh.
 
 ### B: Rename Solution (Optional: VS IDE only)
 
@@ -608,7 +611,7 @@ In the AACloud folder, open _this.config.json_, make the changes as explained be
   "executionList": [
     {
       "enabled": "false",
-      "botPath": "../Bots/AAMasters/AAMariam-Trading-Bot",	# Enter the path to your bot's .sln file
+      "botPath": "../Bots/AAMasters/AAMariam-Trading-Bot",	# Enter the path to your bot's project folder
       "process": "Trading-Process"				# up to the last folder only.
     },
     {								# AACloud is prepared to run multiple bots
@@ -720,7 +723,7 @@ Now, run the IDE. When execution halts, press F11 to step into the module _User.
 Once you have managed to run the bot successfully, you are good to go. We’ve found the following workflow is quite practical:
 
 * The main business logic/solution to edit is in  (_Your-Bot-Repo > Trading-Process > User.Bot.js_). Other types of bots (e.g. indicator or extraction) have different process folder types.
-* Your bot will not fully successfully run until there is a balance in your Poloniex account and your bot can make an actual trade. The bot status report will also not be written to your storage account until then.
+* Your bot will not fully successfully run until there is a balance in your Poloniex account and your bot can make an actual trade. The bot status report will also not be written to your storage account until then. You can use the simulation mode described above (_exchangeSimulationMode_ in the AACloud config) for a temporary workaround until you fund your account.
 * Code directly in the bot’s solution until the code is fully implemented.
 * Close the bot’s module and go to the cloud platform solution to debug (as explained above). While debugging, the bot’s files will pop up in separate tabs, so that you can edit the code in the process.
 
