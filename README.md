@@ -63,6 +63,20 @@ Each Dev Team is allowed to compete with one trading bot only. You can create as
 
 > NOTE: The AA Platform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur --either at the bot or platform level-- resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha testing applications. Execution Logs will be provided for post-mortem analisys.
 
+#### Bots License
+
+The AAMaster bots offered as templates are released under the GNU Affero General Public License (AGPL) to guarantee:
+
+> * the freedom to use the software for any purpose,
+> * the freedom to change the software to suit your needs,
+> * the freedom to share the software with your friends and neighbors, and
+> * the freedom to share the changes you make.
+>
+> _(Extract from [The Foundations of the GPL](https://www.gnu.org/licenses/quick-guide-gplv3.html))_
+
+It is a policy of Advanced Algos to require all bots running on the AAPlatform to be released under the same license. In order to do that. We will guide you through the process to do just that further down this document.
+
+
 ### Markets
 
 The competition takes place in the **USDT-BTC market in Poloniex**.
@@ -731,7 +745,43 @@ Once you have managed to run the bot successfully, you are good to go. We’ve f
 
 # Launching Your Bot
 
-Now that your bot is ready and you are happy with its behavior, it is time to register your Dev Team and bots in the AA Platform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
+Now that your bot is ready and you are happy with its behavior, it is time to release it under the AGPL license, register your Dev Team and bots in the AA Platform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
+
+### Release Under AGPL License
+
+In order to release your bot to the pubic, you need to go to follow this quick process:
+
+#### Step 1
+
+Go the bot's repository in GitHub and click the _Create new file_ button:
+
+![AGPL License](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Bot-License-01.png)
+
+#### Step 2
+
+Enter the word _LICENSE_ in the text field and click the button _Choose a license template_:
+
+![AGPL License](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Bot-License-02.png)
+
+#### Step 3
+
+Scroll the page and cick the _GNU Affero General Public License v3.0_ link:
+
+![AGPL License](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Bot-License-03.png)
+
+#### Step 4
+
+Click the _Review and submit_ button and follow the rest of the usual steps to commit the changes:
+
+![AGPL License](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Bot-License-04.png)
+
+> NOTE: Make sure you don't modify the license text in any way.
+
+#### Step 5
+
+Go back to your repository root and make sure the AGPL icon has been added to the top right corner of the page, next to the _contributors_ counter:
+
+![AGPL License](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Bot-License-05.png)
 
 ### Configure Dev Team and Bots in the Web Platform
 
