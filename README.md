@@ -749,7 +749,7 @@ Now that your bot is ready and you are happy with its behavior, it is time to re
 
 ### Release Under AGPL License
 
-In order to release your bot to the pubic, you need to go to follow this quick process:
+In order to release your bot to the pubic, you need to follow this quick process:
 
 #### Step 1
 
@@ -759,7 +759,7 @@ Go the bot's repository in GitHub and click the _Create new file_ button:
 
 #### Step 2
 
-Enter the word _LICENSE_ in the text field and click the button _Choose a license template_:
+Enter the word _LICENSE_ (in all CAPS!) in the text field and click the button _Choose a license template_:
 
 ![AGPL License](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Bot-License-02.png)
 
