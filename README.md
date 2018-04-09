@@ -40,7 +40,7 @@ Subsequent competitions shall be announced and confirmed later on.
 
 ### Dev Team Registration
 
-We are launching the first competition on an invite-only basis. If you haven’t been invited and want in, send us an email to feedback@advancedalgos.org.
+We are launching the first competition on an invite-only basis. If you haven’t been invited and want in, send us an email to feedback at advancedalgos dot org.
 
 ### Requirements
 #### Step 1: Poloniex Account
@@ -49,7 +49,7 @@ Make sure you have an account with [Poloniex](https://poloniex.com/). If you don
 
 #### Step 2: Join Dev's WhatsApp Group
 
-Send us an email to feedback@advancedalgos.org with your name and phone number. We will add you to a closed WhatsApp Group through which we will offer support.
+Send us an email to feedback at advancedalgos dot org with your name and phone number. We will add you to a closed WhatsApp Group through which we will offer support.
 
 #### Step 3: Your Own Bots
 
