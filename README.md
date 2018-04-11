@@ -32,7 +32,7 @@ Participating in early competitions not only offers the chance to win competitio
 
 ## Competition Rules
 
-### Dates
+### Preliminary Dates (to be confirmed soon)
 
 The first ever competition starts on **Monday April 30th 2018** at 00:00:00.000 GMT and ends on **Sunday May 6th** at 23:59:59.999 GMT.
 
