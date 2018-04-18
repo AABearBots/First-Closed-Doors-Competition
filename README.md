@@ -319,9 +319,9 @@ At this early stage, the AA Platform and the trading bot templates solve several
 
 This leaves the Dev Team free to focus in the creative side of things: coming up with and implementing a trading strategy.
 
-There are three AACloud modules particularly significant to trading bots:
+There are four AACloud modules particularly significant to trading bots:
 
-* _Dependencies_: Your Trading Bot's config file contains a declaration of dependencies. Dependencies exist because trading bots use other bot's datasets, or require certain data to be on a certain state. The dependencies module loads declared dependencies and passes them on to the bot through the Assistant module.
+* _Data Dependencies_ and _Status Dependencies_: Your Trading Bot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because trading bots use other bot's datasets, or require certain data to be on a certain state. The dependencies modules loads declared dependencies and passes them on to the bot through the Assistant module.
 
 * _Context_: In terms of context, trading bots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. Context is saved in files as outputs of trading bots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the Assistant module.
 
