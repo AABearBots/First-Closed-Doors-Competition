@@ -2,11 +2,12 @@
   "codeName": "First-Closed-Door",
   "description": "First AA Competition ever. Bots will be trading during 5 days at the USDT/BTC market of Poloniex to see who can make the gratest return over investment (ROI).",
   "displayName": "First Closed Door Competition",
-  "startDatetime": "2018-03-26Z00:00:00.000 GMT+00:00",
-  "finishDatetime": "2018-03-30Z23:59:59.999 GMT+00:00",
+  "startDatetime": "2018-03-26T00:00:00.000Z",
+  "finishDatetime": "2018-03-30T23:59:59.999Z",
   "formula": "ROI",
   "plotter": 
     {
+      "codeName": "PlottersROI",
       "host": "AAArena",
       "repo": "Plotters-ROI",
       "moduleName": "CombinedProfits"
