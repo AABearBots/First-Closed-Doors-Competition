@@ -26,15 +26,19 @@ Join us for a dive into the world of cryptocurrency trading to collaborate and c
 
 * **Advanced Algos Ltd.**: The start up behind the creation of the AAPlatform and the people running this show until the Algobots Community takes over.
 
-*  **AAPlatform**: The IT system on top of which everything runs.
+* **Algobots**: Open-source algorithms destined to become autonomous agents with an autonomous financial life once the AAPlatform along with the Algobots Ecosystem are launched.
 
-*  **AACloud**: The part of the system that runs algobots in the cloud.
+* **AAPlatform**: The IT system on top of which everything runs.
 
-*  **AAWeb**: The part of the system that shows algobots’ activities in a visual environment.
+* **AACloud**: The part of the system that runs algobots in the cloud.
 
-*  **Algobots Community**: The emerging community of developers and traders that share our vision and help pushing it forwards by creating algobots.
+* **AAWeb**: The part of the system that shows algobots’ activities in a visual environment.
 
-* **Dev Team**: That would be you, along with anyone else that wishes to help you out in this quest.
+* **Algobots Community**: The emerging community of developers and traders that share our vision and help pushing it forwards by creating algobots.
+
+* **Algobots Ecosystem**: A business and economic ecosystem in which all parties described herein will participate once the AAPlatform is released.
+
+* **Algobot Team**: That would be you, along with anyone else that wishes to help you out in this quest.
 
 <hr>
 
@@ -42,11 +46,11 @@ Join us for a dive into the world of cryptocurrency trading to collaborate and c
 
 ## The Competition
 
-The AA Arena is an organization built around the competition of cryptocurrency trading bots, or what we call _algobots_. The foundation of the Arena is powered by the AAPlatform — a system developed by Advanced Algos Ltd. that dramatically simplifies the creation and operation of algobots.
+The Algobots Arena is an organization built around the competition of cryptocurrency trading bots, or what we call _algobots_. The foundation of the Arena is powered by the AAPlatform — a system developed by Advanced Algos Ltd. that dramatically simplifies the creation and operation of algobots.
 
 At this point, the AAPlatform is still in the alpha-stage. A large portion of functionality is under development. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
 
-In the near future, the AAPlatform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees will cover the costs of the bot infrastructure and pay Dev Teams fees. Fees will be paid in ALGO tokens, the AAPlatform’s native token.
+In the near future, the AAPlatform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees will cover the costs of the bot infrastructure and pay Algobot Teams fees. Fees will be paid in ALGO tokens, the AAPlatform’s native token.
 
 Participating in early competitions not only offers the chance to win competition prizes, but makes you a part of the Algobots Community and provides increased potential of monetizing your efforts when the platform is released to the general public.
 
@@ -58,9 +62,9 @@ The first ever competition starts on **Monday May 28th 2018** at 00:00:00.000 GM
 
 Subsequent competitions shall be announced and confirmed later on.
 
-### Dev Team Registration
+### Algobot Team Registration
 
-The Dev Team is you, along with anyone else that may want to help you out in this quest.
+The Algobot Team is you, along with anyone else that may want to help you out in this quest.
 
 We are launching the first competition on an invite-only basis. If you haven’t been invited and want in, send us an email to feedback at advancedalgos dot org.
 
@@ -105,13 +109,13 @@ It is a policy of Advanced Algos Ltd. to require all bots running on the AAPlatf
 
 The competition takes place in the **USDT-BTC market in Poloniex**.
 
-For the time being, the platform serves both historic and live trades data. Trades are performed at Dev Team’s accounts at the exchange, thus having an account with Poloniex is a requirement for participating.
+For the time being, the platform serves both historic and live trades data. Trades are performed at Algobot Team’s accounts at the exchange, thus having an account with Poloniex is a requirement for participating.
 
 For the time being, we will only be using Poloniex and the USDT-BTC market to do our trading. We will expand the horizon in upcoming competitions.
 
 ### Capital
 
-Each Dev Team trades with their own funds within their own accounts at the exchange. Dev Teams are fully responsible for the trading they do.
+Each Algobot Team trades with their own funds within their own accounts at the exchange. Algobot Teams are fully responsible for the trading they do.
 
 Each bot is allowed to trade up to 0.001 BTC Initial Capital (roughly equivalent to USD 10). This is in order to minimize risk at this first ever alpha stage competition.
 
@@ -220,7 +224,7 @@ There are three GitHub Organizations you need to be familiar with:
 
 * [Advanced Algos](https://github.com/AdvancedAlgos): Features repositories with the AAPlatform code including the bits that run in the cloud (AACloud) and in the web browser, along with a few other platform-related configurations and documentation.
 
-* [AAMasters](https://github.com/AAMasters): Its a showcase GitHub organization similar to the one each Dev Team needs to create for themselves. It features several examples of bots, each in their corresponding repository.
+* [AAMasters](https://github.com/AAMasters): Its a showcase GitHub organization similar to the one each Algobot Team needs to create for themselves. It features several examples of bots, each in their corresponding repository.
 
 * [AAArena](https://github.com/AAArena): Its another showcase GitHub organization featuring the AA Application hosting the trading bot competition you are about to enter.
 
@@ -250,9 +254,9 @@ You will most likely need to program indicator bots in order to perform Technica
 
 They automate trading strategies and place orders through the platform, which connects to exchanges via APIs to trade cryptocurrency.
 
-## Setting Up a Dev Team Organization
+## Setting Up a Algobot Team Organization
 
-The very first step is [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Dev Team. Make sure the name of the organization starts with “AA”, just like in the above example _AAMasters_. Also make sure that the phrase “_Advanced Algos_” is part of the organization’s description.
+The very first step is [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with “AA”, just like in the above example _AAMasters_. Also make sure that the phrase “_Advanced Algos_” is part of the organization’s description.
 
 <hr>
 
@@ -367,7 +371,7 @@ At this early stage, the AAPlatform and the trading bot templates solve several 
 * Crucial historical and live trades data;
 * Connection with exchanges, placement and handling of orders.
 
-This leaves the Dev Team free to focus in the creative side of things: coming up with and implementing a trading strategy.
+This leaves the Algobot Team free to focus in the creative side of things: coming up with and implementing a trading strategy.
 
 There are four AACloud modules particularly significant to trading bots:
 
@@ -465,7 +469,7 @@ Make sure you follow the naming convention using the following string:
 
 e.g.: _AAMariam-Trading-Bot_
 
-> NOTE: Make sure the bot name is unique. That is, no other bot by any other Dev Team can have the same name. You can find the current list of bots in the _[AAPlatform ecosystem.json file](https://github.com/AdvancedAlgos/AAPlatform/blob/master/ecosystem.json)_.
+> NOTE: Make sure the bot name is unique. That is, no other bot by any other Algobot Team can have the same name. You can find the current list of bots in the _[AAPlatform ecosystem.json file](https://github.com/AdvancedAlgos/AAPlatform/blob/master/ecosystem.json)_.
 
 > NOTE: Having fun is essential; naming your bot offers a good chance to do just that. Feel free to name your bot after a good friend or go crazy with whatever character makes you laugh.
 
@@ -943,7 +947,7 @@ Once you have managed to run the bot successfully, you are good to go. We’ve f
 
 # Launching Your Bot
 
-Now that your bot is ready and you are happy with its behavior, it is time to release it under the AGPL license, register your Dev Team and bots in the AAPlatform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
+Now that your bot is ready and you are happy with its behavior, it is time to release it under the AGPL license, register your Algobot Team and bots in the AAPlatform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
 
 ### Release Under AGPL License
 
@@ -981,7 +985,7 @@ Go back to your repository root and make sure the AGPL icon has been added to th
 
 ![AGPL License](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Bot-License-05.png)
 
-### Configure Dev Team and Bots in the Web Platform
+### Configure Algobot Team and Bots in the Web Platform
 
 Fork and clone the [AAPlatform](https://github.com/AdvancedAlgos/AAPlatform) repository and open _ecosystem.json_. You will need to locate the following piece of code:
 
