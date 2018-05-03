@@ -10,7 +10,7 @@
 
 [Setting up Your Development Environment](#setting-up-your-development-environment)
 
-[Trading Bots](#trading-bots)
+[Trading Bots](#trading-bots-1)
 
 [Starting out Your Own Bot](#starting-out-your-own-bot)
 
