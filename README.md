@@ -1,6 +1,8 @@
 # Introduction
 
-*Welcome to the Advanced Algos Closed-Doors First Bot Competition!* Join us for a dive into the world of cryptocurrency trading to collaborate and compete with a select group in the AA Arena hosted on the AA Platform. This marks the beginning of a new community for developers and traders and a chance to cultivate the ultimate open-source crypto-currency trading bot community and ecosystem.
+*Welcome to the Advanced Algos Closed-Doors First Bot Competition!* 
+
+Join us for a dive into the world of cryptocurrency trading to collaborate and compete with a select group in the AA Arena, hosted on the AA Platform. This marks the beginning of a new community for developers and traders and a chance to cultivate the ultimate open-source cryptocurrency trading bot community and ecosystem.
 
 # Contents
 
@@ -24,9 +26,9 @@
 
 The AA Arena is an organization built around the competition of cryptocurrency trading bots, or what we call _algobots_. The foundation of the Arena is powered by the AA Platform — a system developed by Advanced Algos Ltd. that dramatically simplifies the creation and operation of algobots.
 
-At this point, the AA platform is still in the alpha-stage. A large portion of functionality is still under development. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
+At this point, the AA platform is still in the alpha-stage. A large portion of functionality is under development. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
 
-In the near future, the AA Platform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees cover the costs of the bot infrastructure and pay development team fees. Fees will be paid in ALGO tokens, the AA Platform’s native token.
+In the near future, the AA Platform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees will cover the costs of the bot infrastructure and pay Dev Teams fees. Fees will be paid in ALGO tokens, the AA Platform’s native token.
 
 Participating in early competitions not only offers the chance to win competition prizes, but makes you a part of the AA Community and provides increased potential of monetizing your efforts when the platform is released to the general public.
 
@@ -43,53 +45,32 @@ Subsequent competitions shall be announced and confirmed later on.
 We are launching the first competition on an invite-only basis. If you haven’t been invited and want in, send us an email to feedback at advancedalgos dot org.
 
 ### Requirements
-#### Step 1: Poloniex Account
 
-Make sure you have an account with [Poloniex](https://poloniex.com/). If you don't, move swiftly and open one ASAP, as there may be a waiting period. You can attempt the verification process, however, you should be able to trade even if you don't verify your account.
+#### Poloniex Account
 
-#### Step 2: Join Our Telegram Channel
+Make sure you have an account with [Poloniex](https://poloniex.com/). If you don't, go ahead and open one ASAP, as there may be a waiting period. You can attempt the verification process, however, you should be able to trade even if you don't verify your account.
+
+#### Join Our Telegram Channel
 
 [Join our Telegram Channel](https://t.me/advancedalgos) through which we will offer support before and during the competition.
 
-#### Step 3: Your Own Bots
+#### Your Own Bots
 
-The next step is creating your own GitHub Organization and your own bots. We will go through the whole process further down this document. In the meantime, please get acquiented with the definitions below.
+The next step is creating your own GitHub Organization and your own algobots. We will go through the whole process further down this document.
 
-### About Bots
+### About Algobots
 
-The AA Platform handles three different types of bots, differentiating them by their incumbencies:
+You are allowed to compete with as many Trading Bots as you see fit. You can create as many Indicator Bots as required to implement your strategy. You will learn more about the different types of bots further down this document.
 
-#### Extractor Bots
-
-They extract raw trades and order books data from exchanges and store it in a standardized format for other bots to consume. 
-
-You will not need to program these kinds of bots for this competition, as we will be using an existing one --[Charly](https://github.com/AAMasters/AACharly-Extraction-Bot)-- which gets raw data from Poloniex, the one exchange we will be working with.
-
-#### Indicator Bots
-
-They process raw trades data and other indicators to output elaborate data structures, mainly technical indicators, for AA Trading Bots to consume. 
-
-You will most likely need to program indicator bots in order to perform Technical Analysis studies or functions. While it is true that you can process data and do all sorts of calculations from within your trading bot's code, this is not recommended. Advanced Algos Ltd. encourages developers to respect incumbencies assigned to each type of bot, for several reasons:
-
-1. The AA Platform's architecture is designed so that bots can consume data from other bots, in order for the network to reuse resources. By respecting the incumbencies of each type of bot you contribute to growing the platform along with the embedded ecosystem in a sustainable manner.
-
-2. The AA Platform is set up as a marketplace of Extractor, Indicator and Trading Bots. If you program and release an Indicator Bot, you will soon be able to monetize that effort as bots consuming the data your Indicator Bot generates will pay you a fee.
-
-3. If instead of creating an Indicator Bot, you do the calculations from within your Trading Bot, anyone can come at a later time, extract from your Trading Bot the code that performs the calculations, and create their own Indicator Bot with it. This means you may permanently lose the chance to monetize the indicator functions and effectively allow someone else to do it instead.
-
-#### Trading Bots
-
-They automate trading strategies and place orders through the platform, which connects to exchanges via APIs to trade cryptocurrency.
-
-Each Dev Team is allowed to compete with one trading bot only. You can create as many Indicator Bots as required to implement your strategy.
+In order to guarantee transparency, registered algobots are not allowed to connect to the exchange directly; algobots should connect with the exchange only through the AACloud Assistant (more on this further down this document).
 
 **Once a bot is released in the competition it cannot be modified.**
 
-> NOTE: The AA Platform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur --either at the bot or platform level-- resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha testing applications. Execution Logs will be provided for post-mortem analisys.
+> NOTE: The AA Platform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur --either at the bot or platform level-- resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha-testing. Execution Logs will be provided for post-mortem analisys.
 
-#### Bots License
+#### Algbots License
 
-The AAMaster bots offered as templates are released under the GNU Affero General Public License (AGPL) to guarantee:
+The AAMaster algobots offered as templates are released under the GNU Affero General Public License (AGPL) to guarantee:
 
 > * the freedom to use the software for any purpose,
 > * the freedom to change the software to suit your needs,
@@ -98,7 +79,7 @@ The AAMaster bots offered as templates are released under the GNU Affero General
 >
 > _(Extract from [The Foundations of the GPL](https://www.gnu.org/licenses/quick-guide-gplv3.html))_
 
-It is a policy of Advanced Algos Ltd. to require all bots running on the AAPlatform to be released under the same license. In order to do that. We will guide you through the process to do just that further down this document.
+It is a policy of Advanced Algos Ltd. to require all bots running on the AAPlatform to be released under the same license. In order to do that. We will guide you through the process further down this document.
 
 ### Markets
 
@@ -197,7 +178,7 @@ The competition awards 0.5 BTC and up to 800,000 ALGO (worth USD 8,000 as of thi
 
 > NOTE: In the [example above](#example), only Bot A would have been awarded the BTC Prize, as it is the only one with a ROI bigger than 10%.
 
-## Term of Service
+## Terms of Service
 
 The information provided in this document is intended for informational purposes only and is subject to change without notice. Advanced Algos may make improvements and/or changes in the products, pricing and/or the programs described in this information at any time without notice.
 
@@ -213,7 +194,7 @@ IN NO EVENT WILL ADVANCED ALGOS BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT,
 
 ## Overview
 
-AA Bots are open source projects in Github, programed in JavaScript. The platform calls bots and puts them to run in specific time intervals. Bots consume services from the platform and data from other bots, specially from indicator bots, and at the same time, produce an output that is stored in the cloud (to be consumed by other bots).
+Algobots are open source projects in Github, programed in JavaScript. The platform calls bots and puts them to run in specific time intervals. Bots consume services from the platform and data from other bots, specially from indicator bots, and at the same time, produce an output that is stored in the cloud (to be consumed by other bots).
 
 There are three GitHub Organizations you need to be familiar with:
 
@@ -222,6 +203,32 @@ There are three GitHub Organizations you need to be familiar with:
 * [AAMasters](https://github.com/AAMasters): Its a showcase GitHub organization similar to the one each Dev Team needs to create for themselves. It features several examples of bots, each in their corresponding repository.
 
 * [AAArena](https://github.com/AAArena): Its another showcase GitHub organization featuring the AA Application hosting the trading bot competition you are about to enter.
+
+### Types of Bots
+
+The AA Platform handles three different types of bots, differentiating them by their incumbencies:
+
+#### Extractor Bots
+
+They extract raw trades and order books data from exchanges and store it in a standardized format for other bots to consume. 
+
+You will not need to program these kinds of bots for this competition, as we will be using an existing one --[Charly](https://github.com/AAMasters/AACharly-Extraction-Bot)-- which gets raw data from Poloniex, the one exchange we will be working with.
+
+#### Indicator Bots
+
+They process raw trades data and other indicators to output elaborate data structures, mainly technical indicators, for AA Trading Bots to consume. 
+
+You will most likely need to program indicator bots in order to perform Technical Analysis studies or functions. While it is true that you can process data and do all sorts of calculations from within your trading bot's code, this is not recommended. Advanced Algos Ltd. encourages developers to respect incumbencies assigned to each type of bot, for several reasons:
+
+1. The AA Platform's architecture is designed so that bots can consume data from other bots, in order for the network to reuse resources. By respecting the incumbencies of each type of bot you contribute to growing the platform along with the embedded ecosystem in a sustainable manner.
+
+2. The AA Platform is set up as a marketplace of Extractor, Indicator and Trading Bots. If you program and release an Indicator Bot, you will soon be able to monetize that effort as bots consuming the data your Indicator Bot generates will pay you a fee.
+
+3. If instead of creating an Indicator Bot, you do the calculations from within your Trading Bot, anyone can come at a later time, extract from your Trading Bot the code that performs the calculations, and create their own Indicator Bot with it. This means you may permanently lose the chance to monetize the indicator functions and effectively allow someone else to do it instead.
+
+#### Trading Bots
+
+They automate trading strategies and place orders through the platform, which connects to exchanges via APIs to trade cryptocurrency.
 
 ## Setting Up a Dev Team Organization
 
@@ -483,7 +490,7 @@ $ git push -u origin master
 
 ### E: Request a Storage Account
 
-Bots store data in the cloud. For the time being, the process for opening a storage account for your bot is manual. Please send us a request to open a storage account over WhatsApp; include your bot's name, please. When the request is processed, you will get the following:
+Bots store data in the cloud. For the time being, the process for opening a storage account for your bot is manual. Please send us a request to open a storage account over Telegram; include your Github Organization and bot's name, please. When the request is processed, you will get the following:
 
 #### Your Bot's Connection String
 
@@ -540,47 +547,63 @@ Open _this.bot.config.json_, a file within your bot's repository. Let's modify t
     "patch": 0
   },
 ```
-
 You need to update that segment of the config with the following things in mind:
 
- - *displayName* (your bot's name without the AA prefix)
+ - *displayName* (your bot's name without the AA prefix; e.g. Mariam)
  - *codeName* (name with the AA prefix; e.g. AAMariam)
  - *version* (start with major:0, minor:1, patch:0 -- increase minor until you release your bot; once you do, change to major:1, minor: 0)
 
 ```
   "devTeam": "AAMasters",
+  "profilePicture": "Mariam.png",
   "dataSetVersion": "dataSet.V1",
+```
+
+ - *devTeam* (your organization's name including the AA prefix)
+ - *profilePicture* (your bot's picture) 
+ - *dataSetVersion* (different versions of bots may use different versions of datasets)
+
+```
   "processes": [
     {
       "name": "Trading-Process",
       "description": "Simple trading strategy to be used as a template.",
-```
-
- - *devTeam* (your organization's name including the AA prefix)
- - *dataSetVersion* (different versions of bots may use different versions of datasets)
- - *description* (briefly describe your bot's strategy)
- 
-```
       "startMode": {
-        "allMonths": {
-          "run": "false",
-          "minYear": "",
-          "maxYear": ""
+        "live": {
+          "run": "true",
+          "resumeExecution": "false"
         },
-        "oneMonth": {
+        "backtest": {
           "run": "false",
-          "year": "",
-          "month": ""
+          "beginDatetime": "2018-04-12T16:00:00.000Z",
+          "endDatetime": "2018-04-12T16:15:00.000Z",
+          "waitTime": 1000
         },
-        "noTime": {
-          "run": "true"
+        "competition": {
+          "run": "false",
+          "beginDatetime": "2018-04-27T16:00:00.000Z",
+          "endDatetime": "2018-04-28T16:05:00.000Z",
+          "resumeExecution": "false"
         }
       },
+```
+
+ - *description* (briefly describe your bot's strategy)
+ - *startMode* There are three ways in which your bot can be run and only one of them should be set to _true_: 
+   - _live_ means real trading,
+   - _backtest_ allows testing your strategy against historical data,
+   - _competition_ means real trading within a competition
+
+```
       "normalWaitTime": 60000,
       "retryWaitTime": 10000,
       "sleepWaitTime": 3600000,
       "comaWaitTime": 86400000,
-      "dependencies": [
+```
+These parameters affect the frequency with which the bot is run and wait periods in case of certain events. Leave them at the default value for the time being.
+
+```
+      "statusDependencies": [
         {
           "devTeam": "AAMasters",
           "bot": "AAMariam",
@@ -591,27 +614,68 @@ You need to update that segment of the config with the following things in mind:
           "process": "Trading-Process",
           "dataSetVersion": "dataSet.V1"
         }
+      ],
+```
+
+This is a declaration of Status Dependencies, meaning the status reports the bot consumes. If your bot needs status reports from other bots, this is where you need to configure those dependencies.
+
+```
+      "dataDependencies": [
+        {
+          "devTeam": "AAMasters",
+          "bot": "AAOlivia",
+          "botVersion": {
+            "major": 1,
+            "minor": 0
+          },
+          "product": "Candles",
+          "dataSet": "Multi-Period-Market",
+          "dataSetVersion": "dataSet.V1"
+        },
+        {
+          "devTeam": "AAMasters",
+          "bot": "AAOlivia",
+          "botVersion": {
+            "major": 1,
+            "minor": 0
+          },
+          "product": "Candles",
+          "dataSet": "Multi-Period-Daily",
+          "dataSetVersion": "dataSet.V1"
+        },
+        {
+          "devTeam": "AAMasters",
+          "bot": "AABruce",
+          "botVersion": {
+            "major": 1,
+            "minor": 0
+          },
+          "product": "Candles",
+          "dataSet": "One-Min",
+          "dataSetVersion": "dataSet.V1"
+        }
       ]
     }
   ],
 ```
 
-No need to touch the previous segment.
+These are declarations of Data Dependencies, that is, data from other bots that Mariam consumes. If you bot consumes data from other bots, this is where you need to declare those dependencies.
 
 ```
   "products": [
     {
-      "codeName": "Trading History",
-      "displayName": "Mariam Trading History",
-      "description": "General information about Mariam trading history.",
+      "codeName": "Live Trading History",
+      "displayName": "Live Trading History",
+      "shortDisplayName": "Live",
+      "description": "General information about Mariam live trading history.",
       "storageAccount": "aamariam",
-      "sets": [
+      "dataSets": [
         {
-          "codeName": "Oficial History",
-          "type": "Single File",
+          "codeName": "Backtest History",
+          "type": "File Sequence",
           "validPeriods": [ "24-hs", "12-hs", "08-hs", "06-hs", "04-hs", "03-hs", "02-hs", "01-hs", "45-min", "40-min", "30-min", "20-min", "15-min", "10-min", "05-min", "04-min", "03-min", "02-min", "01-min" ],
-          "filePath": "@DevTeam/@Bot.1.0/dataSet.V1/Output/Trading-Process/AACloud.1.0",
-          "fileName": "Execution.History.json"
+          "filePath": "@DevTeam/@Bot.1.0/AACloud.1.1/Poloniex/dataSet.V1/Output/Trading-Process",
+          "fileName": "Execution.History.Live.@Sequence.json"
         }
       ],
       "exchangeList": [
@@ -621,26 +685,96 @@ No need to touch the previous segment.
       ],
       "plotter": {
         "devTeam": "AAMasters",
-        "repo": "Plotters-Trading",
+        "codeName": "PlottersTrading",
+        "moduleName": "History"
+      }
+    },
+  ```
+  
+Bots output certain products. AACloud keeps track of bots activities in different running modes and makes it publicly available, for transparency purposes.
+
+The config segment above shows the configuration of the first and most important product all trading bots output: the Live Trading History.
+
+ - *storageAccount* (replace with the one assigned to you)
+ 
+```
+    {
+      "codeName": "Backtest Trading History",
+      "displayName": "Backtest Trading History",
+      "shortDisplayName": "Backtest",
+      "description": "General information about Mariam backtest trading history.",
+      "storageAccount": "aamariam",
+      "dataSets": [
+        {
+          "codeName": "Backtest History",
+          "type": "File Sequence",
+          "validPeriods": [ "24-hs", "12-hs", "08-hs", "06-hs", "04-hs", "03-hs", "02-hs", "01-hs", "45-min", "40-min", "30-min", "20-min", "15-min", "10-min", "05-min", "04-min", "03-min", "02-min", "01-min" ],
+          "filePath": "@DevTeam/@Bot.1.0/AACloud.1.1/Poloniex/dataSet.V1/Output/Trading-Process",
+          "fileName": "Execution.History.Backtest.@Sequence.json"
+        }
+      ],
+      "exchangeList": [
+        {
+          "name": "Poloniex"
+        }
+      ],
+      "plotter": {
+        "devTeam": "AAMasters",
+        "codeName": "PlottersTrading",
+        "moduleName": "History"
+      }
+    },
+
+```
+The above segment shows the configuration of the Backtest History.
+
+ - *storageAccount* (replace with the one assigned to you)
+
+```
+    {
+      "codeName": "Competition Trading History",
+      "displayName": "Competition Trading History",
+      "shortDisplayName": "Competition",
+      "description": "General information about Mariam competition trading history.",
+      "storageAccount": "aamariam",
+      "dataSets": [
+        {
+          "codeName": "Backtest History",
+          "type": "File Sequence",
+          "validPeriods": [ "24-hs", "12-hs", "08-hs", "06-hs", "04-hs", "03-hs", "02-hs", "01-hs", "45-min", "40-min", "30-min", "20-min", "15-min", "10-min", "05-min", "04-min", "03-min", "02-min", "01-min" ],
+          "filePath": "@DevTeam/@Bot.1.0/AACloud.1.1/Poloniex/dataSet.V1/Output/Trading-Process",
+          "fileName": "Execution.History.Competition.@Sequence.json"
+        }
+      ],
+      "exchangeList": [
+        {
+          "name": "Poloniex"
+        }
+      ],
+      "plotter": {
+        "devTeam": "AAMasters",
+        "codeName": "PlottersTrading",
         "moduleName": "History"
       }
     }
   ],
-  ```
 
-   - *displayName* (replace "_Example_" with your bot's name)
+```
 
+Finally, the last product configured is the Competition Trading History.
+
+ - *storageAccount* (replace with the one assigned to you)
 
   ```
     "storage": {
     "sas": "?sv=2017-07-29&ss=f&srt=sco&sp=rl&se=2018-12-31T01:49:13Z&st=2018-03-01T17:49:13Z&spr=https&sig=BGdV3DlytkD6vGr%2FxfXcinqF3xSLFxfIz18lfzFzI6g%3D",
-    "fileUri": "https://aayourbot.file.core.windows.net"
+    "fileUri": "https://aayourorganization.file.core.windows.net"
   }
 }
 ```
 
    - *sas* (replace the value with the SAS token we gave you in the [previous step](#sas-token)
-   - *fileUri* (replace "_yourbot_" with the actual name of your bot)
+   - *fileUri* (replace "_yourorganization_" with the actual name of your Github Organization)
 
 Save the file when you are done.
 
@@ -676,12 +810,22 @@ In the AACloud folder, open _this.config.json_, make the changes as explained be
       "enabled": "true",					# in which case you will need to 
       "botPath": "../Bots/AAMasters/AABruce-Indicator-Bot",	# delete the comma
       "process": "One-Min-Daily-Candles-Volumes"		# after the first bot.
-    }								#
+    }								
   ],
   "stopGracefully": "true",		# 'false' for continuous run, 'true' for one run only.
-  "exchangeSimulationMode": "false",	# 'false' to place real order at the exchange, 'true' to simulate orders.
-  "storageConnStringFolder": "Mixed",	# 'Testnet', 'Mixed' or 'Production' indicate which folders to look in for connection strings.
+  "storageConnStringFolder": "Mixed",	# 'Testnet', 'Mixed' or 'Production' indicate which folders to look in for conn strings
   "maxLogLoops": 10			# The number of loops you wish to log.
+  "marketRateProvider": {
+    "devTeam": "AAMasters",
+    "bot": "AABruce",
+    "botVersion": {
+      "major": 1,
+      "minor": 0
+    },
+    "product": "Candles",
+    "dataSet": "One-Min",
+    "dataSetVersion": "dataSet.V1"
+  }
 }
 ```
 
