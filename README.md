@@ -2,13 +2,13 @@
 
 *Welcome to the Advanced Algos Closed-Doors First Bot Competition!* 
 
-Join us for a dive into the world of cryptocurrency trading to collaborate and compete with a select group in the AA Arena, hosted on the AA Platform. This marks the beginning of a new community for developers and traders and a chance to cultivate the ultimate open-source cryptocurrency trading bot community and ecosystem.
+Join us for a dive into the world of cryptocurrency trading to collaborate and compete with a select group in the Algobots Arena, hosted on the AAPlatform. This marks the beginning of a new community for developers and traders and a chance to cultivate the ultimate open-source cryptocurrency trading bot community and ecosystem.
 
 # Contents
 
 [Competition Guidelines](#competition-guidelines)
 
-[The AA Platform](#the-aa-platform)
+[The AAPlatform](#the-aa-platform)
 
 [Setting up Your Development Environment](#setting-up-your-development-environment)
 
@@ -20,15 +20,29 @@ Join us for a dive into the world of cryptocurrency trading to collaborate and c
 
 <hr>
 
+# Basic Definitions
+
+* **Advanced Algos Ltd.**: The start up behind the creation of the AAPlatform and the people running this show until the Algobots Community takes over.
+
+*  **AAPlatform**: The IT system on top of which everything runs.
+
+*  **AACloud**: The part of the system that runs algobots in the cloud.
+
+*  **AAWeb**: The part of the system that shows algobots’ activities in a visual environment.
+
+*  **Algobots Community**: The emerging community of developers and traders that share our vision and help pushing it forwards by creating algobots.
+
+* **Dev Team**: That would be you, along with anyone else that wishes to help you out in this quest.
+
 # Competition Guidelines
 
 ## The Competition
 
-The AA Arena is an organization built around the competition of cryptocurrency trading bots, or what we call _algobots_. The foundation of the Arena is powered by the AA Platform — a system developed by Advanced Algos Ltd. that dramatically simplifies the creation and operation of algobots.
+The AA Arena is an organization built around the competition of cryptocurrency trading bots, or what we call _algobots_. The foundation of the Arena is powered by the AAPlatform — a system developed by Advanced Algos Ltd. that dramatically simplifies the creation and operation of algobots.
 
-At this point, the AA platform is still in the alpha-stage. A large portion of functionality is under development. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
+At this point, the AAPlatform is still in the alpha-stage. A large portion of functionality is under development. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
 
-In the near future, the AA Platform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees will cover the costs of the bot infrastructure and pay Dev Teams fees. Fees will be paid in ALGO tokens, the AA Platform’s native token.
+In the near future, the AAPlatform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees will cover the costs of the bot infrastructure and pay Dev Teams fees. Fees will be paid in ALGO tokens, the AAPlatform’s native token.
 
 Participating in early competitions not only offers the chance to win competition prizes, but makes you a part of the AA Community and provides increased potential of monetizing your efforts when the platform is released to the general public.
 
@@ -41,6 +55,8 @@ The first ever competition starts on **Monday May 28th 2018** at 00:00:00.000 GM
 Subsequent competitions shall be announced and confirmed later on.
 
 ### Dev Team Registration
+
+The Dev Team is you, along with anyone else that may want to help you out in this quest.
 
 We are launching the first competition on an invite-only basis. If you haven’t been invited and want in, send us an email to feedback at advancedalgos dot org.
 
@@ -62,11 +78,11 @@ The next step is creating your own GitHub Organization and your own algobots. We
 
 You are allowed to compete with as many Trading Bots as you see fit. You can create as many Indicator Bots as required to implement your strategy. You will learn more about the different types of bots further down this document.
 
-In order to guarantee transparency, registered algobots are not allowed to connect to the exchange directly; algobots should connect with the exchange only through the AACloud Assistant (more on this further down this document).
+In order to guarantee transparency, registered algobots are not allowed to connect to the exchange directly; algobots should connect with the exchange only through the AACloud _Assistant_ (more on this further down this document).
 
 **Once a bot is released in the competition it cannot be modified.**
 
-> NOTE: The AA Platform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur --either at the bot or platform level-- resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha-testing. Execution Logs will be provided for post-mortem analisys.
+> NOTE: The AAPlatform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur --either at the bot or platform level-- resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha-testing. Execution Logs will be provided for post-mortem analisys.
 
 #### Algbots License
 
@@ -105,7 +121,7 @@ Bots are allowed to trade with partial profits. This is the only way in which bo
 
 #### Fees
 
-Participating in the competition and running your bots on the AA Platform is free of charge at this point in time.
+Participating in the competition and running your bots on the AAPlatform is free of charge at this point in time.
 
 For your information, Poloniex charges the following fees for every order filled:
 
@@ -190,7 +206,7 @@ IN NO EVENT WILL ADVANCED ALGOS BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT,
 
 <hr>
 
-# The AA Platform
+# The AAPlatform
 
 ## Overview
 
@@ -198,7 +214,7 @@ Algobots are open source projects in Github, programed in JavaScript. The platfo
 
 There are three GitHub Organizations you need to be familiar with:
 
-* [Advanced Algos](https://github.com/AdvancedAlgos): Features repositories with the AA Platform code including the bits that run in the cloud (AACloud) and in the web browser, along with a few other platform-related configurations and documentation.
+* [Advanced Algos](https://github.com/AdvancedAlgos): Features repositories with the AAPlatform code including the bits that run in the cloud (AACloud) and in the web browser, along with a few other platform-related configurations and documentation.
 
 * [AAMasters](https://github.com/AAMasters): Its a showcase GitHub organization similar to the one each Dev Team needs to create for themselves. It features several examples of bots, each in their corresponding repository.
 
@@ -206,7 +222,7 @@ There are three GitHub Organizations you need to be familiar with:
 
 ### Types of Bots
 
-The AA Platform handles three different types of bots, differentiating them by their incumbencies:
+The AAPlatform handles three different types of bots, differentiating them by their incumbencies:
 
 #### Extractor Bots
 
@@ -220,9 +236,9 @@ They process raw trades data and other indicators to output elaborate data struc
 
 You will most likely need to program indicator bots in order to perform Technical Analysis studies or functions. While it is true that you can process data and do all sorts of calculations from within your trading bot's code, this is not recommended. Advanced Algos Ltd. encourages developers to respect incumbencies assigned to each type of bot, for several reasons:
 
-1. The AA Platform's architecture is designed so that bots can consume data from other bots, in order for the network to reuse resources. By respecting the incumbencies of each type of bot you contribute to growing the platform along with the embedded ecosystem in a sustainable manner.
+1. The AAPlatform's architecture is designed so that bots can consume data from other bots, in order for the network to reuse resources. By respecting the incumbencies of each type of bot you contribute to growing the platform along with the embedded ecosystem in a sustainable manner.
 
-2. The AA Platform is set up as a marketplace of Extractor, Indicator and Trading Bots. If you program and release an Indicator Bot, you will soon be able to monetize that effort as bots consuming the data your Indicator Bot generates will pay you a fee.
+2. The AAPlatform is set up as a marketplace of Extractor, Indicator and Trading Bots. If you program and release an Indicator Bot, you will soon be able to monetize that effort as bots consuming the data your Indicator Bot generates will pay you a fee.
 
 3. If instead of creating an Indicator Bot, you do the calculations from within your Trading Bot, anyone can come at a later time, extract from your Trading Bot the code that performs the calculations, and create their own Indicator Bot with it. This means you may permanently lose the chance to monetize the indicator functions and effectively allow someone else to do it instead.
 
@@ -341,7 +357,7 @@ You are almost done with your set up. Let's briefely discuss Trading Bots before
 
 ## Overview
 
-At this early stage, the AA Platform and the trading bot templates solve several of the main issues around algorithmic trading:
+At this early stage, the AAPlatform and the trading bot templates solve several of the main issues around algorithmic trading:
 
 * Infrastructure to run bots in the cloud;
 * Crucial historical and live trades data;
@@ -374,7 +390,7 @@ The overall strategy when working with trading bots can be summarized in the fol
 
 ## Exchanges API
 
-The AA Platform places orders on exchanges through the use of the exchanges' APIs. You will need to create an API Key and configure your bot to use it.
+The AAPlatform places orders on exchanges through the use of the exchanges' APIs. You will need to create an API Key and configure your bot to use it.
 
 ### Creating the API Key
 
@@ -923,7 +939,7 @@ Once you have managed to run the bot successfully, you are good to go. We’ve f
 
 # Launching Your Bot
 
-Now that your bot is ready and you are happy with its behavior, it is time to release it under the AGPL license, register your Dev Team and bots in the AA Platform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
+Now that your bot is ready and you are happy with its behavior, it is time to release it under the AGPL license, register your Dev Team and bots in the AAPlatform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
 
 ### Release Under AGPL License
 
