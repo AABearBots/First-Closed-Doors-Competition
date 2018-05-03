@@ -6,6 +6,8 @@ Join us for a dive into the world of cryptocurrency trading to collaborate and c
 
 # Contents
 
+[Basic Definitions](#basic-definitions)
+
 [Competition Guidelines](#competition-guidelines)
 
 [The AAPlatform](#the-aa-platform)
@@ -34,6 +36,8 @@ Join us for a dive into the world of cryptocurrency trading to collaborate and c
 
 * **Dev Team**: That would be you, along with anyone else that wishes to help you out in this quest.
 
+<hr>
+
 # Competition Guidelines
 
 ## The Competition
@@ -44,7 +48,7 @@ At this point, the AAPlatform is still in the alpha-stage. A large portion of fu
 
 In the near future, the AAPlatform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees will cover the costs of the bot infrastructure and pay Dev Teams fees. Fees will be paid in ALGO tokens, the AAPlatform’s native token.
 
-Participating in early competitions not only offers the chance to win competition prizes, but makes you a part of the AA Community and provides increased potential of monetizing your efforts when the platform is released to the general public.
+Participating in early competitions not only offers the chance to win competition prizes, but makes you a part of the Algobots Community and provides increased potential of monetizing your efforts when the platform is released to the general public.
 
 ## Competition Rules
 
