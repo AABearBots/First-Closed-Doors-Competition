@@ -344,13 +344,13 @@ This leaves the Dev Team free to focus in the creative side of things: coming up
 
 There are four AACloud modules particularly significant to trading bots:
 
-* _Data Dependencies_ and _Status Dependencies_: Your Trading Bot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because trading bots use other bot's datasets, or require certain data to be on a certain state. The dependencies modules loads declared dependencies and passes them on to the bot through the Assistant module.
+* _Data Dependencies_ and _Status Dependencies_: Your Trading Bot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because trading bots use other bot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
 
 * _Context_: In terms of context, trading bots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. Context is saved in files as outputs of trading bots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the Assistant module.
 
 * _Assistant_: The Assistant module processes information available from other modules and serves a digest version to the trading bot. It also serves the datasource with trades, candles, etc. The Assistant module also acts as an interface with the exchange, as it offers methods for placing, closing and moving orders.
 
-In its current version, AACloud provides an object (_platform_) containing several other objects:
+In its current version, AACloud provides an object (_platform_) containing other objects:
 
 * _datasource_: preloads ready-to-consume data comprised of candlesticks and stair patterns;
 * _assistant_: opens, closes and moves positions
@@ -361,7 +361,8 @@ The overall strategy when working with trading bots can be summarized in the fol
 
 * Each time the bot runs, it first needs to understand the context of the current execution. Bots get the context info from the Assitant module.
 
-* Then the bot embarks in the calculations required by its trading strategy. At this point in time, there are very few indicators offering processed information. As a consequence, the bot needs to do all calculations internally. Almost all Technical Analysis indicators are calculated from trades and volume data. Their formulas are in the pubic domain and even code is readily available if you search around. You are free to use open source code within your bot's code.
+* Then the bot embarks in the calculations required by its trading strategy. At this point in time, there are very few indicators offering processed information. As [explained earlier](#indicator-bots), we encourage you to respect the proposed incumbencies architectecture and put the Technical Analysis logic in **indicator bots**. Almost all Technical Analysis indicators are calculated from trades and volume data. Their formulas are in the pubic domain and even code is readily available if you search around. You are free to use open source code within your bot's code.
+
 * Once calculations are performed, the bot decides what to do, and uses the platform to place orders on the exchange.
 
 ## Exchanges API
