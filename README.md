@@ -412,6 +412,16 @@ e.g.: AAMariam.Poloniex.json
 
 ## Step 1: Using an Existing Bot as a Starting Point
 
+Now is a good time to sit and think about your trading strategy. Do you have one?
+
+If you do have a strategy you wish to automate, then we are going to offer you a Trading Bot template to start from: it’s called [Mariam]( https://github.com/AAMasters/AAMariam-Trading-Bot). As her [README]( https://github.com/AAMasters/AAMariam-Trading-Bot/blob/master/README.md) file goes, Mariam is ideal as a “starting point laying out the proper ways to interact with the AACloud”. However, her actual trading strategy is quite unusable. Start with Mariam if you are bringing your own logic.
+
+If you don’t have a strategy or are not sure about starting out from scratch, we have a friend you might want to meet: this is [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot). Artudito is an accomplished trader. He uses linear regression channels to determine when to buy or sell. Check his [README]( https://github.com/AAMasters/AAArtudito-Trading-Bot/blob/master/README.md) file for more details. 
+
+Starting out with an accomplished trading bot is all about making incremental improvements on how the bot does what he does. You might want to introduce new complementary logic to make him smarter, or simply polish his decision-making by studying his actual performance and ironing out the flaws you may see when taking a closer look.
+
+Now that we’ve cleared that up, it’s time to move on and set you up with your template. For simplicity’s sake we are going to describe how to proceed with Mariam, but the exact same explanation should work if you choose to clone Artudito instead.
+
 ### A: Clone and Rename Bot
 
 We will use Mariam, a Trading Bot within the AAMasters organization as a starting point for creating your own bot. Clone [Mariam's repository](https://github.com/AAMasters/AAMariam-Trading-Bot) and --once in your local machine-- copy and paste the repository’s root folder, renaming it with the name of your new bot.
