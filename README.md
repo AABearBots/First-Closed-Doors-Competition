@@ -310,11 +310,11 @@ But the value-adding chain does not stop there. Let's take a look at another i-b
 
 And so it goes. The last link in the chain usually comes in the form of trading algobots using data from indicator algobots, as that is the ultimate purpose of the whole algobots ecosystem: to provide trading algobots with quality preprocessed data they can use to make the best possible trading decisions.
 
-Let's take a look at [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot), for instance. Artudito –a t-bot– uses candles and volumes from Olivia and regression curves from [Gauss]() to make trading decisions. Of course, the main goal of a t-bot like Artudito is to perform profitable trading. However, notice that trading algobots too have outputs, and thus offer products that are consumable by others. Trading bots output three different products: Live Trading History, Backtest Trading History and Competition Trading History. Those datasets are available for others to consume. For instance, the AAWeb application uses those datasets to show t-bots activities on a visual environment resembling typical candlestick charts so that anyone can dive in and analyze what algobots are doing.
+Let's take a look at [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot), for instance. Artudito –a t-bot– uses candles and volumes from Olivia to make trading decisions. Of course, the main goal of a t-bot like Artudito is to perform profitable trading. However, notice that trading algobots too have outputs, and thus offer products that are consumable by others. Trading bots output three different products: Live Trading History, Backtest Trading History and Competition Trading History. Those datasets are available for others to consume. For instance, the AAWeb application uses those datasets to show t-bots activities on a visual environment resembling typical candlestick charts so that anyone can dive in and analyze what algobots are doing.
 
 ## About Plotters
 
-Plotters are –too–JavaScript programs created by Algobot Teams. They serve the purpose of creating a visual representation of datasets so that people can easily interpret the data. For instance, [Plotters-Candles-Volumes]( https://github.com/AAMasters/Plotters-Candles-Volumes) creates the visual representation of candlesticks and volume graphs. 
+Plotters are –too– JavaScript programs created by Algobot Teams. They serve the purpose of creating a visual representation of datasets so that people can easily interpret the data. For instance, [Plotters-Candles-Volumes]( https://github.com/AAMasters/Plotters-Candles-Volumes) creates the visual representation of candlesticks and volume graphs. 
 
 Algobots are usually associated to plotters in order for the AAWeb app to be able to plot the corresponding datasets. For instance, trading algobots use [Plotters-Trading]( https://github.com/AAMasters/Plotters-Trading).
 
@@ -352,7 +352,7 @@ To setup and develop your own algobot, you'll need to pull in several code repos
 
 ## Step 1: Setting Up Your Algobot Team Github Organization
 
-Let's start by [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with "AA", just like in the above example _AAMasters_. Also make sure that the word "_algobots_" is part of the organization's description.
+Let's start by [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with "AA", just like in the above example _AAMasters_. Also make sure that the word "_algobot_" is part of the organization's description.
 
 ## Step 2: Node.js
 
@@ -624,7 +624,7 @@ You will use the SAS token in the next step.
 
 ### F: Configure Your Bot
 
-Open _this.bot.config.json_, a file within your bot's repository. Let's modify the config file segment by segment:
+Open _this.bot.config.json_, a file within your bot's repository. Let's review and modify the config file segment by segment:
 
 ```
 {
@@ -680,7 +680,7 @@ You need to update that segment of the config with the following things in mind:
 
  - *description* (briefly describe your bot's strategy)
  - *startMode* There are three ways in which your bot can be run and only one of them should be set to _true_: 
-   - _live_ means real trading,
+   - _live_ means real live trading,
    - _backtest_ allows testing your strategy against historical data,
    - _competition_ means real trading within a competition
 
@@ -816,7 +816,7 @@ The config segment above shows the configuration of the first and most important
     },
 
 ```
-The above segment shows the configuration of the Backtest History.
+The above segment shows the configuration of the Backtest History product.
 
  - *storageAccount* (replace with the one assigned to you)
 
@@ -968,14 +968,19 @@ By now you should be able to run the bot in your local environment and use typic
 In case you were not able to successfully run the bot, the logs files are the first place to go.
 
 #### A Quick Logs Overview
+
+Logs are segregated per each execution so that it is easy to locate log files corresponding to different executions. The separation is accomplished by the folder structure itself.
+
 ```
 .
 ├── AACloud              
-├── Logs             			# Note: same dir level as AACloud
-	└── _Your_Team_ 		# Directory named after your team
-	   └── Trading 			# Named after process (e.g. Trading, Indicator, etc)
-		   └── _YourBot_ver_    # Named after your Bot
-			   └── ...logs 	# See below for details			   
+├── Logs > [year] > [month] > [day] > [hour] > [minute ]	# Folder structure showing execution datetime
+
+		└── _Your_Team_ 				# Directory named after your team
+	  		 └── Trading 				# Named after type of bot (e.g. Trading, Indicator, etc)
+		 	  	└── _YourBot_ver_    		# Named after your Bot and Version
+		 	  		└── _Process_    	# Named after the specific process			
+			   			└── ...logs 	# See below for details			   
 ```
 **Log name format:** _Date(Yr-Mo-Day-Hr-Min)–RandId–SourceFile.log_
 \* _SourceFile_ is the name of the AACloud file to check for associated error or output.
@@ -989,7 +994,6 @@ In case you were not able to successfully run the bot, the logs files are the fi
 6. _~.trading algobot Main Loop.log:_ Best log to narrow down general cloud platform issues
 
 \*_By closest relationship to your bot. Read source code for more detailed comments and to view other files associated with the cloud platform_
-
 
 If you wish to debug the platform and your bot, open the _IntervalExecutor.js_ module and place a breakpoint in the following line:
 
@@ -1005,8 +1009,11 @@ Now, run the IDE. When execution halts, press F11 to step into the module _User.
 Once you have managed to run the bot successfully, you are good to go. We've found the following workflow is quite practical:
 
 * The main business logic/solution to edit is in  (_Your-Bot-Repo > Trading-Process > User.Bot.js_). Other types of bots (e.g. indicator or extraction) have different process folder types.
+
 * Your bot will not fully successfully run until there is a balance in your Poloniex account and your bot can make an actual trade. The bot status report will also not be written to your storage account until then. You can use the simulation mode described above (_exchangeSimulationMode_ in the AACloud config) for a temporary workaround until you fund your account.
+
 * Code directly in the bot's solution until the code is fully implemented.
+
 * Close the bot's module and go to the cloud platform solution to debug (as explained above). While debugging, the bot's files will pop up in separate tabs, so that you can edit the code in the process.
 
 <hr>
