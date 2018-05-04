@@ -10,11 +10,11 @@ Join us for a dive into the world of cryptocurrency trading to collaborate and c
 
 [Competition Guidelines](#competition-guidelines)
 
-[The AAPlatform](#the-aa-platform)
+[The AAPlatform](#the-aaplatform)
 
 [Setting up Your Development Environment](#setting-up-your-development-environment)
 
-[Trading Algobots](#trading-bots-1)
+[Trading Algobots](#trading-algobots)
 
 [Starting out Your Own Bot](#starting-out-your-own-bot)
 
@@ -132,7 +132,7 @@ Participating in the competition and running your algobots on the AAPlatform is 
 For your information, Poloniex charges the following fees for every order filled:
 
 | **Maker** | **Taker** |
-|–––––-|–––––-|
+|------|------|
 | 0.15% | 0.25% |
 
 Poloniex fees are explained [here](https://poloniex.com/fees/).
@@ -176,7 +176,7 @@ Bot B ROI = (0.001 - 0.001) / 0.001 * 100% = 0%
 _Final Ranking_:
 
 | **Position** | **Algobot** | **ROI** |
-|:–––––|:––––-:|–––––:|
+|:------|:------:|------:|
 | 1st | A | 50 % |
 | 2nd | C | 0 % |
 | 3rd | B | -25 % |
@@ -192,7 +192,7 @@ The competition awards 0.5 BTC and up to 800,000 ALGO (worth USD 8,000 as of thi
 **The prize money is awarded as follows:**
 
 | **Position** | **BTC Prize** | **ALGO Prize** |
-|:–––––|–––––:|–––––:|
+|:-----|-----:|-----:|
 | 1st | 0.30 | 300,000 |
 | 2nd | 0.15 | 150,000 |
 | 3rd | 0.05 |  50,000 |
