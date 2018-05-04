@@ -14,7 +14,7 @@ Join us for a dive into the world of cryptocurrency trading to collaborate and c
 
 [Setting up Your Development Environment](#setting-up-your-development-environment)
 
-[trading algobots](#trading-bots-1)
+[Trading Algobots](#trading-bots-1)
 
 [Starting out Your Own Bot](#starting-out-your-own-bot)
 
@@ -236,21 +236,21 @@ There are three GitHub Organizations you need to be familiar with:
 
 * [AAArena](https://github.com/AAArena): Its another showcase GitHub organization featuring the AA Application hosting the trading algobot competition you are about to enter.
 
-### About Algobots
+## About Algobots
 
 Algobots are open source projects in Github, programed in JavaScript. AACloud calls algobots and puts them to run in specific time intervals. Algobots consume services from the platform and data from other algobots, especially from indicator algobots, and at the same time, produce an output that is stored in the cloud (to be consumed by other algobots).
 
-#### Types of Algobots
+### Types of Algobots
 
 The AAPlatform handles three different types of bots, differentiating them by their incumbencies:
 
-##### Extractor Algobots (AKA e-gobots)
+#### Extractor Algobots (AKA e-gobots)
 
 They extract raw trades and order books data from exchanges and store it in a standardized format for other bots to consume. 
 
 You will not need to program these kinds of bots for this competition, as we will be using an existing one –[Charly](https://github.com/AAMasters/AACharly-Extraction-Bot)– which gets raw data from Poloniex, the one exchange we will be working with.
 
-##### Indicator Algobots (AKA i-gobots)
+#### Indicator Algobots (AKA i-gobots)
 
 They process raw trades data and other indicators to output elaborate data structures, mainly technical indicators, for trading algobots to consume. 
 
@@ -262,11 +262,11 @@ You will most likely need to program i-gobots in order to perform Technical Anal
 
 3. If instead of creating an indicator algobot, you do the calculations from within your trading algobot, anyone can come at a later time, extract from your trading algobot the code that performs the calculations, and create their own indicator algobot with it. This means you may permanently lose the chance to monetize the indicator functions and effectively allow someone else to do it instead.
 
-##### Trading Algobots (AKA t-gobots)
+#### Trading Algobots (AKA t-gobots)
 
 They automate trading strategies and place orders through the platform, which connects to exchanges via exchanges APIs to trade cryptocurrency.
 
-#### How Algobots Work
+### How Algobots Work
 
 Algobots mission is –in essence– creating *products* that others can consume. To do this, they run *processes* which produce and store *datasets*. 
 
@@ -292,7 +292,7 @@ A *file sequence* consists of sequential information that is not necessarily str
 
 A *single file* is pretty much just that: a dataset that is stored in one file only.
 
-##### Real Life Example
+### Real Life Example
 
 Let's put all this in perspective by analyzing the processes, products and dependencies of a few existing bots.
 
@@ -312,17 +312,11 @@ And so it goes. The last link in the chain usually comes in the form of trading 
 
 Let's take a look at [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot), for instance. Artudito –a t-gobot– uses candles and volumes from Olivia and regression curves from [Gauss]() to make trading decisions. Of course, the main goal of a t-gobot like Artudito is to perform profitable trading. However, notice that trading algobots too have outputs, and thus offer products that are consumable by others. Trading bots output three different products: Live Trading History, Backtest Trading History and Competition Trading History. Those datasets are available for others to consume. For instance, the AAWeb application uses those datasets to show t-gobots activities on a visual environment resembling typical candlestick charts so that anyone can dive in and analyze what algobots are doing.
 
-### About Plotters
+## About Plotters
 
 Plotters are –too–JavaScript programs created by Algobot Teams. They serve the purpose of creating a visual representation of datasets so that people can easily interpret the data. For instance, [Plotters-Candles-Volumes]( https://github.com/AAMasters/Plotters-Candles-Volumes) creates the visual representation of candlesticks and volume graphs. 
 
 Algobots are usually associated to plotters in order for the AAWeb app to be able to plot the corresponding datasets. For instance, trading algobots use [Plotters-Trading]( https://github.com/AAMasters/Plotters-Trading).
-
-## Setting Up Your Algobot Team Github Organization
-
-Ok, enough talking. Let's get you started.
-
-The very first step is [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with "AA", just like in the above example _AAMasters_. Also make sure that the word "_algobots_" is part of the organization's description.
 
 <hr>
 
@@ -355,6 +349,10 @@ To setup and develop your own algobot, you'll need to pull in several code repos
         └─ this.bot.config.json # Your bot configuration
 
 ```
+
+## Getting Started: Setting Up Your Algobot Team Github Organization
+
+Let's start by [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with "AA", just like in the above example _AAMasters_. Also make sure that the word "_algobots_" is part of the organization's description.
 
 ## Step 1: Node.js
 
@@ -427,7 +425,7 @@ Once you clone the repository, GitHub desktop keeps track of the changes that ma
 
 <hr>
 
-# trading algobots
+# Trading Algobots
 
 You are almost done with your set up. Let's briefely discuss t-gobots before actually cloning one to use as a template.
 
