@@ -244,25 +244,25 @@ Algobots are open source projects in Github, programed in JavaScript. AACloud ca
 
 The AAPlatform handles three different types of bots, differentiating them by their incumbencies:
 
-#### Extractor Algobots (AKA e-gobots)
+#### Extractor Algobots (AKA e-bots)
 
 They extract raw trades and order books data from exchanges and store it in a standardized format for other bots to consume. 
 
 You will not need to program these kinds of bots for this competition, as we will be using an existing one –[Charly](https://github.com/AAMasters/AACharly-Extraction-Bot)– which gets raw data from Poloniex, the one exchange we will be working with.
 
-#### Indicator Algobots (AKA i-gobots)
+#### Indicator Algobots (AKA i-bots)
 
 They process raw trades data and other indicators to output elaborate data structures, mainly technical indicators, for trading algobots to consume. 
 
-You will most likely need to program i-gobots in order to perform Technical Analysis studies or functions. While it is true that you can process data and do all sorts of calculations from within your trading algobot's code, this is not recommended. Advanced Algos Ltd. encourages developers to respect incumbencies assigned to each type of algobot, for several reasons:
+You will most likely need to program i-bots in order to perform Technical Analysis studies or functions. While it is true that you can process data and do all sorts of calculations from within your trading algobot's code, this is not recommended. Advanced Algos Ltd. encourages developers to respect incumbencies assigned to each type of algobot, for several reasons:
 
 1. The AAPlatform's architecture is designed so that algobots can consume data from other algobots, in order for the network to reuse resources. By respecting the incumbencies of each type of algobot you contribute to growing the platform along with the embedded ecosystem in a sustainable manner.
 
-2. The AAPlatform is set up as a marketplace of Extractor, Indicator and trading algobots. If you program and release an i-gobot, you will soon be able to monetize that effort as algobots consuming the data your i-gobot generates will pay you a fee.
+2. The AAPlatform is set up as a marketplace of Extractor, Indicator and trading algobots. If you program and release an i-bot, you will soon be able to monetize that effort as algobots consuming the data your i-bot generates will pay you a fee.
 
 3. If instead of creating an indicator algobot, you do the calculations from within your trading algobot, anyone can come at a later time, extract from your trading algobot the code that performs the calculations, and create their own indicator algobot with it. This means you may permanently lose the chance to monetize the indicator functions and effectively allow someone else to do it instead.
 
-#### Trading Algobots (AKA t-gobots)
+#### Trading Algobots (AKA t-bots)
 
 They automate trading strategies and place orders through the platform, which connects to exchanges via exchanges APIs to trade cryptocurrency.
 
@@ -306,11 +306,11 @@ Now, let's see what [Bruce]( https://github.com/AAMasters/AABruce-Indicator-Bot)
 
 Now scroll down the README file and see what Bruce's dependencies are. That's right. Bruce depends on Charly's product. Bruce's processes take the trades data that Charly extracted from the exchange, performs calculations to build 1 minute candles and stores his own dataset with more elaborate data. In other words, Bruce is adding value to Charly's product and offering a new value-added product of his own.
 
-But the value-adding chain does not stop there. Let's take a look at another i-gobot, [Olivia]( https://github.com/AAMasters/AAOlivia-Indicator-Bot). According to her [README file]( https://github.com/AAMasters/AAOlivia-Indicator-Bot/blob/master/README.md) Olivia offers four different products: candles at sub-hour resolutions, candles in resolutions above one hour, volumes in sub-hour resolutions and volumes in resolutions above one hour. And guess what? Indeed, Olivia uses Bruce's one minute candles and one minute volumes to produce complementary candles and volumes at different resolutions.
+But the value-adding chain does not stop there. Let's take a look at another i-bot, [Olivia]( https://github.com/AAMasters/AAOlivia-Indicator-Bot). According to her [README file]( https://github.com/AAMasters/AAOlivia-Indicator-Bot/blob/master/README.md) Olivia offers four different products: candles at sub-hour resolutions, candles in resolutions above one hour, volumes in sub-hour resolutions and volumes in resolutions above one hour. And guess what? Indeed, Olivia uses Bruce's one minute candles and one minute volumes to produce complementary candles and volumes at different resolutions.
 
 And so it goes. The last link in the chain usually comes in the form of trading algobots using data from indicator algobots, as that is the ultimate purpose of the whole algobots ecosystem: to provide trading algobots with quality preprocessed data they can use to make the best possible trading decisions.
 
-Let's take a look at [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot), for instance. Artudito –a t-gobot– uses candles and volumes from Olivia and regression curves from [Gauss]() to make trading decisions. Of course, the main goal of a t-gobot like Artudito is to perform profitable trading. However, notice that trading algobots too have outputs, and thus offer products that are consumable by others. Trading bots output three different products: Live Trading History, Backtest Trading History and Competition Trading History. Those datasets are available for others to consume. For instance, the AAWeb application uses those datasets to show t-gobots activities on a visual environment resembling typical candlestick charts so that anyone can dive in and analyze what algobots are doing.
+Let's take a look at [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot), for instance. Artudito –a t-bot– uses candles and volumes from Olivia and regression curves from [Gauss]() to make trading decisions. Of course, the main goal of a t-bot like Artudito is to perform profitable trading. However, notice that trading algobots too have outputs, and thus offer products that are consumable by others. Trading bots output three different products: Live Trading History, Backtest Trading History and Competition Trading History. Those datasets are available for others to consume. For instance, the AAWeb application uses those datasets to show t-bots activities on a visual environment resembling typical candlestick charts so that anyone can dive in and analyze what algobots are doing.
 
 ## About Plotters
 
@@ -350,17 +350,17 @@ To setup and develop your own algobot, you'll need to pull in several code repos
 
 ```
 
-## Getting Started: Setting Up Your Algobot Team Github Organization
+## Step 1: Setting Up Your Algobot Team Github Organization
 
 Let's start by [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with "AA", just like in the above example _AAMasters_. Also make sure that the word "_algobots_" is part of the organization's description.
 
-## Step 1: Node.js
+## Step 2: Node.js
 
 Before we start, make sure you have Node.js installed. If you don't, please [download and install Node.js](https://nodejs.org/en/download/).
 
 ![Node.js](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Node-js-01.png)
 
-## Step 2: Azure Storage Explorer
+## Step 3: Azure Storage Explorer
 
 Bots consume and store data in the Microsoft Azure cloud. This tool will allow you to browse and manage data.
 
@@ -390,7 +390,7 @@ Storage Explorer will load on the following screen:
 
 ![Azure Storage Explorer](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-01.png)
 
-## Step 3: Clone the AACloud
+## Step 4: Clone the AACloud
 
 Clone the [AACloud](https://github.com/AdvancedAlgos/AACloud) repository in your local machine.
 
@@ -427,7 +427,7 @@ Once you clone the repository, GitHub desktop keeps track of the changes that ma
 
 # Trading Algobots
 
-You are almost done with your set up. Let's briefely discuss t-gobots before actually cloning one to use as a template.
+You are almost done with your set up. Let's briefely discuss t-bots before actually cloning one to use as a template.
 
 ## Overview
 
@@ -441,9 +441,7 @@ This leaves Algobot Teams free to focus in the creative side of things: coming u
 
 There are four AACloud modules particularly significant to trading algobots:
 
-* _Data Dependencies_: Your trading algobot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because t-gobots use other algobot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
-
-* _Status Dependencies_: Your trading algobot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because t-gobots use other algobot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
+* _Data Dependencies_ & _Status Dependencies_: Your trading algobot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because t-bots use other algobot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
 
 * _Context_: In terms of context, trading algobots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. Context is saved in files as outputs of trading algobots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the Assistant module.
 
@@ -460,7 +458,7 @@ The overall strategy when working with trading algobots can be summarized in the
 
 * Each time the bot runs, it first needs to understand the context of the current execution. Bots get the context info from the Assitant module.
 
-* Then the bot embarks in the calculations required by its trading strategy. At this point in time, there are very few indicators offering processed information. As [explained earlier](#indicator-bots), we encourage you to respect the proposed incumbencies architectecture and put the Technical Analysis logic in **indicator algobots**. Almost all Technical Analysis indicators are calculated from trades and volume data. Their formulas are in the pubic domain and even code is readily available if you search around. You are free to use open source code within your bot's code.
+* Then the bot embarks in the calculations required by its trading strategy. At this point in time, there are very few indicators offering processed information. As [explained earlier](#indicator-algobots-aka-i-bots), we encourage you to respect the proposed incumbencies architectecture and put the Technical Analysis logic in **indicator algobots**. Almost all Technical Analysis indicators are calculated from trades and volume data. Their formulas are in the pubic domain and even code is readily available if you search around. You are free to use open source code within your bot's code.
 
 * Once calculations are performed, the bot decides what to do, and uses the platform to place orders on the exchange.
 
@@ -584,7 +582,7 @@ $ git push -u origin master
 
 Bots store data in the cloud. For the time being, the process for opening a storage account for your bot is manual. Please send us a request to open a storage account over Telegram; include your Github Organization and bot's name, please. When the request is processed, you will get the following:
 
-#### Your Bot's Connection String
+#### Your Algobot Team Connection String
 
 A text string similar to the following one:
 
