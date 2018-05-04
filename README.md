@@ -24,21 +24,21 @@ Join us for a dive into the world of cryptocurrency trading to collaborate and c
 
 # Basic Definitions
 
-* **Advanced Algos Ltd.**: The start up behind the creation of the AAPlatform and the people running this show until the Algobots Community takes over.
+**Advanced Algos Ltd.**: The start up behind the creation of the AAPlatform and the people running this show until the Algobots Community takes over.
 
-* **Algobots**: Open-source algorithms destined to become autonomous agents with an autonomous financial life once the AAPlatform along with the Algobots Ecosystem are launched.
+**Algobots**: Open-source algorithms destined to become autonomous agents with an autonomous financial life once the AAPlatform along with the Algobots Ecosystem are launched.
 
-* **AAPlatform**: The IT system on top of which everything runs.
+**AAPlatform**: AKA _the platform_, it is the IT system on top of which everything runs.
 
-* **AACloud**: The part of the system that runs algobots in the cloud.
+**AACloud**: The part of the system that runs algobots in the cloud.
 
-* **AAWeb**: The part of the system that shows algobots’ activities in a visual environment.
+**AAWeb**: The part of the system that shows algobots' activities in a visual environment.
 
-* **Algobots Community**: The emerging community of developers and traders that share our vision and help pushing it forwards by creating algobots.
+**Algobots Community**: The emerging community of developers and traders that share our vision and help pushing it forwards by creating algobots.
 
-* **Algobots Ecosystem**: A business and economic ecosystem in which all parties described herein will participate once the AAPlatform is released.
+**Algobots Ecosystem**: A business and economic ecosystem in which all parties described herein will participate once the AAPlatform is released.
 
-* **Algobot Team**: That would be you, along with anyone else that wishes to help you out in this quest.
+**Algobot Team**: That would be you, along with anyone else that wishes to help you out in this quest.
 
 <hr>
 
@@ -50,7 +50,7 @@ The Algobots Arena is an organization built around the competition of cryptocurr
 
 At this point, the AAPlatform is still in the alpha-stage. A large portion of functionality is under development. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
 
-In the near future, the AAPlatform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees will cover the costs of the bot infrastructure and pay Algobot Teams fees. Fees will be paid in ALGO tokens, the AAPlatform’s native token.
+In the near future, the AAPlatform is set to implement an ecosystem enabling end-users access to subscriptions for bots that trade on their behalf. Subscription fees will cover the costs of the bot infrastructure and pay Algobot Teams fees. Fees will be paid in ALGO tokens, the AAPlatform's native token.
 
 Participating in early competitions not only offers the chance to win competition prizes, but makes you a part of the Algobots Community and provides increased potential of monetizing your efforts when the platform is released to the general public.
 
@@ -64,9 +64,7 @@ Subsequent competitions shall be announced and confirmed later on.
 
 ### Algobot Team Registration
 
-The Algobot Team is you, along with anyone else that may want to help you out in this quest.
-
-We are launching the first competition on an invite-only basis. If you haven’t been invited and want in, send us an email to feedback at advancedalgos dot org.
+We are launching the first competition on an invite-only basis. If you haven't been invited and want in, send us an email to feedback at advancedalgos dot org.
 
 ### Requirements
 
@@ -76,17 +74,17 @@ Make sure you have an account with [Poloniex](https://poloniex.com/). If you don
 
 #### Join Our Telegram Channel
 
-[Join our Telegram Channel](https://t.me/advancedalgos) through which we will offer support before and during the competition.
+[Join the Advanced Algos Telegram Channel](https://t.me/advancedalgos) through which we will offer support before and during the competition.
 
 #### Your Own Bots
 
-The next step is creating your own GitHub Organization and your own algobots. We will go through the whole process further down this document.
+Your Algobot Team will need your own GitHub Organization and your own algobots. We will go through the whole process further down this document.
 
 ### About Algobots
 
 You are allowed to compete with as many Trading Bots as you see fit. You can create as many Indicator Bots as required to implement your strategy. You will learn more about the different types of bots further down this document.
 
-In order to guarantee transparency, registered algobots are not allowed to connect to the exchange directly; algobots should connect with the exchange only through the AACloud _Assistant_ (more on this further down this document).
+In order to guarantee transparency, registered algobots are not allowed to connect to the exchange directly; algobots should connect to the exchange only through the AACloud _Assistant_ (more on this further down this document). AACloud tracks algbots activity and makes the information available for everyone to audit.
 
 **Once a bot is released in the competition it cannot be modified.**
 
@@ -109,7 +107,7 @@ It is a policy of Advanced Algos Ltd. to require all bots running on the AAPlatf
 
 The competition takes place in the **USDT-BTC market in Poloniex**.
 
-For the time being, the platform serves both historic and live trades data. Trades are performed at Algobot Team’s accounts at the exchange, thus having an account with Poloniex is a requirement for participating.
+For the time being, the platform serves both historic and live trades data. Trades are performed at Algobot Team's accounts at the exchange, thus having an account with Poloniex is a requirement for participating.
 
 For the time being, we will only be using Poloniex and the USDT-BTC market to do our trading. We will expand the horizon in upcoming competitions.
 
@@ -117,19 +115,19 @@ For the time being, we will only be using Poloniex and the USDT-BTC market to do
 
 Each Algobot Team trades with their own funds within their own accounts at the exchange. Algobot Teams are fully responsible for the trading they do.
 
-Each bot is allowed to trade up to 0.001 BTC Initial Capital (roughly equivalent to USD 10). This is in order to minimize risk at this first ever alpha stage competition.
+Each algobot is allowed to trade up to 0.001 BTC Initial Capital (roughly equivalent to USD 10). This is in order to minimize risk at this first ever alpha stage competition.
 
 > NOTE: In order to avoid unnecessary risk, we recommend withdrawing excess funds from the exchange or block them by placing an order at a price you know will not be filled.
 
 #### Partial Profits Trading
 
-Bots are allowed to trade with partial profits. This is the only way in which bots can legally trade with more than the Initial Capital specified above. Thus, the limit is 0.001 BTC + Partial Profits. The platform serves available balances that your bot can check in order to make sure the limit is not exceeded.
+Algobots are allowed to trade with partial profits. This is the only way in which they can legally trade with more than the Initial Capital specified above. Thus, the limit is 0.001 BTC + Partial Profits. The platform serves available balances that your algobot can check in order to make sure the limit is not exceeded.
 
-> Bots attempting to trade more than the allowed limit generate an exception that needs to be handled.
+> Algobots attempting to trade more than the allowed limit generate an exception that needs to be handled.
 
 #### Fees
 
-Participating in the competition and running your bots on the AAPlatform is free of charge at this point in time.
+Participating in the competition and running your algobots on the AAPlatform is free of charge at this point in time.
 
 For your information, Poloniex charges the following fees for every order filled:
 
@@ -153,31 +151,31 @@ The ranking is determined by a very simple performance metric: [Return on Invest
 
 * **Cost of Investment** = Initial BTC Balance = 0.001 BTC. For the purpose of this competition, this is a constant, meaning that if you use less than 0.001 BTC to do your trading, we will still use 0.001 BTC as the value for this constant.
 
-> NOTE: It doesn’t matter how much BTC you actually have in the exchange. The platform keeps track of your trades and available balances during the competition.
+> NOTE: It doesn't matter how much BTC you actually have in the exchange. The platform keeps track of your trades and available balances during the competition.
 
 * **Gain from Investment** (or Losses, expressed as negative Gains) = Final BTC Balance
 
 #### Winners
 
-The result of the competition is determined by the position of each bot in the ranking by the end of the competition.
+The result of the competition is determined by the position of each algobo in the ranking by the end of the competition.
 
 ##### _Example_
 
-**Bot A** ends up with 0.0015 BTC
+**Algobot A** ends up with 0.0015 BTC
 
 Bot A ROI = (0.0015 - 0.001) / 0.001 * 100% = 50%
 
-**Bot B** ends up with 0.0005 BTC
+**Algobot B** ends up with 0.0005 BTC
 
 Bot B ROI = (0.00075 - 0.001) / 0.001 * 100% = -25%
 
-**Bot C** ends up with 0.001 BTC
+**Algobot C** ends up with 0.001 BTC
 
 Bot B ROI = (0.001 - 0.001) / 0.001 * 100% = 0%
 
 _Final Ranking_:
 
-| **Position** | **Bot** | **ROI** |
+| **Position** | **Algobot** | **ROI** |
 |:----------|:---------:|----------:|
 | 1st | A | 50 % |
 | 2nd | C | 0 % |
@@ -200,17 +198,17 @@ The competition awards 0.5 BTC and up to 800,000 ALGO (worth USD 8,000 as of thi
 | 3rd | 0.05 |  50,000 |
 | 4th to 15th |      |  25,000 |
 
-> NOTE: In the [example above](#example), only Bot A would have been awarded the BTC Prize, as it is the only one with a ROI bigger than 10%.
+> NOTE: In the [example above](#example), only Bot A would have been awarded the BTC Prize, as it is the only one with a ROI bigger than 10%. ALGO prizes are awarded irrespectively.
 
 ## Terms of Service
 
-The information provided in this document is intended for informational purposes only and is subject to change without notice. Advanced Algos may make improvements and/or changes in the products, pricing and/or the programs described in this information at any time without notice.
+The information provided in this document is intended for informational purposes only and is subject to change without notice. Advanced Algos Ltd. may make improvements and/or changes in the products, pricing and/or the programs described in this information at any time without notice.
 
 ## Disclaimer
 
-THE AACLOUD, THE AA ARENA COMPETITION, THE AA MASTERS BOTS AND THEIR ASSOCIATED PRODUCTS AND SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, SUITABILITY FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+THE AAPLATFORM, THE AA ARENA COMPETITION, THE AA MASTERS BOTS AND THEIR ASSOCIATED PRODUCTS AND SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, SUITABILITY FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
 
-IN NO EVENT WILL ADVANCED ALGOS BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT, SPECIAL OR OTHER CONSEQUENTIAL DAMAGES FOR ANY USE OF THE AACLOUD, THE AA ARENA COMPETITION, THE AA MASTERS BOTS, OR ANY OTHER ASSOCIATED SERVICE OR WEB SITE, INCLUDING, WITHOUT LIMITATION, ANY LOST PROFITS, BUSINESS INTERRUPTION, LOSS OF FUNDS, PROGRAMS OR OTHER DATA OR OTHERWISE, EVEN IF WE ARE EXPRESSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+IN NO EVENT WILL ADVANCED ALGOS LTD. BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT, SPECIAL OR OTHER CONSEQUENTIAL DAMAGES FOR ANY USE OF THE AACLOUD, THE AA ARENA COMPETITION, THE AA MASTERS BOTS, OR ANY OTHER ASSOCIATED SERVICE OR WEB SITE, INCLUDING, WITHOUT LIMITATION, ANY LOST PROFITS, BUSINESS INTERRUPTION, LOSS OF FUNDS, PROGRAMS OR OTHER DATA OR OTHERWISE, EVEN IF WE ARE EXPRESSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 <hr>
 
@@ -218,7 +216,17 @@ IN NO EVENT WILL ADVANCED ALGOS BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT,
 
 ## Overview
 
-Algobots are open source projects in Github, programed in JavaScript. The platform calls bots and puts them to run in specific time intervals. Bots consume services from the platform and data from other bots, specially from indicator bots, and at the same time, produce an output that is stored in the cloud (to be consumed by other bots).
+Historically, trading algorithms have been used in traditional markets and are used in crypto markets as well. Successful bots are most likely kept in the dark by their creators, usually large financial corporations, in order to protect their intellectual property and keep profits for themselves.
+
+In contrast, algobots are open source and so are other applications running on the AAPlatform. Advanced Algos incentivizes bot’s evolution via non-stop competitions between algobots and algobot teams, fostering collaboration and permissionless innovation.
+
+Algobot Teams can take existing bots and improve them, either by collaborating with the maintainer team submitting pull requests, or by starting up a whole new project forking the bot’s code. These principles allow bots to evolve much faster than any private corporate enterprise could dream of.
+
+Trading Bots take the leading role, performing trades and being judged by their performance in competitions. Trading is done with real crypto assets and orders are placed in real crypto exchanges, through the AAPlatform. Algobot Teams are protagonists in their own merit as well, constantly tweaking their algobots to improve performance, speeding up evolution. Users and the general public will eventually have an active role too: they will support Algobot Teams and their algobots by subscribing and paying a fee to have t-gobots work on their behalf, effectively taking part in the competitions, just like fans in the arena.
+
+The project attracts a community related to the crypto, IT and gaming industries through algobots competitions, incentivizing them via competition prizes, and tying them up in a comprehensive business model in which all stakeholders profit. The market itself becomes a part of the economic circuit as platform tokens circulate among actors, each of them cashing out or procuring tokens as needed. A limited supply of tokens to be sold at successive token sale events sets free market forces in motion, guaranteeing that only the best performing bots will get support and thrive while the rest die.
+
+The business model will eventually allow end users (not participating in the development of algobots) to subscribe to the services of trading bots, effectively hiring them to work on their behalf. This feature extends the business beyond the Algobots Community, enabling the massification of the service of the platform and the algobots running on it. At the same time, the business model incentivizes the Algobots Community to keep improving bots competing both for clients and for competition prizes at the same time.
 
 There are three GitHub Organizations you need to be familiar with:
 
@@ -228,59 +236,119 @@ There are three GitHub Organizations you need to be familiar with:
 
 * [AAArena](https://github.com/AAArena): Its another showcase GitHub organization featuring the AA Application hosting the trading bot competition you are about to enter.
 
-### Types of Bots
+### About Algobots
+
+Algobots are open source projects in Github, programed in JavaScript. AACloud calls algobots and puts them to run in specific time intervals. Algobots consume services from the platform and data from other algobots, especially from indicator bots, and at the same time, produce an output that is stored in the cloud (to be consumed by other algobots).
+
+#### Types of Algobots
 
 The AAPlatform handles three different types of bots, differentiating them by their incumbencies:
 
-#### Extractor Bots
+##### Extractor Bots (AKA e-gobots)
 
 They extract raw trades and order books data from exchanges and store it in a standardized format for other bots to consume. 
 
 You will not need to program these kinds of bots for this competition, as we will be using an existing one --[Charly](https://github.com/AAMasters/AACharly-Extraction-Bot)-- which gets raw data from Poloniex, the one exchange we will be working with.
 
-#### Indicator Bots
+##### Indicator Bots (AKA i-gobots)
 
-They process raw trades data and other indicators to output elaborate data structures, mainly technical indicators, for AA Trading Bots to consume. 
+They process raw trades data and other indicators to output elaborate data structures, mainly technical indicators, for Trading Bots to consume. 
 
-You will most likely need to program indicator bots in order to perform Technical Analysis studies or functions. While it is true that you can process data and do all sorts of calculations from within your trading bot's code, this is not recommended. Advanced Algos Ltd. encourages developers to respect incumbencies assigned to each type of bot, for several reasons:
+You will most likely need to program i-gobots in order to perform Technical Analysis studies or functions. While it is true that you can process data and do all sorts of calculations from within your trading bot's code, this is not recommended. Advanced Algos Ltd. encourages developers to respect incumbencies assigned to each type of algobot, for several reasons:
 
-1. The AAPlatform's architecture is designed so that bots can consume data from other bots, in order for the network to reuse resources. By respecting the incumbencies of each type of bot you contribute to growing the platform along with the embedded ecosystem in a sustainable manner.
+1. The AAPlatform's architecture is designed so that algobots can consume data from other algobots, in order for the network to reuse resources. By respecting the incumbencies of each type of algobot you contribute to growing the platform along with the embedded ecosystem in a sustainable manner.
 
-2. The AAPlatform is set up as a marketplace of Extractor, Indicator and Trading Bots. If you program and release an Indicator Bot, you will soon be able to monetize that effort as bots consuming the data your Indicator Bot generates will pay you a fee.
+2. The AAPlatform is set up as a marketplace of Extractor, Indicator and Trading Bots. If you program and release an i-gobot, you will soon be able to monetize that effort as algobots consuming the data your i-gobot generates will pay you a fee.
 
 3. If instead of creating an Indicator Bot, you do the calculations from within your Trading Bot, anyone can come at a later time, extract from your Trading Bot the code that performs the calculations, and create their own Indicator Bot with it. This means you may permanently lose the chance to monetize the indicator functions and effectively allow someone else to do it instead.
 
-#### Trading Bots
+##### Trading Bots (AKA t-gobots)
 
-They automate trading strategies and place orders through the platform, which connects to exchanges via APIs to trade cryptocurrency.
+They automate trading strategies and place orders through the platform, which connects to exchanges via exchanges APIs to trade cryptocurrency.
 
-## Setting Up a Algobot Team Organization
+#### How Algobots Work
 
-The very first step is [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with “AA”, just like in the above example _AAMasters_. Also make sure that the phrase “_Advanced Algos_” is part of the organization’s description.
+Algobots mission is –in essence—creating *products* that others can consume. To do this, they run *processes* which produce and store *datasets*. 
+
+Eeach algobot may have several processes, and processes don’t necessarily have a one-to-one relationship with products. That is, a product can be the result of the work of one or more processes.
+
+Algobot processes are self-contained entities, meaning that they run when called by the AACloud and stop when they finish the task at hand, to wake up again only when AACloud calls the process the next time (in configurable intervals). The datasets processes create are the actual *output* of algobots which are stored in Azure Cloud Storage accounts. But process also produce and store a second valuable piece of information: *status reports*.
+
+Status reports serve as temporal annotations that algobots read every time they are called by AACloud so as to know what was done in the previous run and what the state of affairs is at the present time. Status reports are dynamic, and they change constantly, with updates after every single run of the associated process.
+
+We established that algobots produce products for others to consume. This “others” include other algobots, meaning that algobots usually depend on the datasets produced by other algobots. We call these *data dependencies*, which are declared on each algobot configuration file.
+
+Algobots consume their own status report and they might as well consume status reports from other algobots. We call these *status dependencies*, which are too declared in each algobot configuration files.
+
+At this point in time, there are five different types of datasets: market files, daily files, minutes files, single file and file sequence. These types of datasets define the structure of the data and how it is stored.
+
+A *market file* contains data spanning the whole existence of the market, that is, from the day the pair (e.g. USDT-BTC) started trading up to the present time. The data is stored in one single file, which is appended every time the process runs generating new data. 
+
+A *daily file* contains data segmented by day. That is, the process generates one file per day and stores it in the deepest level of a folder tree structure of the following type:  Year > Month > Day.
+
+A *minutes file* contains data pertaining to one single minute and is stored in the deepest level of a folder tree structure of the following type:  Year > Month > Day > Hour > Minute.
+
+A *file sequence* consists of sequential information that is not necessarily structured on any particular timeframe. The process stores a to files: the one ending in *.Sequence.json* contains the number of files in the sequence, and the sequence is formed by multiple files ending in a sequential number (e.g. 15.json).
+
+A *single file* is pretty much just that: a dataset that is stored in one file only.
+
+##### Real Life Example
+
+Let’s put all this in perspective by analyzing the processes, products and dependencies of a few existing bots.
+
+[Charly]( https://github.com/AAMasters/AACharly-Extraction-Bot) is an extractor bot. As his [README file]( https://github.com/AAMasters/AACharly-Extraction-Bot/blob/master/README.md) explains, he “gets trades data for all markets --both historic and live-- assuring consistency using recursive processes, and store it in a highly fragmented and usable dataset”. 
+
+Also explained in Charly’s README file, Charly offers one product which is defined by the dataset scope and various characteristics. Please, go on and review [Charly’s README file]( https://github.com/AAMasters/AACharly-Extraction-Bot/blob/master/README.md)  and become familiarized with the concepts detailed in there.
+
+Charly has three different processes: Poloniex-Live-Trades, Poloniex-Historic-Trades and Poloniex-Hole-Fixing. These three process combined generate the one single dataset that constitutes Charly’s single product. The dataset is stored under the *minutes file* structure.
+
+Now, let’s see what [Bruce]( https://github.com/AAMasters/AABruce-Indicator-Bot), an indicator bot, does with Charly’s product. As you can learn from [Bruce’s README file]( https://github.com/AAMasters/AABruce-Indicator-Bot/blob/master/README.md) he produces two datasets: candles at 1 minute resolution and volumes at 1 minute resolution. The datasets are stored under the daily file type of dataset.
+
+Now scroll down the README file and see what Bruce’s dependencies are. That’s right. Bruce depends on Charly’s product. Bruce’s processes take the trades data that Charly extracted from the exchange, performs calculations to build 1 minute candles and stores his own dataset with more elaborate data. In other words, Bruce is adding value to Charly’s product and offering a new value-added product of his own.
+
+But the value-adding chain does not stop there. Let’s take a look at another i-gobot, [Olivia]( https://github.com/AAMasters/AAOlivia-Indicator-Bot). According to her [README file]( https://github.com/AAMasters/AAOlivia-Indicator-Bot/blob/master/README.md) Olivia offers four different products: candles at sub-hour resolutions, candles in resolutions above one hour, volumes in sub-hour resolutions and volumes in resolutions above one hour. And guess what? Indeed, Olivia uses Bruce’s one minute candles and one minute volumes to produce complementary candles and volumes at different resolutions.
+
+And so it goes. The last link in the chain usually comes in the form of trading algobots using data from indicator algobots, as that is the ultimate purpose of the whole algobots ecosystem: to provide trading algobots with quality preprocessed data they can use to make the best possible trading decisions.
+
+Let’s take a look at [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot), for instance. Artudito –a t-gobot-- uses candles and volumes from Olivia and regression curves from [Gauss]() to make trading decisions. Of course, the main goal of a t-gobot like Artudito is to perform profitable trading. However, notice that trading bots too have outputs, and thus offer products that are consumable by others. Trading bots output three different products: Live Trading History, Backtest Trading History and Competition Trading History. Those datasets are available for others to consume. For instance, the AAWeb application uses those datasets to show t-gobots activities on a visual environment resembling typical candlestick charts so that anyone can dive in and analyze what algobots are doing.
+
+### About Plotters
+
+Plotters are –too—JavaScript programs created by Algobot Teams. They serve the purpose of creating a visual representation of datasets so that people can easily interpret the data. For instance, [Plotters-Candles-Volumes]( https://github.com/AAMasters/Plotters-Candles-Volumes) creates the visual representation of candlesticks and volume graphs. 
+
+Algobots are usually associated to plotters in order for the AAWeb app to be able to plot the corresponding datasets. For instance, trading algobots use [Plotters-Trading]( https://github.com/AAMasters/Plotters-Trading).
+
+## Setting Up Your Algobot Team Github Organization
+
+Ok, enough talking. Let's get you started.
+
+The very first step is [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with “AA”, just like in the above example _AAMasters_. Also make sure that the word “_algobots_” is part of the organization's description.
 
 <hr>
 
 # Setting up your Development Environment
-To setup and develop your own bot, you'll need to pull in several code repositories as well as make a few directories to store configurations. This is a sample view of the final directory structure with important files/folder annotated. Instructions for creating all of this will follow and your directory and file names will differ.
+
+To setup and develop your own algobot, you'll need to pull in several code repositories as well as make a few directories to store configurations. This is a sample view of the final directory structure with important files/folder annotated. Instructions for creating all of this will follow and your directory and file names will differ.
+
 ```
 .                               # Top level directory located at your choice
 ├── AACloud		        # Will be cloned from git repository
 │   ├── ...                     # A variety of files and folders
 │   ├── AACloud.sln             # Used only with VS IDE to launch project
-│   └── this.config.json    	# Configure your bot to test and develop in cloud
+│   └── this.config.json    	# Configure your bot to test and develop
 ├── API-Keys                    # Create this dir at same level as AACloud
-│   └── AABot.Poloniex.json     # Your Poloniex API Key
+│   └── AABot.Poloniex.json     # Your Poloniex API Key (more on this further down this doc)
 ├── Connection-Strings          # Create this dir at same level as AACloud
 │   └── Production              
-│       ├─ .connstring          # A variety of storage connection files to be supplied by Advanced Algos
+│       ├─ .connstring          # A variety of storage connection files to be supplied by Advanced Algos Ltd.
 │       └─ ...  
-├── Logs                        # AACloud will output logs here
+├── Logs                        # AACloud will output logs here --the folder is created once you run AACloud for the first time
 │            
 ├── AAPlatform                  # Will be cloned from git repository
 │   └── ecosystem.json          # Adding your team and bots to the cloud
 │
 └── AAYourTeam                  # Directory named after your Dev/Bot Team
-    └── AAYourBot-Trading-Bot   # You custom bot repository     
+    └── AAYourBot-Trading-Bot   # Your custom bot repository     
         ├─ Trading-Process
         │    └── User.Bot.js    # Customize your bot logic here
         ├─ AA~Trading-Bot.sln   # Used only with VS IDE to launch project
@@ -290,7 +358,7 @@ To setup and develop your own bot, you'll need to pull in several code repositor
 
 ## Step 1: Node.js
 
-Before we start, make sure you have Node.js installed. If you don’t, please [download and install Node.js](https://nodejs.org/en/download/).
+Before we start, make sure you have Node.js installed. If you don't, please [download and install Node.js](https://nodejs.org/en/download/).
 
 ![Node.js](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Node-js-01.png)
 
@@ -318,13 +386,13 @@ DefaultEndpointsProtocol=https;AccountName=aatestnet;AccountKey=rQRuD8KeD0upqcN9
 
 Click **Next** and **Connect** in the following screen.
 
-> **NOTE**: Please bear in mind that this connection string allows you to browse data in the testnet environment. When you produce your own bot it will store data in its own storage for which you will get your own connection string.
+> **NOTE**: Please bear in mind that this connection string allows you to browse data in the testnet environment. When you produce your own bot it will store data in the production storage for which you will get your own connection string (more on this further down this document).
 
 Storage Explorer will load on the following screen:
 
 ![Azure Storage Explorer](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-01.png)
 
-## Step 3: Clone the Cloud Platform
+## Step 3: Clone the AACloud
 
 Clone the [AACloud](https://github.com/AdvancedAlgos/AACloud) repository in your local machine.
 
@@ -339,7 +407,7 @@ If you are an advanced GitHub user you are probably using Git via the command-li
 
 If you are not familiar with GitHub at all, we highly recommend you invest the time in learning it, as it is the most popular collaboration and version control system. For further information on how to use GitHub Desktop, please refer to the [Getting Started with GitHub Desktop guide](https://help.github.com/desktop/guides/getting-started-with-github-desktop/) or [watch this video tutorial](https://www.youtube.com/watch?v=GqNAD4XoZ6k).
 
-Once you have launched GitHub Desktop and logged in with your GitHub credentials, this is what you need to do to clone the platform’s repository:
+Once you have launched GitHub Desktop and logged in with your GitHub credentials, this is what you need to do to clone the platform's repository:
 
 Go to _File > Clone Repository_
 
@@ -361,7 +429,7 @@ Once you clone the repository, GitHub desktop keeps track of the changes that ma
 
 # Trading Bots
 
-You are almost done with your set up. Let's briefely discuss Trading Bots before actually cloning one to use as a template.
+You are almost done with your set up. Let's briefely discuss t-gobots before actually cloning one to use as a template.
 
 ## Overview
 
@@ -371,11 +439,13 @@ At this early stage, the AAPlatform and the trading bot templates solve several 
 * Crucial historical and live trades data;
 * Connection with exchanges, placement and handling of orders.
 
-This leaves the Algobot Team free to focus in the creative side of things: coming up with and implementing a trading strategy.
+This leaves Algobot Teams free to focus in the creative side of things: coming up with and implementing a trading strategy.
 
 There are four AACloud modules particularly significant to trading bots:
 
-* _Data Dependencies_ and _Status Dependencies_: Your Trading Bot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because trading bots use other bot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
+* _Data Dependencies_: Your Trading Bot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because t-gobots use other algobot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
+
+* _Status Dependencies_: Your Trading Bot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because t-gobots use other algobot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
 
 * _Context_: In terms of context, trading bots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. Context is saved in files as outputs of trading bots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the Assistant module.
 
@@ -446,17 +516,17 @@ e.g.: AAMariam.Poloniex.json
 
 Now is a good time to sit and think about your trading strategy. Do you have one?
 
-If you do have a strategy you wish to automate, then we are going to offer you a Trading Bot template to start from: it’s called [Mariam]( https://github.com/AAMasters/AAMariam-Trading-Bot). As her [README]( https://github.com/AAMasters/AAMariam-Trading-Bot/blob/master/README.md) file goes, Mariam is ideal as a “starting point laying out the proper ways to interact with the AACloud”. However, her actual trading strategy is quite unusable. Start with Mariam if you are bringing your own logic.
+If you do have a strategy you wish to automate, then we are going to offer you a Trading Bot template to start from: it's called [Mariam]( https://github.com/AAMasters/AAMariam-Trading-Bot). As her [README]( https://github.com/AAMasters/AAMariam-Trading-Bot/blob/master/README.md) file goes, Mariam is ideal as a “starting point laying out the proper ways to interact with the AACloud”. However, her actual trading strategy is quite unusable. Start with Mariam if you are bringing your own logic.
 
-If you don’t have a strategy or are not sure about starting out from scratch, we have a friend you might want to meet: this is [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot). Artudito is an accomplished trader. He uses linear regression channels to determine when to buy or sell. Check his [README]( https://github.com/AAMasters/AAArtudito-Trading-Bot/blob/master/README.md) file for more details. 
+If you don't have a strategy or are not sure about starting out from scratch, we have a friend you might want to meet: this is [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot). Artudito is an accomplished trader. He uses linear regression channels to determine when to buy or sell. Check his [README]( https://github.com/AAMasters/AAArtudito-Trading-Bot/blob/master/README.md) file for more details. 
 
 Starting out with an accomplished trading bot is all about making incremental improvements on how the bot does what he does. You might want to introduce new complementary logic to make him smarter, or simply polish his decision-making by studying his actual performance and ironing out the flaws you may see when taking a closer look.
 
-Now that we’ve cleared that up, it’s time to move on and set you up with your template. For simplicity’s sake we are going to describe how to proceed with Mariam, but the exact same explanation should work if you choose to clone Artudito instead.
+Now that we've cleared that up, it's time to move on and set you up with your template. For simplicity's sake we are going to describe how to proceed with Mariam, but the exact same explanation should work if you choose to clone Artudito instead.
 
 ### A: Clone and Rename Bot
 
-We will use Mariam, a Trading Bot within the AAMasters organization as a starting point for creating your own bot. Clone [Mariam's repository](https://github.com/AAMasters/AAMariam-Trading-Bot) and --once in your local machine-- copy and paste the repository’s root folder, renaming it with the name of your new bot.
+We will use Mariam, a Trading Bot within the AAMasters organization as a starting point for creating your own bot. Clone [Mariam's repository](https://github.com/AAMasters/AAMariam-Trading-Bot) and --once in your local machine-- copy and paste the repository's root folder, renaming it with the name of your new bot.
 
 ```
 $ git clone https://github.com/AAMasters/AAMariam-Trading-Bot _AAYourBotName-Trading-Bot_
@@ -936,12 +1006,12 @@ Now, run the IDE. When execution halts, press F11 to step into the module _User.
 
 ## Step 5: Start Coding
 
-Once you have managed to run the bot successfully, you are good to go. We’ve found the following workflow is quite practical:
+Once you have managed to run the bot successfully, you are good to go. We've found the following workflow is quite practical:
 
 * The main business logic/solution to edit is in  (_Your-Bot-Repo > Trading-Process > User.Bot.js_). Other types of bots (e.g. indicator or extraction) have different process folder types.
 * Your bot will not fully successfully run until there is a balance in your Poloniex account and your bot can make an actual trade. The bot status report will also not be written to your storage account until then. You can use the simulation mode described above (_exchangeSimulationMode_ in the AACloud config) for a temporary workaround until you fund your account.
-* Code directly in the bot’s solution until the code is fully implemented.
-* Close the bot’s module and go to the cloud platform solution to debug (as explained above). While debugging, the bot’s files will pop up in separate tabs, so that you can edit the code in the process.
+* Code directly in the bot's solution until the code is fully implemented.
+* Close the bot's module and go to the cloud platform solution to debug (as explained above). While debugging, the bot's files will pop up in separate tabs, so that you can edit the code in the process.
 
 <hr>
 
