@@ -26,7 +26,7 @@ There are three GitHub Organizations you need to be familiar with:
 
 * [AAArena](https://github.com/AAArena): Its another showcase GitHub organization featuring the AA Application hosting the trading algobot competition you are about to enter.
 
-**[Next: Setting Up Your Development Environment >>](./developing/0-Setup.md)**
+**[Next: About Algobots](./Algobots.md)**
 
 [Terms of Service](./Terms.md)  &bull;  [Disclaimer](./Disclaimer.md)
 

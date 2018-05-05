@@ -1,4 +1,4 @@
-**[<< Previous: The AAPlatform](../AAPlatform.md)**
+**[<< Previous: About Algobots](../Algobots.md)**
 
 
 # Setting up your Development Environment

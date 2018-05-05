@@ -24,8 +24,6 @@ Join us for a dive into the world of cryptocurrency trading to collaborate and c
 
 # Basic Definitions
 
-# Basic Definitions
-
 **Advanced Algos Ltd.**: The start up behind the creation of the AAPlatform and the people running this show until the Algobots Community takes over.
 
 **Algobots**: Open-source algorithms destined to become autonomous agents with an autonomous financial life once the AAPlatform along with the Algobots Ecosystem are launched.
