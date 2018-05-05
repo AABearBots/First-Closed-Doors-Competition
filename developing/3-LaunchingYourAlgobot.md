@@ -173,7 +173,6 @@ Modify the pasted code to incorporate the details of your own GitHub organizatio
 We hope your participation is fun and educational and we'd love to make it better. Please submit any issues you experience during the competition in the [issues section](https://github.com/AAArena/First-Closed-Doors-Competition/issues) of this repository. Please also submit **any** suggestions or other feedback you might have to enhance future experiences via email to feedback at advancedalgos dot org.
 
 
-
 <hr />
 
 [Terms of Service](../Terms.md)  &bull;  [Disclaimer](../Disclaimer.md)
