@@ -162,7 +162,8 @@ Copy the piece of code and replicate it immediately below the closing key, **add
 Modify the pasted code to incorporate the details of your own GitHub organization and your own bot. Create a pull request and wait for someone at our end to review it.
 
 
-<hr>
+<hr />
+
 ### Support
 
 [Join the Advanced Algos Telegram Channel](https://t.me/advancedalgos)
@@ -173,8 +174,10 @@ We hope your participation is fun and educational and we'd love to make it bette
 
 
 
-<hr>
+<hr />
+
 [Terms of Service](../Terms.md)  &bull;  [Disclaimer](../Disclaimer.md)
 
-<hr>
+<hr />
+
 **Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)

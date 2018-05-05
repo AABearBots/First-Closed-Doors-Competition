@@ -88,5 +88,6 @@ Create a folder named _API-Keys_ at the same level of the platform's repository 
 
 [Terms of Service](../Terms.md)  &bull;  [Disclaimer](../Disclaimer.md)
 
-<hr>
+<hr />
+
 **Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)
