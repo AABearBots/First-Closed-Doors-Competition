@@ -4,7 +4,7 @@
 
 # Trading Algobots
 
-You are almost done with your set up. Let's briefely discuss t-gobots before actually cloning one to use as a template.
+You are almost done with your set up. Let's briefely discuss t-bots before actually cloning one to use as a template.
 
 ## Overview
 
@@ -18,9 +18,7 @@ This leaves Algobot Teams free to focus in the creative side of things: coming u
 
 There are four AACloud modules particularly significant to trading algobots:
 
-* _Data Dependencies_: Your trading algobot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because t-gobots use other algobot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
-
-* _Status Dependencies_: Your trading algobot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because t-gobots use other algobot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
+* _Data Dependencies_ & _Status Dependencies_: Your trading algobot's config file contains two declarations of dependencies: data and status dependencies. Dependencies exist because t-bots use other algobot's datasets, or require certain data to be on a certain state. The dependencies modules load declared dependencies and pass them on to the bot through the Assistant module.
 
 * _Context_: In terms of context, trading algobots require the latest status report, the history of what was done on previous runs and the execution context tracking balances, trades, positions and so on. Context is saved in files as outputs of trading algobots. The context module reads the last status report, gets the date of the last execution, fetches the corresponding context file and serves it to the Assistant module.
 
@@ -37,7 +35,7 @@ The overall strategy when working with trading algobots can be summarized in the
 
 * Each time the bot runs, it first needs to understand the context of the current execution. Bots get the context info from the Assitant module.
 
-* Then the bot embarks in the calculations required by its trading strategy. At this point in time, there are very few indicators offering processed information. As [explained earlier](#indicator-bots), we encourage you to respect the proposed incumbencies architectecture and put the Technical Analysis logic in **indicator algobots**. Almost all Technical Analysis indicators are calculated from trades and volume data. Their formulas are in the pubic domain and even code is readily available if you search around. You are free to use open source code within your bot's code.
+* Then the bot embarks in the calculations required by its trading strategy. At this point in time, there are very few indicators offering processed information. As [explained earlier](#indicator-algobots-aka-i-bots), we encourage you to respect the proposed incumbencies architectecture and put the Technical Analysis logic in **indicator algobots**. Almost all Technical Analysis indicators are calculated from trades and volume data. Their formulas are in the pubic domain and even code is readily available if you search around. You are free to use open source code within your bot's code.
 
 * Once calculations are performed, the bot decides what to do, and uses the platform to place orders on the exchange.
 
@@ -79,7 +77,7 @@ Create a folder named _API-Keys_ at the same level of the platform's repository 
 
 "**AA**" + **BotName** + "**.**" + **ExchangeName** + "**.json**"
 
-> e.g.: AAMariam.Poloniex.json
+e.g.: AAMariam.Poloniex.json
 
 **NOTE: Make sure the folder and file doesn't accidentally end up in GitHub! Your API KEYs should be kept secret!**
 
@@ -90,4 +88,4 @@ Create a folder named _API-Keys_ at the same level of the platform's repository 
 
 <hr />
 
-**Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)
+**Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [About Algobots](../Algobots.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)

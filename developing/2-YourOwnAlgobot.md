@@ -2,7 +2,7 @@
 
 
 
-# Starting out Your Own Algobot
+# Starting out Your Own Bot
 
 ## Step 1: Using an Existing Bot as a Starting Point
 
@@ -78,7 +78,7 @@ $ git push -u origin master
 
 Bots store data in the cloud. For the time being, the process for opening a storage account for your bot is manual. Please send us a request to open a storage account over Telegram; include your Github Organization and bot's name, please. When the request is processed, you will get the following:
 
-#### Your Bot's Connection String
+#### Your Algobot Team Connection String
 
 A text string similar to the following one:
 
@@ -120,7 +120,7 @@ You will use the SAS token in the next step.
 
 ### F: Configure Your Bot
 
-Open _this.bot.config.json_, a file within your bot's repository. Let's modify the config file segment by segment:
+Open _this.bot.config.json_, a file within your bot's repository. Let's review and modify the config file segment by segment:
 
 ```
 {
@@ -176,7 +176,7 @@ You need to update that segment of the config with the following things in mind:
 
  - *description* (briefly describe your bot's strategy)
  - *startMode* There are three ways in which your bot can be run and only one of them should be set to _true_:
-   - _live_ means real trading,
+   - _live_ means real live trading,
    - _backtest_ allows testing your strategy against historical data,
    - _competition_ means real trading within a competition
 
@@ -312,7 +312,7 @@ The config segment above shows the configuration of the first and most important
     },
 
 ```
-The above segment shows the configuration of the Backtest History.
+The above segment shows the configuration of the Backtest History product.
 
  - *storageAccount* (replace with the one assigned to you)
 
@@ -464,14 +464,19 @@ By now you should be able to run the bot in your local environment and use typic
 In case you were not able to successfully run the bot, the logs files are the first place to go.
 
 #### A Quick Logs Overview
+
+Logs are segregated per each execution so that it is easy to locate log files corresponding to different executions. The separation is accomplished by the folder structure itself.
+
 ```
 .
 ├── AACloud              
-├── Logs             			# Note: same dir level as AACloud
-	└── _Your_Team_ 		# Directory named after your team
-	   └── Trading 			# Named after process (e.g. Trading, Indicator, etc)
-		   └── _YourBot_ver_    # Named after your Bot
-			   └── ...logs 	# See below for details			   
+├── Logs > [year] > [month] > [day] > [hour] > [minute ]	# Folder structure showing execution datetime
+
+		└── _Your_Team_ 				# Directory named after your team
+	  		 └── Trading 				# Named after type of bot (e.g. Trading, Indicator, etc)
+		 	  	└── _YourBot_ver_    		# Named after your Bot and Version
+		 	  		└── _Process_    	# Named after the specific process			
+			   			└── ...logs 	# See below for details			   
 ```
 **Log name format:** _Date(Yr-Mo-Day-Hr-Min)–RandId–SourceFile.log_
 \* _SourceFile_ is the name of the AACloud file to check for associated error or output.
@@ -485,7 +490,6 @@ In case you were not able to successfully run the bot, the logs files are the fi
 6. _~.trading algobot Main Loop.log:_ Best log to narrow down general cloud platform issues
 
 \*_By closest relationship to your bot. Read source code for more detailed comments and to view other files associated with the cloud platform_
-
 
 If you wish to debug the platform and your bot, open the _IntervalExecutor.js_ module and place a breakpoint in the following line:
 
@@ -501,8 +505,11 @@ Now, run the IDE. When execution halts, press F11 to step into the module _User.
 Once you have managed to run the bot successfully, you are good to go. We've found the following workflow is quite practical:
 
 * The main business logic/solution to edit is in  (_Your-Bot-Repo > Trading-Process > User.Bot.js_). Other types of bots (e.g. indicator or extraction) have different process folder types.
+
 * Your bot will not fully successfully run until there is a balance in your Poloniex account and your bot can make an actual trade. The bot status report will also not be written to your storage account until then. You can use the simulation mode described above (_exchangeSimulationMode_ in the AACloud config) for a temporary workaround until you fund your account.
+
 * Code directly in the bot's solution until the code is fully implemented.
+
 * Close the bot's module and go to the cloud platform solution to debug (as explained above). While debugging, the bot's files will pop up in separate tabs, so that you can edit the code in the process.
 
 
@@ -512,4 +519,4 @@ Once you have managed to run the bot successfully, you are good to go. We've fou
 
 <hr />
 
-**Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)
+**Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [About Algobots](../Algobots.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)

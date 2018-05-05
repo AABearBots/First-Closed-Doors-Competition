@@ -2,7 +2,7 @@
 
 
 
-# Launching Your Algobot
+# Launching Your Bot
 
 Now that your bot is ready and you are happy with its behavior, it is time to release it under the AGPL license, register your Algobot Team and bots in the AAPlatform and eventually run it in the cloud. Running in the cloud is not that different from running the bot locally.
 
@@ -180,4 +180,4 @@ We hope your participation is fun and educational and we'd love to make it bette
 
 <hr />
 
-**Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)
+**Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [About Algobots](../Algobots.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)

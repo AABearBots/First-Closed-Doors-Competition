@@ -4,7 +4,7 @@
 
 # About The Competition
 
-The Algobots Arena is an organization built around the competition of cryptocurrency trading bots, or what we call _algobots_. The foundation of the Arena is powered by the AAPlatform – a system developed by Advanced Algos Ltd. that dramatically simplifies the creation and operation of algobots.
+The Algobots Arena is an organization built around the competition of cryptocurrency trading algobots, or what we call _algobots_. The foundation of the Arena is powered by the AAPlatform – a system developed by Advanced Algos Ltd. that dramatically simplifies the creation and operation of algobots.
 
 At this point, the AAPlatform is still in the alpha-stage. A large portion of functionality is under development. However, hosting early stage competitions will help drive development as well as integrate early feedback and interests from both developers and traders.
 
@@ -42,13 +42,13 @@ Your Algobot Team will need your own GitHub Organization and your own algobots. 
 
 You are allowed to compete with as many trading algobots as you see fit. You can create as many indicator algobots as required to implement your strategy. You will learn more about the different types of bots further down this document.
 
-In order to guarantee transparency, registered algobots are not allowed to connect to the exchange directly; algobots should connect to the exchange only through the AACloud _Assistant_ (more on this further down this document). AACloud tracks algobots activity and makes the information available for everyone to audit.
+In order to guarantee transparency, registered algobots are not allowed to connect to the exchange directly; algobots should connect to the exchange only through the AACloud _Assistant_ (more on this further down this document). AACloud tracks algbots activity and makes the information available for everyone to audit.
 
 **Once a bot is released in the competition it cannot be modified.**
 
-> NOTE: The AAPlatform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur –either at the bot or platform level– resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha-testing. Execution Logs will be provided for post-mortem analysis.
+> NOTE: The AAPlatform is still in its infancy, on alpha stage. It is likely that errors may occur at runtime. Should any unhandled error occur –either at the bot or platform level– resulting in the bot interrupting its execution, the bot will be considered dead and will not be restarted. This is unfortunate but it is the reality of alpha-testing. Execution Logs will be provided for post-mortem analisys.
 
-#### Algobots License
+#### Algbots License
 
 The AAMaster algobots offered as templates are released under the GNU Affero General Public License (AGPL) to guarantee:
 
@@ -164,4 +164,4 @@ The competition awards 0.5 BTC and up to 800,000 ALGO (worth USD 8,000 as of thi
 
 <hr />
 
-**Table of Contents:** [Basic Definitions](./README.md/#basic-definitions) | [About The Competition](./TheCompetition.md) | [The AAPlatform](./AAPlatform.md) | [Setting Up Your Development Environment](./developing/0-Setup.md) | [Trading Algobots](./developing/1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./developing/2-YourOwnAlgobot.md) | [Launching Your Algobot](./developing/3-LaunchingYourAlgobot.md)
+**Table of Contents:** [Basic Definitions](./README.md/#basic-definitions) | [About The Competition](./TheCompetition.md) | [The AAPlatform](./AAPlatform.md) | [About Algobots](./Algobots.md) | [Setting Up Your Development Environment](./developing/0-Setup.md) | [Trading Algobots](./developing/1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./developing/2-YourOwnAlgobot.md) | [Launching Your Algobot](./developing/3-LaunchingYourAlgobot.md)

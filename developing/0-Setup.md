@@ -31,17 +31,17 @@ To setup and develop your own algobot, you'll need to pull in several code repos
 
 ```
 
-## Getting Started: Setting Up Your Algobot Team Github Organization
+## Step 1: Setting Up Your Algobot Team Github Organization
 
-Let's start by [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with "AA", just like in the above example _AAMasters_. Also make sure that the word "_algobots_" is part of the organization's description.
+Let's start by [setting up a GitHub organization](https://github.com/account/organizations/new) named after your own Algobot Team. Make sure the name of the organization starts with "AA", just like in the above example _AAMasters_. Also make sure that the word "_algobot_" is part of the organization's description.
 
-## Step 1: Node.js
+## Step 2: Node.js
 
 Before we start, make sure you have Node.js installed. If you don't, please [download and install Node.js](https://nodejs.org/en/download/).
 
 ![Node.js](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Node-js-01.png)
 
-## Step 2: Azure Storage Explorer
+## Step 3: Azure Storage Explorer
 
 Bots consume and store data in the Microsoft Azure cloud. This tool will allow you to browse and manage data.
 
@@ -71,7 +71,7 @@ Storage Explorer will load on the following screen:
 
 ![Azure Storage Explorer](https://github.com/AdvancedAlgos/Documentation/blob/master/Media/Dev-Teams-Getting-Sarted-Guide/Azure-Storage-Explorer-01.png)
 
-## Step 3: Clone the AACloud
+## Step 4: Clone the AACloud
 
 Clone the [AACloud](https://github.com/AdvancedAlgos/AACloud) repository in your local machine.
 
@@ -111,4 +111,4 @@ Once you clone the repository, GitHub desktop keeps track of the changes that ma
 
 <hr />
 
-**Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)
+**Table of Contents:** [Basic Definitions](../README.md/#basic-definitions) | [About The Competition](../TheCompetition.md) | [The AAPlatform](../AAPlatform.md) | [About Algobots](../Algobots.md) | [Setting Up Your Development Environment](./0-Setup.md) | [Trading Algobots](./1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./2-YourOwnAlgobot.md) | [Launching Your Algobot](./3-LaunchingYourAlgobot.md)

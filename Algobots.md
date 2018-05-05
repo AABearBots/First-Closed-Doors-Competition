@@ -9,25 +9,25 @@ Algobots are open source projects in Github, programed in JavaScript. AACloud ca
 
 The AAPlatform handles three different types of bots, differentiating them by their incumbencies:
 
-#### Extractor Algobots (AKA e-gobots)
+#### Extractor Algobots (AKA e-bots)
 
 They extract raw trades and order books data from exchanges and store it in a standardized format for other bots to consume.
 
 You will not need to program these kinds of bots for this competition, as we will be using an existing one –[Charly](https://github.com/AAMasters/AACharly-Extraction-Bot)– which gets raw data from Poloniex, the one exchange we will be working with.
 
-#### Indicator Algobots (AKA i-gobots)
+#### Indicator Algobots (AKA i-bots)
 
 They process raw trades data and other indicators to output elaborate data structures, mainly technical indicators, for trading algobots to consume.
 
-You will most likely need to program i-gobots in order to perform Technical Analysis studies or functions. While it is true that you can process data and do all sorts of calculations from within your trading algobot's code, this is not recommended. Advanced Algos Ltd. encourages developers to respect incumbencies assigned to each type of algobot, for several reasons:
+You will most likely need to program i-bots in order to perform Technical Analysis studies or functions. While it is true that you can process data and do all sorts of calculations from within your trading algobot's code, this is not recommended. Advanced Algos Ltd. encourages developers to respect incumbencies assigned to each type of algobot, for several reasons:
 
 1. The AAPlatform's architecture is designed so that algobots can consume data from other algobots, in order for the network to reuse resources. By respecting the incumbencies of each type of algobot you contribute to growing the platform along with the embedded ecosystem in a sustainable manner.
 
-2. The AAPlatform is set up as a marketplace of Extractor, Indicator and trading algobots. If you program and release an i-gobot, you will soon be able to monetize that effort as algobots consuming the data your i-gobot generates will pay you a fee.
+2. The AAPlatform is set up as a marketplace of Extractor, Indicator and trading algobots. If you program and release an i-bot, you will soon be able to monetize that effort as algobots consuming the data your i-bot generates will pay you a fee.
 
 3. If instead of creating an indicator algobot, you do the calculations from within your trading algobot, anyone can come at a later time, extract from your trading algobot the code that performs the calculations, and create their own indicator algobot with it. This means you may permanently lose the chance to monetize the indicator functions and effectively allow someone else to do it instead.
 
-#### Trading Algobots (AKA t-gobots)
+#### Trading Algobots (AKA t-bots)
 
 They automate trading strategies and place orders through the platform, which connects to exchanges via exchanges APIs to trade cryptocurrency.
 
@@ -71,17 +71,18 @@ Now, let's see what [Bruce]( https://github.com/AAMasters/AABruce-Indicator-Bot)
 
 Now scroll down the README file and see what Bruce's dependencies are. That's right. Bruce depends on Charly's product. Bruce's processes take the trades data that Charly extracted from the exchange, performs calculations to build 1 minute candles and stores his own dataset with more elaborate data. In other words, Bruce is adding value to Charly's product and offering a new value-added product of his own.
 
-But the value-adding chain does not stop there. Let's take a look at another i-gobot, [Olivia]( https://github.com/AAMasters/AAOlivia-Indicator-Bot). According to her [README file]( https://github.com/AAMasters/AAOlivia-Indicator-Bot/blob/master/README.md) Olivia offers four different products: candles at sub-hour resolutions, candles in resolutions above one hour, volumes in sub-hour resolutions and volumes in resolutions above one hour. And guess what? Indeed, Olivia uses Bruce's one minute candles and one minute volumes to produce complementary candles and volumes at different resolutions.
+But the value-adding chain does not stop there. Let's take a look at another i-bot, [Olivia]( https://github.com/AAMasters/AAOlivia-Indicator-Bot). According to her [README file]( https://github.com/AAMasters/AAOlivia-Indicator-Bot/blob/master/README.md) Olivia offers four different products: candles at sub-hour resolutions, candles in resolutions above one hour, volumes in sub-hour resolutions and volumes in resolutions above one hour. And guess what? Indeed, Olivia uses Bruce's one minute candles and one minute volumes to produce complementary candles and volumes at different resolutions.
 
 And so it goes. The last link in the chain usually comes in the form of trading algobots using data from indicator algobots, as that is the ultimate purpose of the whole algobots ecosystem: to provide trading algobots with quality preprocessed data they can use to make the best possible trading decisions.
 
-Let's take a look at [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot), for instance. Artudito –a t-gobot– uses candles and volumes from Olivia and regression curves from [Gauss]() to make trading decisions. Of course, the main goal of a t-gobot like Artudito is to perform profitable trading. However, notice that trading algobots too have outputs, and thus offer products that are consumable by others. Trading bots output three different products: Live Trading History, Backtest Trading History and Competition Trading History. Those datasets are available for others to consume. For instance, the AAWeb application uses those datasets to show t-gobots activities on a visual environment resembling typical candlestick charts so that anyone can dive in and analyze what algobots are doing.
+Let's take a look at [Artudito]( https://github.com/AAMasters/AAArtudito-Trading-Bot), for instance. Artudito –a t-bot– uses candles and volumes from Olivia to make trading decisions. Of course, the main goal of a t-bot like Artudito is to perform profitable trading. However, notice that trading algobots too have outputs, and thus offer products that are consumable by others. Trading bots output three different products: Live Trading History, Backtest Trading History and Competition Trading History. Those datasets are available for others to consume. For instance, the AAWeb application uses those datasets to show t-bots activities on a visual environment resembling typical candlestick charts so that anyone can dive in and analyze what algobots are doing.
 
 ## About Plotters
 
-Plotters are –too–JavaScript programs created by Algobot Teams. They serve the purpose of creating a visual representation of datasets so that people can easily interpret the data. For instance, [Plotters-Candles-Volumes]( https://github.com/AAMasters/Plotters-Candles-Volumes) creates the visual representation of candlesticks and volume graphs.
+Plotters are –too– JavaScript programs created by Algobot Teams. They serve the purpose of creating a visual representation of datasets so that people can easily interpret the data. For instance, [Plotters-Candles-Volumes]( https://github.com/AAMasters/Plotters-Candles-Volumes) creates the visual representation of candlesticks and volume graphs.
 
 Algobots are usually associated to plotters in order for the AAWeb app to be able to plot the corresponding datasets. For instance, trading algobots use [Plotters-Trading]( https://github.com/AAMasters/Plotters-Trading).
+
 
 **[Next: Trading Algobots >>](./developing/1-TradingAlgobots.md)**
 
@@ -89,4 +90,4 @@ Algobots are usually associated to plotters in order for the AAWeb app to be abl
 
 <hr />
 
-**Table of Contents:** [Basic Definitions](./README.md/#basic-definitions) | [About The Competition](./TheCompetition.md) | [The AAPlatform](./AAPlatform.md) | [Setting Up Your Development Environment](./developing/0-Setup.md) | [Trading Algobots](./developing/1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./developing/2-YourOwnAlgobot.md) | [Launching Your Algobot](./developing/3-LaunchingYourAlgobot.md)
+**Table of Contents:** [Basic Definitions](./README.md/#basic-definitions) | [About The Competition](./TheCompetition.md) | [The AAPlatform](./AAPlatform.md) | [About Algobots](./Algobots.md) | [Setting Up Your Development Environment](./developing/0-Setup.md) | [Trading Algobots](./developing/1-TradingAlgobots.md) | [Starting Out Your Own Algobot](./developing/2-YourOwnAlgobot.md) | [Launching Your Algobot](./developing/3-LaunchingYourAlgobot.md)
